@@ -1,0 +1,533 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="dc: http://purl.org/dc/terms/ schema: http://schema.org/ prov: http://www.w3.org/ns/prov# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl#"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<style type="text/css">
+		/*
+		   This template uses the W3C css for working drafts, with small modifications.
+		   Original copyright:
+		   Copyright 1997-2003 W3C (MIT, ERCIM, Keio). All Rights Reserved.
+		   The following software licensing rules apply:
+		   http://www.w3.org/Consortium/Legal/copyright-software */
+
+		/* $Id: base.css,v 1.26 2012/08/31 21:24:31 ijacobs Exp $ */
+
+		body {
+		  padding: 2em 1em 2em 70px;
+		  margin: 0;
+		  font-family: sans-serif;
+		  color: black;
+		  background: white;
+		  background-position: top left;
+		  background-attachment: fixed;
+		  background-repeat: no-repeat;
+		}
+		:link { color: #00C; background: transparent }
+		:visited { color: #609; background: transparent }
+		a:active { color: #C00; background: transparent }
+
+		a:link img, a:visited img { border-style: none } /* no border on img links */
+
+		a img { color: white; }        /* trick to hide the border in Netscape 4 */
+		@media all {                   /* hide the next rule from Netscape 4 */
+		  a img { color: inherit; }    /* undo the color change above */
+		}
+
+		th, td { /* ns 4 */
+		  font-family: sans-serif;
+		}
+
+		h1, h2, h3, h4, h5, h6 { text-align: left }
+		/* background should be transparent, but WebTV has a bug */
+		h1, h2, h3 { color: #005A9C; background: white }
+		h1 { font: 170% sans-serif }
+		h2 { font: 140% sans-serif }
+		h3 { font: 120% sans-serif }
+		h3 {
+			border-bottom: 1px solid navy;
+			margin-top: 3px;
+			padding-bottom: 5px;
+		}
+		h4 { font: bold 100% sans-serif }
+		h5 { font: italic 100% sans-serif }
+		h6 { font: small-caps 100% sans-serif }
+
+		.hide { display: none }
+
+		div.head { margin-bottom: 1em }
+		div.head h1 { margin-top: 2em; clear: both }
+		div.head table { margin-left: 2em; margin-top: 2em }
+
+		p.copyright { font-size: small }
+		p.copyright small { font-size: small }
+
+		@media screen {  /* hide from IE3 */
+		a[href]:hover { background: #ffa }
+		}
+
+		pre { margin-left: 2em }
+		
+		p {
+		  margin-top: 0.6em;
+		  margin-bottom: 0.6em;		  
+		  text-align: justify;
+		}
+		
+		dt, dd { margin-top: 0; margin-bottom: 0 } /* opera 3.50 */
+		dt { font-weight: bold }
+
+		ul.toc, ol.toc {
+		  list-style: disc;		/* Mac NS has problem with 'none' */
+		  list-style: none;
+		}
+
+		@media aural {  
+		  h1, h2, h3 { stress: 20; richness: 90 }
+		  .hide { speak: none }
+		  p.copyright { volume: x-soft; speech-rate: x-fast }
+		  dt { pause-before: 20% }
+		  pre { speak-punctuation: code } 
+		}
+		
+		/*Additional css*/
+		.hlist {
+			background-color: #F4FFFF;
+			border: 1px solid navy;
+			padding: 5px;
+		}
+		.hlist li {
+			display: inline-table;
+			list-style-type: none;
+			padding-right: 20px;
+		}
+		.backlink {
+			background-color: #F4FFFF;
+			border: 1px dotted navy;
+			color: black;
+			float: right;
+			font-size: 10pt;
+			padding: 2px;
+			text-align: right;
+		}
+		.entity {
+			border: 1px solid navy;
+			margin: 5px 0;
+			padding: 5px;
+		}
+		table {
+			background-color: #F4FFFF;
+			border: 1px solid navy;
+			margin: 20px;
+		}
+		table {
+			text-align: center;
+			vertical-align: middle;
+		}
+		table td {
+			padding: 5px 15px;
+			text-align: left;
+		}
+		table th {
+			background-color: LightGoldenRodYellow;
+		}
+		pre {
+			background-color: #F9F9F9;
+			border: 1px dashed #2F6FAB;
+			color: black;
+			line-height: 1.1em;
+			padding: 1em;
+		}
+		</style>
+		</head>
+		<span resource="" typeOf="foaf:Document schema:WebPage">
+			<title property="dc:title schema:name">The Workflow Invocation Ontology</title>
+			<span property="dc:created schema:dateCreated" content="17 May 2013"></span>
+			<span property="dc:isVersionOf" resource="http://purl.org/net/wf-invocation"></span>	
+			<span property="dc:creator prov:wasAttributedTo schema:creator" resource="http://delicias.dia.fi.upm.es/members/DGarijo/#me"></span>
+		</span>
+		<body resource="http://purl.org/net/wf-invocation#" typeOf="owl:Ontology schema:TechArticle"><div class="head">
+						<h1 property="dc:title schema:name">The Workflow Invocation Ontology</h1>
+						<h2 property="dc:modified schema:dateModified">Release 17 May 2013</h2>
+						</head><dl>
+							<dt>This version:</dt>
+							<dd><a href="http://vocab.linkeddata.es/wf-invoc/version/17052013/">http://vocab.linkeddata.es/wf-invoc/version/17052013/</a></dd>
+							</dl><dl><dt>Latest version:</dt>
+								<dd><a href="http://purl.org/net/wf-invocation">http://purl.org/net/wf-invocation</a></dd>
+							</dl><dl><dt>Previous version:</dt>
+								<dd><a href="http://www.opmw.org/model/wf-invocation03042013" property="prov:wasRevisionOf dc:isVersionOf">http://www.opmw.org/model/wf-invocation03042013</a></dd>
+							</dl><dl>
+							<dt>Revision</dt>
+								<dd>Revision 1.1</dd>
+								</dl><dl><dt>Authors:</dt>
+									<dd><a href="http://delicias.dia.fi.upm.es/members/DGarijo/" property="dc:creator prov:wasAttributedTo schema:author">Daniel Garijo</a>,  Ontology Engineering Group, Universidad Polit&eacute;cnica de Madrid</dd>
+									<dd><a href="http://www.isi.edu/~varunr/resume.html" property="dc:creator prov:wasAttributedTo schema:author">Varun Ratnakar</a>, Information Sciences Institute, University of Southern California, US </dd>
+									<dd><a href="http://www.isi.edu/~gil/" property="dc:creator prov:wasAttributedTo schema:author">Yolanda Gil</a>, Information Sciences Institute, University of Southern California, US </dd>
+								</dl><dl>
+								<dt>Imported Ontologies:</dt>
+									<dd><a href="http://purl.org/net/p-plan" property="schema:mentions">p-plan: The P-plan Ontology</a> </dd>									
+								</dl>
+								<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/" property="dc:license"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License</a>.
+						</div>
+						<hr>
+						<h2>Abstract</h2>
+							<p>This document describes the Workflow Invocation Ontology (wf-invocation), a simple profile of the P-plan ontology to describe how workflow steps are invoked within a workflow execution.</p>							
+							<p style="text-align: center;"> <b>The latest OWL encoding of the Workflow Invocation Ontology can be found <a href="http://vocab.linkeddata.es/wf-invoc/wf-invocation.owl"> here </a></b></p>
+						<div id="toc">
+						<h2>Table of Contents</h2><ul><li>
+							<a href="#introduction">1. Introduction</a></li>
+								<ul><li><a href="#namespacedeclarations">1.1 Namespace declarations</a></li></ul>
+							<a href="#ontOverview">2. Workflow Invocation Overview</a></li><li>
+							<a href="#ontDescription">3. Workflow Invocation Description</a></li>							
+							<li><a href="#crossReference">4. Cross reference for Workflow Invocation classes, properties and dataproperties</a></li>
+							<ul>
+								<li><a href="#classes">4.1 Classes</a></li>
+								<li><a href="#dataproperties">4.2 Data Properties</a></li>
+								<!--<li><a href="#dataproperties">4.3 Data Properties</a></li>-->
+							</ul>							
+							<li>
+							<a href="#references">5. References</a></li>
+							<li>
+							<a href="#ack"> Acknowledgements</a></li>
+							</li>
+							</ul>
+						</div>
+						<div id="introduction">
+						<h2>1. Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+						<p>
+						The Workflow Invocation Ontology is a simple OWL2 Ontology for representing the invocation of workflow specifications when they are sent to 
+						a workflow execution engine. This Ontology extends P-Plan [<cite><a class="bibref" href="#P-Plan" property="dc:references schema:mentions">P-Plan</a></cite>], reusing some of its classes 
+						and properties.
+						</p>
+						<p>
+						By exposing the workflow invocation parameters, we are able to determine the commands sent to the workflow execution engine with the workflow 
+						specification, which may help to understand the provenance results in case of failure. This information is also helpful to reproduce the workflow, since 
+						we can invoke the specification in the same way as in the original workflow.
+						</p>						
+						<p>
+							This document specifies the classes and properties of the Workflow Invocation ontology.
+						</p>
+						<div id="namespacedeclarations">
+						<h2>1.1. Namespace declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+						</p><div id="ns" align="center">
+						 <table>
+							<caption> <a href="#ns"> Table 2</a>: Namespaces used in the document </caption>
+							<tbody>
+							<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+							<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+							<tr><td><b>p-plan</b></td><td>&lt;http://purl.org/net/p-plan#&gt;</td></tr>
+							<tr><td><b>wf-invoc</b></td><td>&lt;http://purl.org/net/wf-invocation#&gt;</td></tr>
+							</tbody>
+						  </table>
+						  </div>
+						</div>
+						
+						<div id="ontOverview">
+						<h2>2. Workflow Invocation Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>					
+						An overview of the classes and data properties of the Workflow Invocation Ontology can be seen below (no obect properties are defined).
+						<h4>Classes</h4>
+						<ul class="hlist">							
+							<li>
+							<a href="#Step" title="http://purl.org/net/wf-invocation#Step">wf-invoc:Step</a>
+							</li>
+							<li>
+							<a href="#Variable" title="http://purl.org/net/wf-invocation#Variable">wf-invoc:Variable</a>
+							</li>							
+						</ul>
+						<h4>Data properties</h4>
+						<ul class="hlist">
+							<li>
+							<a href="#hasCodeBinding" title="http://purl.org/net/wf-invocation#hasCodeBinding">wf-invoc:hasCodeBinding</a>
+							</li>
+							<li>
+							<a href="#hasDataBinding" title="http://purl.org/net/wf-invocation#hasDataBinding">wf-invoc:hasDataBinding</a>
+							</li>
+							<li>
+							<a href="#hasInvocationLine" title="http://purl.org/net/wf-invocation#hasInvocationLine">wf-invoc:hasInvocationLine</a>
+							</li>							
+							<li>
+							<a href="#hasCustomData" title="http://purl.org/net/wf-invocation#hasInvocationLine">wf-invoc:hasCustomData</a>
+							</li>														
+						</ul>						
+						
+						</div>
+						<div id="ontDescription">
+							<h2>3. Workflow Invocation Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2> 							
+							<p>
+						The Workflow Invocation Ontology extends P-Plan with two new classes (<i>wf-invoc:Step</i> and <i>wf-invoc:Variable</i>) and three data properties 
+						(<i>wf-invoc:hasDataBinding</i>, <i>wf-invoc:hasCustomData</i> and <i>wf-invoc:hasInvocationLine</i>). An overview of the ontology an be see in 
+						<a href="#image1">Image 1</a>:
+						<div id="image1" class="figure" style="text-align: center;">
+							<img src="img/image1.png" alt="Wf-invoc extending p-plan to represent workflow invocation." width="1000">
+								<div style="text-align: center;">
+								<a href="#image1">Figure 1</a>. Wf-invoc extending P-plan to represent an actual workflow invocation. Literals are represented in orange boxes
+								</div>
+							</div>
+						</p>
+						<p>
+						As shown in Figure 1, three new data properties are used to add the workflow invocation metadata to the workflow specification in P-plan. The data bindings 
+						between Variables and the actual files are linked with <i>wf-invoc:hasDataBinding</i>; the invocation line of the different Steps is specified through the 
+						<i>wf-invoc:hasInvocationLine</i> and any other metadata that the Step could require (e.g., additional tool requirements, memory restrictions, etc.) can be specified 
+						with the <i>wf-invoc:hasCustomData</i>.
+						</p>
+						<p>
+						Since the three new data properties have as domain refined p-plan classes, we have extended <i>p-plan:Step</i> and <i>p-plan:Variable</i> with <i>wf-invoc:Step</i> and 
+						<i>wf-invoc:Variable</i> respectively. These classes represent the <i>p-plan:Steps</i> and <i>p-plan:Variables</i> contextualized in a scientific workflow invocation domain. 
+						</p>						
+						</div>
+						<div id="crossReference">
+							<h2>4. Cross reference for Workflow Invocation classes and properties</h2>
+							This section provides details for each class and property defined by the Workflow Invocation Ontology.
+							<div id="classes">
+								<h2>4.1 Classes</h2>
+								<ul class="hlist">
+								<li>							
+							<li>
+							<a href="#Step" title="http://purl.org/net/wf-invocation#Step">wf-invoc:Step</a>
+							</li>
+							<li>
+							<a href="#Variable" title="http://purl.org/net/wf-invocation#Variable">wf-invoc:Variable</a>
+							</li>	
+								</ul>			
+								<div class="entity" id="Step">
+								<a name="http://purl.org/net/wf-invocation#Step"/></a>
+								<h3>wf-invoc:Step<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-invocation#Step</p>
+								<div class="comment">
+								<p>Specialization of p-plan:Step in order to be able to assert domain specific properties. A wf-invoc:Step refers to those p-plan:Steps related to the scientific workflow invocation.</p>								
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://purl.org/net/p-plan#Step"><a href="http://purl.org/net/p-plan#Step">p-plan:Step</a></span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>								
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#hasCustomData" title="http://purl.org/net/wf-invocation#hasCustomData">wf-invoc:hasCustomData</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#hasInvocationLine" title="http://purl.org/net/wf-invocation#hasInvocationLine">wf-invoc:hasInvocationLine</a>
+								<sup class="type-dp" title="data property">dp</sup>
+								</dd>								
+								</dl>
+								</div>
+								
+								<div class="entity" id="Variable">
+								<a name="http://purl.org/net/wf-invocation#Variable"/></a>
+								<h3>wf-invoc:Variable<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-invocation#Variable</p>
+								<div class="comment">
+								<p>Specialization of p-plan:Variable in order to be able to assert specific properties. A wf-invoc:Variable refers to those p-plan:Variables related to the scientific workflow invocation.</p>								
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://purl.org/net/p-plan#Variable"><a href="http://purl.org/net/p-plan#Variable">p-plan:Variable</a></span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#hasDataBinding" title="http://purl.org/net/wf-invocation#hasDataBinding">wf-invoc:hasDataBinding</a>
+								<sup class="type-dp" title="data property">dp</sup>
+								</dd>																
+								</dl>
+								</div>
+							</div>
+							
+							<div id="dataproperties">
+								<h2>4.2 Data Properties</h2>
+								<ul class="hlist">
+									<li>
+									<a href="#hasCodeBinding" title="http://purl.org/net/wf-invocation#hasCodeBinding">wf-invoc:hasCodeBinding</a>
+									</li>
+									<li>
+									<a href="#hasCustomData" title="http://purl.org/net/wf-invocation#hasCustomData">wf-invoc:hasCustomData</a>
+									</li>
+									<li>
+									<a href="#hasDataBinding" title="http://purl.org/net/wf-invocation#hasDataBinding#">wf-invoc:hasDataBinding</a>
+									</li>							
+									<li>
+									<a href="#hasInvocationLine" title="http://purl.org/net/wf-invocation#hasInvocationLine">wf-invoc:hasInvocationLine</a>
+									</li>
+								</ul>
+								
+								<div class="entity" id="hasCodeBinding">
+								<a name="http://purl.org/net/wf-invocation#hasCodeBinding"/></a>
+								<h3>wf-invoc:hasCodeBinding<sup class="type-op" title="data property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-invocation#hasCodeBinding</p>
+								<div class="comment">
+								<p>Data property used to bind a wf-invoc:Step to the code/library/software used to execute the workflow step.</p>								
+								</div>
+								<div class="description">
+								<p>								
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href ="#Step" title="http://purl.org/net/wf-invocation#Step">wf-invoc:Step</span></a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								xsd:string
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="hasCustomData">
+								<a name="http://purl.org/net/wf-invocation#hasCustomData"/></a>
+								<h3>wf-invoc:hasCustomData<sup class="type-op" title="data property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-invocation#hasCustomData</p>
+								<div class="comment">
+								<p>Data property used to link a wf-invoc:Step with any particular metadata that will be used in the execution of the Step (e.g., environment requirements, memory, etc.).</p>								
+								</div>
+								<div class="description">
+								<p>								
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href ="#Step" title="http://purl.org/net/wf-invocation#Step">wf-invoc:Step</span></a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								xsd:string
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="hasDataBinding">
+								<a name="http://purl.org/net/wf-invocation#hasDataBinding"/></a>
+								<h3>wf-invoc:hasDataBinding<sup class="type-op" title="data property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-invocation#hasDataBinding</p>
+								<div class="comment">
+								<p>Data property used to bind a wf-invoc:Variable with the path or URL where the data is available for the execution.</p>								
+								</div>
+								<div class="description">
+								<p>								
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href ="#Step" title="http://purl.org/net/wf-invocation#Variable">wf-invoc:Variable</span></a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								xsd:string
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="hasInvocationLine">
+								<a name="http://purl.org/net/wf-invocation#hasInvocationLine"/></a>
+								<h3>wf-invoc:hasInvocationLine<sup class="type-op" title="data property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-invocation#hasInvocationLine</p>
+								<div class="comment">
+								<p>Data property used to link a wf-invoc:Step with the Literal representing the invocation line of the current Step.</p>								
+								</div>
+								<div class="description">
+								<p>								
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href ="#Step" title="http://purl.org/net/wf-invocation#Step">wf-invoc:Step</span></a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								xsd:string
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								
+							</div>							
+						</div>
+						
+						<div id="references">
+								<h2>5. References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+								<ul>
+								<li id="P-Plan"><b>[P-plan]</b>: Daniel Garijo, Yolanda Gil.
+									<a href="http://www.w3.org/TR/2012/CR-prov-o-20121211/">
+									<cite>P-plan: The P-Plan Ontology</cite>
+									</a>10 November 2012. URL:
+									<a href="http://purl.org/net/p-plan">http://purl.org/net/p-plan</a></li>					
+								</ul>
+						</div>
+						<div id="ack">
+							<h2>6. Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+							<p>
+								We would like to thank Silvio Peroni for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a framework used to build part of this web page.
+							</p>
+						</div>
+						<div id="changelog">
+							<h2>Changes since last release <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+							<ul>
+								<li>Added property "hasCodeBinding" to link a workflow step to the code used in its execution.</li>
+							</ul>
+						</div>
+</body></html>

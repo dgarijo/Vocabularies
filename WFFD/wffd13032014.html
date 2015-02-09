@@ -1,0 +1,449 @@
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="dc: http://purl.org/dc/terms/ schema: http://schema.org/ prov: http://www.w3.org/ns/prov# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl#"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+/*This template uses the W3C css for working drafts, with small modifications.
+Original copyright:
+Copyright 1997-2003 W3C (MIT, ERCIM, Keio). All Rights Reserved.
+The following software licensing rules apply:
+http://www.w3.org/Consortium/Legal/copyright-software */
+body {
+padding: 2em 1em 2em 70px;
+margin: 0;
+font-family: sans-serif;
+color: black;
+background: white;
+background-position: top left;
+background-attachment: fixed;
+background-repeat: no-repeat;
+}
+:link { color: #00C; background: transparent }
+:visited { color: #609; background: transparent }
+a:active { color: #C00; background: transparent }
+a:link img, a:visited img { border-style: none } /* no border on img links */
+a img { color: white; }        /* trick to hide the border in Netscape 4 */
+@media all {                   /* hide the next rule from Netscape 4 */
+a img { color: inherit; }    /* undo the color change above */
+}
+th, td { /* ns 4 */
+font-family: sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { text-align: left }
+/* background should be transparent, but WebTV has a bug */
+h1, h2, h3 { color: #005A9C; background: white }
+h1 { font: 170% sans-serif }
+h2 { font: 140% sans-serif }
+h3 { font: 120% sans-serif }
+h3 {
+border-bottom: 1px solid navy;
+margin-top: 3px;
+padding-bottom: 5px;
+}
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+.hide { display: none }
+div.head { margin-bottom: 1em }
+div.head h1 { margin-top: 2em; clear: both }
+div.head table { margin-left: 2em; margin-top: 2em }
+p.copyright { font-size: small }
+p.copyright small { font-size: small }
+@media screen {  /* hide from IE3 */
+a[href]:hover { background: #ffa }
+}
+pre { margin-left: 2em }
+p {
+margin-top: 0.6em;
+margin-bottom: 0.6em;		  
+text-align: justify;
+}
+dt, dd { margin-top: 0; margin-bottom: 0 } /* opera 3.50 */
+dt { font-weight: bold }
+ul.toc, ol.toc {
+list-style: disc;		/* Mac NS has problem with 'none' */
+list-style: none;
+}
+@media aural {  
+h1, h2, h3 { stress: 20; richness: 90 }
+.hide { speak: none }
+p.copyright { volume: x-soft; speech-rate: x-fast }
+dt { pause-before: 20% }
+pre { speak-punctuation: code } 
+}
+/*Additional css*/
+.hlist {
+background-color: #F4FFFF;
+border: 1px solid navy;
+padding: 5px;
+}
+.hlist li {
+display: inline-table;
+list-style-type: none;
+padding-right: 20px;
+}
+.backlink {
+background-color: #F4FFFF;
+border: 1px dotted navy;
+color: black;
+float: right;
+font-size: 10pt;
+padding: 2px;
+text-align: right;
+}
+.entity {
+border: 1px solid navy;
+margin: 5px 0;
+padding: 5px;
+}
+table {
+background-color: #F4FFFF;
+border: 1px solid navy;
+margin: 20px;
+}
+table {
+text-align: center;
+vertical-align: middle;
+}
+table td {
+padding: 5px 15px;
+text-align: left;
+}
+table th {
+background-color: LightGoldenRodYellow;
+}
+pre {
+background-color: #F9F9F9;
+border: 1px dashed #2F6FAB;
+color: black;
+line-height: 1.1em;
+padding: 1em;
+}
+.type-c {
+cursor:help;
+color:orange;
+}
+.type-op {
+cursor:help;
+color:navy;   
+}
+.type-dp {
+cursor:help;
+color:green;
+}
+</style> </head>
+<span resource="" typeOf="foaf:Document schema:WebPage">
+	<title property="dc:title schema:name">The Workflow Fragment Description Ontology</title>
+	<span property="dc:created schema:dateCreated" content="17 September 2013"></span>
+	<span property="dc:isVersionOf" resource="http://purl.org/net/wf-fd"></span>
+	<span property="prov:wasDerivedFrom" resource="http://www.opmw.org/model/p-plan/#"></span>
+	<span property="dc:creator prov:wasAttributedTo schema:creator" resource="http://delicias.dia.fi.upm.es/members/DGarijo/#me"></span>
+</span>
+<body resource="http://purl.org/net/wf-fd#" typeOf="owl:Ontology schema:TechArticle"><div class="head">
+<h1 property="dc:title schema:name">The Workflow Fragment Description Ontology</h1>
+<span property="dc:modified schema:dateModified" content="12 March 2014"></span><h2>Release 12 March 2014</h2>
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://vocab.linkeddata.es/wffd/version/13032014/">http://vocab.linkeddata.es/wffd/version/13032014/</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="http://vocab.linkeddata.es/wffd/version/17092013/">http://vocab.linkeddata.es/wffd/version/17092013/</a></dd>
+</dl><dl><dt>Latest version:</dt>
+<dd><a href="http://purl.org/net/wf-fd">http://purl.org/net/wf-fd</a></dd>
+</dl><dl>
+</dl>
+<dl>
+<dt>Revision</dt>
+<dd property="schema:version">1.1</dd>
+</dl><dl><dt>Authors:</dt>
+<dd><a property="dc:creator prov:wasAttributedTo schema:author" resource="http://delicias.dia.fi.upm.es/members/DGarijo/#me" href="http://delicias.dia.fi.upm.es/members/DGarijo/#me">Daniel Garijo</a>, Ontology Engineering Group, Universidad Polit&eacute;cnica de Madrid</dd></dl>
+<dl><dt>Contributors:</dt>
+<dd><a property="dc:contributor schema:contributor prov:wasAttributedTo" resource="http://delicias.dia.fi.upm.es/members/isantana/" href="http://delicias.dia.fi.upm.es/members/isantana/">Idafen Santana</a>, Ontology Engineering Group, Universidad Polit&eacute;cnica de Madrid</dd> <dd><a property="dc:contributor schema:contributor prov:wasAttributedTo" resource="http://www.oeg-upm.net/index.php/en/teachers/11-ocorcho" href="http://www.oeg-upm.net/index.php/en/teachers/11-ocorcho">Oscar Corcho</a>, Ontology Engineering Group, Universidad Polit&eacute;cnica de Madrid</dd><dd><a property="dc:contributor schema:contributor prov:wasAttributedTo" resource="http://www.isi.edu/~gil/" href="http://www.isi.edu/~gil/">Yolanda Gil</a>, Information Sciences Institute, University of Southern California</dd></dl>
+<dl><dt>Imported Ontologies:</dt>
+<dd><a href="http://purl.org/net/p-plan#" property="schema:mentions">P-plan: The Ontology for Provenance and Plans</a></dd></dl>
+<dl><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License</a>.</dl>
+<span property="dc:license" resource="http://creativecommons.org/licenses/by-nc-sa/2.0/"></span><hr></div>
+
+<h2>Abstract</h2><p>The Workflow Fragment Description Ontology (wf-fd) is a simple ontology designed to link the common workflow fragments detected by applying graph mining techniques
+to a collection of workflows to the original workflow collection. That is, wf-fd links the common workflow fragments to the workflows where they appear.</p>
+<p style="text-align: center;"> <b> The latest owl encoding of the wf-fd ontology ontology can be found <a href="wffd1.1.owl">here</a></b></p>
+<div id="toc"><h2>Table of Contents</h2>
+<ul><li>
+<a href="#introduction">1. Introduction</a></li>
+<ul>
+	<li><a href="#namespacedeclarations">1.1 Namespace declarations</a></li>
+	<li><a href="#terminology">1.2 Terminology</a></li>
+</ul>
+<a href="#ontOverview">2. Wf-fd Overview</a></li><li>
+<a href="#ontDescription">3. Wf-fd Description</a></li>
+<li><a href="#crossReference">4. Cross reference for Wf-fd classes, properties and dataproperties</a></li>
+<ul>
+        <li><a href="#classes">4.1 Classes</a></li>
+        <li><a href="#objectproperties">4.2 Object Properties</a></li>
+		<li><a href="#dataproperties">4.3 Data Properties</a></li>
+</ul
+><li>
+<a href="#references">5. References</a></li><li>
+<a href="#acknowledgements">6. Acknowledgements</a></li>
+</ul>
+</div>
+<div id="introduction">
+	<h2>1. Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+	<p>A scientific workflow can be seen as a digital instrument that allows scientists to encode a scientific experiment in the form of a set of 
+	computational or data manipulation steps. Scientific workflows play an important role in the reproducibility and replicability of scientific experiments, 
+	as well as in repurposing and reusing results from previous experiments [<cite><a href="#GODERIS" class="bibref" property="schema:mentions">Goderis et. al.</a></cite>].
+	</p>
+	
+	<p>	
+	Given their importance in the research lifecycle, scientific workflows are beginning to be included in scientific publications, 
+	together with datasets and other elements used in the context of an experiment. At the same time, repositories of workflows like 
+	<a href="http://www.myexperiment.org/">myExperiment</a>, <a href="http://www.crowdlabs.org/">Crowdlabs</a> or  
+	<a href="https://main.g2.bx.psu.edu/root">Galaxy</a> facilitate 
+	workflow publication, exchange and reuse. These repositories currently store thousands of workflows (referred to as workflow templates), 
+	which have been uploaded by scientists in many different domains (ranging from life sciences to text analytics or astronomy).
+	</p>
+
+	<p>These workflow templates and the provenance associated to their executions are  used for different purposes: detection of the source of an error 
+	in a particular execution, determining workflow similarity among workflows, automatic workflow mining for helping in workflow design or 
+	detection of common workflow fragments among the workflow dataset.
+	</p>
+
+	<p>The Workflow Fragment Description ontology (Wf-fd) aims to model workflow fragments by connecting them to the different workflows to which they correspond.
+	The objective of the ontology is twofold:
+	<ol>
+		<li>Model the workflow fragments and how they overlap with each other independently of their connection to template.</li>
+		<li>Model how the workflow fragments can be found within workflow templates.</li>
+	</ol>
+	</p>
+	<p>
+	The Wf-fd ontology complements the work described in [<cite><a href="#GARIJO" class="bibref" property="schema:mentions">Garijo et. al.</a></cite>], where an approach for detecting 
+	common workflow fragments is described. Some of the descriptions and motivation used in this document are extracted from that publication.
+	</p>
+
+<div id="namespacedeclarations">
+<h2>1.1. Namespace declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+</p><div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>wffd</b></td><td>&lt;http://purl.org/net/wf-fd#&gt;</td></tr>
+<tr><td><b>p-plan</b></td><td>&lt;http://purl.org/net/p-plan#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="terminology">
+<h2>1.2. Terminology <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+</p>
+In this document we use workflow related terminology. The following list covers the main concept used across the document:
+<ul>
+<li><b>Workflow / Workflow template</b>: digital instrument that allows scientists to encode a scientific experiment in the form of a set of computational or data manipulation steps.
+Workflows can be seen as graphs, where the nodes are the data manipulation steps and the edges are the dependencies among them. In this work workflows are connected Directed Acyclic Graphs (DAGs).</li>
+<li><b>Workflow Step</b>: individual piece of functionality belonging to a workflow. For example the invocation of a script or a web service. A step can be a subworkflow.</li>
+<li><b>Workflow Fragment</b>: Set of connected steps that are part of a bigger workflow.</li>
+</ul>
+</div>
+</div>
+<div id="ontOverview">
+<h2>2. Wf-fd Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>Wf-fd extends the <a href="http://purl.org/net/p-plan#">Ontology for provenance and plans</a> (P-plan) to link workflow fragments to the workflow templates where they can be found. The next tables summarize the classes and properties that have been used to 
+extend or complement P-plan to adapt it to our particular domain. No dataproperties are included, because Wf-fd doesn't define any:</p>
+<h4>4.1 Classes</h4><ul class="hlist">
+<li>
+<a href="#TiedResultWorkflowFragment" title="http://purl.org/net/wf-fd#TiedResultWorkflowFragment">wffd:TiedResultWorkflowFragment</a>
+</li>
+<li>
+<a href="#DetectedResultWorkflowFragment" title="http://purl.org/net/wf-fd#DetectedResultWorkflowFragment">wffd:DetectedResultWorkflowFragment</a>
+</li>
+<li>
+<a href="#WorkflowFragment" title="http://purl.org/net/wf-fd#WorkflowFragment">wffd:WorkflowFragment</a>
+</li>
+</ul>
+<h4>4.2 Properties</h4><ul class="hlist">
+<li>
+<a href="#foundAs" title="http://purl.org/net/wf-fd#foundAs">wffd:foundAs</a>
+</li>
+<li>
+<a href="#foundIn" title="http://purl.org/net/wf-fd#foundIn">wffd:foundIn</a>
+</li>
+<li>
+<a href="#isPartOfWorkflowFragment" title="http://purl.org/net/wf-fd#isPartOfWorkflowFragment">wffd:isPartOfWorkflowFragment</a>
+</li>
+</ul>
+<h4>4.3 Data Properties</h4><ul class="hlist">
+<li>
+<a href="#detectedByAlgorithm" title="http://purl.org/net/wf-fd#detectedByAlgorithm">wffd:detectedByAlgorithm</a>
+</li>
+</ul>
+</div>
+<div id="ontDescription">
+<h2>3. Wf-fd Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>As stated, the Wf-fd ontology aims to link workflow fragments to their occurrences in workflow templates. A <code>wffd:WorkflowFragment</code> extends 
+ <code>p-plan:Plan</code>, since a fragment of a workflow is a workflow itself (which is also a type of p-plan:Plan). A workflow fragment has steps 
+ (<code>p-plan:Step</code>) which represent the individual data manipulation steps of a particular fragment.
+</p>
+<p>
+There are two types of <code>wffd:WorkflowFragments</code>: <code>wffd:DetectedResultWorkflowFragment</code> and <code>wffd:TiedWorkflowFragment</code>. The 
+former refers to those workflow fragments found as a result of applying graph mining techniques among a workflow collection (i.e., the results of the algorithms).
+The latter is used to represent how a particular result workflow fragment is bound to a part of a workflow template. This separation is necessary to 
+properly point to the different parts of a workflow where a fragment appears. For instance, if we find that a fragment appears twice in a workflow, then we need
+two <code>wffd:TiedWorkflowFragments</code> to group the workflow steps belonging to each fragment. For this we use the relationship <code>wffd:foundAs</code>, 
+which links a <code>wffd:DetectedResultWorkflowFragment</code> to the <code>wffd:TiedWorkflowFragment</code> which represents it in the workflow.
+</p>
+<p>
+Workflow fragments may be included in other workflow fragments. In order to capture this overlap among the detected result workflow fragments, we use the relationship <code>wffd:isPartOfWorkflowFragment</code>.
+This facilitates querying the results, being able to retrieve efficiently the fragments related to each other.
+</p>
+<p>Another function to facilitate relating fragments is <code>wffd:foundIn</code>. This function connects a <code>wffd:DetectedResultWorkflowFragment</code> to the Workflow (<code>p-plan:Plan</code>) where it was found (i.e., where one or more <code>wffd:TiedWorkflowFragments</code> have been <code>wffd:foundAs</code>).
+</p>
+<p>
+Workflow fragments are composed by steps (<code>p-plan:Step</code>). Since we are interested in representing the ordering of the steps in the result fragment, we use the property <code>p-plan:isPrecededBy</code>
+between detected result fragment steps. The ordering of other workflow fragment steps, such as the ones belonging to a tied workflow fragment, is out of the scope of Wf-fd. 
+</p>
+<p>
+The Wf-fd complete diagram can be seen in <a href="#figure_overview">Figure 1</a> below.
+</p>
+							
+							<div id="figure_overview" class="figure" style="text-align: center;">
+							<img src="images/wfdDiagramv1.1.svg" alt="Wf-fd as an extension of p-plan." >
+								<div style="text-align: center;">
+								<a href="#figure_overview">Figure 1</a>. Wf-fd as an extension of p-plan: 
+								Workflow fragments are represented as plans with steps. The extension is represented in blue, while in orange the original classes are shown.
+								</div>
+							</div>
+							
+<p>
+An example of usage of the Wf-fd ontology can be seen in <a href="#figure_example">Figure 2</a>. Three workflows are represented on the top of the figure 
+(Workflow 1, Workflow 2 and Workflow 3) with their steps coloured in orange. Each step has its URI represented on the top (e.g., :step1W1), while their type
+is represented in angle brackets. In order to avoid adding complexity to the figure, only the relevant type of the step for detecting the fragments is shown
+ (e.g., &lt;A&gt;, &lt;B&gt;, etc).
+</p>
+<p>
+On the bottom of the figure the two detected result workflow fragments are shown. As depicted in 
+<a href="#figure_overview">Figure 1</a>, each workflow fragment step belongs to a workflow fragment. The detected result workflow fragments (shown in yellow)
+are linked to their tied workflow fragment (parts of the original workflows where they appear, shown in green) with the <code>wffd:foundAs</code> relationship. Each fragment is also 
+directly connected to the original workflow with the property <code>wffd:foundIn</code>. 
+</p>
+						<div id="figure_example" class="figure" style="text-align: center;">
+							<img src="images/exampleDiagram1.1.svg" alt="Example of usage." >
+								<div style="text-align: center;">
+								<a href="#figure_example">Figure 2</a>. Wf-fd: example of usage. On the top side of the figure some workflows of the workflow collection are represented.
+								The names of their staps are different, but some of their types are common. On the bottom part of the figures we can see the fragments detected (yellow plus
+								 orange). With the help pf wf-fd, all the fragments are properly represented anb bound to their corresponding fragments in the workflow templates.
+								</div>
+							</div>
+</div>
+</div>
+<div id="crossReference">
+<h2>4. Cross reference for Wf-fd classes and properties</h2>
+This section provides details for each class and property defined by Wf-fd.
+<div id="classes"><h2>4.1 Classes</h2><ul class="hlist"><li><a href="#TiedResultWorkflowFragment" title="http://purl.org/net/wf-fd#TiedResultWorkflowFragment">wffd:TiedResultWorkflowFragment</a></li><li><a href="#DetectedResultWorkflowFragment" title="http://purl.org/net/wf-fd#DetectedResultWorkflowFragment">wffd:DetectedResultWorkflowFragment</a></li><li><a href="#WorkflowFragment" title="http://purl.org/net/wf-fd#WorkflowFragment">wffd:WorkflowFragment</a></li></ul><div class="entity" id="TiedResultWorkflowFragment"><h3>wffd:TiedResultWorkflowFragment<sup class="type-c" title="class">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/net/wf-fd#TiedResultWorkflowFragment</p><div class="comment"><p>A Tied Workflow Result Fragment is a Workflow Fragment used as an auxiliary structure to point to Workflow Steps of a collection of workflows. </p></div><dl class="description"><dt>has super-classes</dt><dd><a href="#WorkflowFragment" title="http://purl.org/net/wf-fd#WorkflowFragment">wffd:WorkflowFragment</a><sup class="type-c" title="class">c</sup></dd><dt>is in range of</dt><dd><a href="#foundAs" title="http://purl.org/net/wf-fd#foundAs">wffd:foundAs</a><sup class="type-op" title="object property">op</sup></dd></dl></div><div class="entity" id="DetectedResultWorkflowFragment"><h3>wffd:DetectedResultWorkflowFragment<sup class="type-c" title="class">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/net/wf-fd#DetectedResultWorkflowFragment</p><div class="comment"><p>A Detected Result Workflow Fragment is a Workflow Fragment detected automatically by using graph matching tecnhiques over a workflow collection. 
+This fragment is a result of the algortihms and it is composed of Detected Result Steps.</p></div><dl class="description"><dt>has super-classes</dt><dd><a href="#WorkflowFragment" title="http://purl.org/net/wf-fd#WorkflowFragment">wffd:WorkflowFragment</a><sup class="type-c" title="class">c</sup></dd><dt>is in domain of</dt><dd><a href="#foundAs" title="http://purl.org/net/wf-fd#foundAs">wffd:foundAs</a><sup class="type-op" title="object property">op</sup>, <a href="#foundIn" title="http://purl.org/net/wf-fd#foundIn">wffd:foundIn</a>
+<sup class="type-op" title="object property">op</sup>, <a href="#isPartOfWorkflowFragment" title="http://purl.org/net/wf-fd#isPartOfWorkflowFragment">wffd:isPartOfWorkflowFragment</a> <sup class="type-op" title="object property">op</sup>, <a href="#detectedByAlgorithm" title="http://purl.org/net/wf-fd#detectedByAlgorithm">wffd:detectedByAlgorithm</a> <sup class="type-dp" title="object property">dp</sup></dd>
+<dt>is in range of</dt>
+<dd>
+<a href="#isPartOfWorkflowFragment" title="http://purl.org/net/wf-fd#isPartOfWorkflowFragment">wffd:isPartOfWorkflowFragment</a> <sup class="type-op" title="object property">op</sup>
+</dd></dl></div><div class="entity" id="WorkflowFragment"><h3>wffd:WorkflowFragment<sup class="type-c" title="class">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/net/wf-fd#WorkflowFragment</p><div class="comment"><p>A Workflow Fragment is a set of connected steps which belongs as part of a scientific workflow. A Workflow Fragment is a directed acyclic graph (DAG) and may have one or more Steps.</p><p>There are two types of Workflow Fragments: The Tied Result Workflow Fragments and the Detected Result Workflow Fragments. On one hand, the Detected Result 
+Workflow Fragments are used to describe the results of the graph matching algorithms applied to a workflow collection. On the other hand, the Tied Workflow 
+Result Fragments are auxiliary structures to point out the Steps of a Workflow belonging to a Detected Result Workflow Fragment .</p></div><dl class="description"><dt>has super-classes</dt><dd><span class="dotted" title="http://purl.org/net/p-plan#Plan"><a href="http://purl.org/net/p-plan#Plan">p-plan:Plan</a></span><sup class="type-c" title="class">c</sup></dd><dt>has sub-classes</dt><dd><a href="#TiedResultWorkflowFragment" title="http://purl.org/net/wf-fd#TiedResultWorkflowFragment">wffd:TiedResultWorkflowFragment</a><sup class="type-c" title="class">c</sup>, <a href="#DetectedResultWorkflowFragment" title="http://purl.org/net/wf-fd#DetectedResultWorkflowFragment">wffd:DetectedResultWorkflowFragment</a><sup class="type-c" title="class">c</sup></dd>
+<dt>is in domain of</dt>
+<dd>
+<a href="#isPartOfWorkflowFragment" title="http://purl.org/net/wf-fd#isPartOfWorkflowFragment">wffd:isPartOfWorkflowFragment</a>
+<sup class="type-op" title="object property">op</sup>
+</dd>
+<dt>is in range of</dt><dd><a href="#isPartOfWorkflowFragment" title="http://purl.org/net/wf-fd#isPartOfWorkflowFragment">wffd:isPartOfWorkflowFragment</a>
+<sup class="type-op" title="object property">op</sup></dd></dl></div></div><div id="objectproperties"><h2>4.2 Object Properties</h2><ul class="hlist">
+<li>
+<a href="#foundAs" title="http://purl.org/net/wf-fd#foundAs">wffd:foundAs</a>
+</li>
+<li>
+<a href="#foundIn" title="http://purl.org/net/wf-fd#foundIn">wffd:foundIn</a>
+</li>
+<li>
+<a href="#isPartOfWorkflowFragment" title="http://purl.org/net/wf-fd#isPartOfWorkflowFragment">wffd:isPartOfWorkflowFragment</a>
+</li>
+</ul><div class="entity" id="foundAs"><h3>wffd:foundAs<sup class="type-op" title="object property">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/net/wf-fd#foundAs</p><div class="comment"><p>Property that links a Detected Result Workflow Fragment to a Tied Result Workflow Fragment. That is, this property links a workflow fragment found as a result of applying graph mining techniques to a collection of workflows to the correspondant fragment of the workflow itself.</p></div><div class="description"><dl><dt>has domain</dt><dd><a href="#DetectedResultWorkflowFragment" title="http://purl.org/net/wf-fd#DetectedResultWorkflowFragment">wffd:DetectedResultWorkflowFragment</a><sup class="type-c" title="class">c</sup></dd><dt>has range</dt><dd><a href="#TiedResultWorkflowFragment" title="http://purl.org/net/wf-fd#TiedResultWorkflowFragment">wffd:TiedResultWorkflowFragment</a><sup class="type-c" title="class">c</sup></dd></dl></div></div>
+
+<div class="entity" id="foundIn">
+<h3>wffd:foundIn<sup class="type-op" title="object property">op</sup>
+<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+</span>
+</h3>
+<p>
+<strong>IRI:</strong> http://purl.org/net/wf-fd#foundIn</p>
+<div class="comment">
+<p>Property used to state in which workflows (p-plan:Plans) has a wffd:DetectedResultWorkflowFragment been found</p>
+</div>
+<div class="description">
+<dl>
+<dt>has domain</dt>
+<dd>
+<a href="#DetectedResultWorkflowFragment" title="http://purl.org/net/wf-fd#DetectedResultWorkflowFragment">wffd:DetectedResultWorkflowFragment</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+<dt>has range</dt>
+<dd>
+<a href="http://purl.org/net/p-plan#Plan" title="http://purl.org/net/p-plan#Plan">p-plan:Plan</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+</dl>
+</div>
+</div>
+<div class="entity" id="isPartOfWorkflowFragment"><h3>wffd:isPartOfWorkflowFragment<sup class="type-op" title="object property">op</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3><p><strong>IRI:</strong> http://purl.org/net/wf-fd#isPartOfWorkflowFragment</p><div class="comment"><p>Property that specifies which Workflow Fragments overlap with each other. In this case an overlap means to be included partially (or completely) as part of another fragment</p></div><div class="description"><dl><dt>has domain</dt><dd><a href="#WorkflowFragment" title="http://purl.org/net/wf-fd#WorkflowFragment">wffd:WorkflowFragment</a><sup class="type-c" title="class">c</sup></dd><dt>has range</dt><dd><a href="#WorkflowFragment" title="http://purl.org/net/wf-fd#WorkflowFragment">wffd:WorkflowFragment</a><sup class="type-c" title="class">c</sup></dd></dl></div></div></div>
+<div id="dataproperties">
+<h2>4.3 Data Properties</h2>
+<ul class="hlist">
+<li>
+<a href="#detectedByAlgorithm" title="http://purl.org/net/wf-fd#detectedByAlgorithm">wffd:detectedByAlgorithm</a>
+</li>
+</ul>
+<div class="entity" id="detectedByAlgorithm">
+<h3>wffd:detectedByAlgorithm<sup class="type-dp" title="object property">dp</sup>
+<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Object Data Property ToC</a>
+</span>
+</h3>
+<p>
+<strong>IRI:</strong> http://purl.org/net/wf-fd#detectedByAlgorithm</p>
+<div class="comment">
+<p>Property used to link a wffd:DetectedResultWorkflowFragment with the algorithm used to detect it. The name of the algorithm will be a Literal.</p>
+</div>
+<div class="description">
+<dl>
+<dt>has domain</dt>
+<dd>
+<a href="#DetectedResultWorkflowFragment" title="http://purl.org/net/wf-fd#DetectedResutlWorkflowFragment">wffd:DetectedResutlWorkflowFragment</a>
+<sup class="type-c" title="class">c</sup>
+</dd>
+<dt>has range</dt>
+<dd>
+xsd:String
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="references">
+<h2>5. References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<ul>
+	<li id="GODERIS"><b>[Goderis et. al.]</b>: Goderis, A.; Sattler, U.; Lord, P. W. and Goble, C. A.
+		<cite>Seven Bottlenecks to Workflow Reuse and Repurposing</cite>
+		11 December 2012, W3C Candidate Recommendation.	International Semantic Web Conference, Springer, 2005, 323-337</li>
+									
+	<li id="GARIJO"><b>[Garijo et. al.]</b>: Garijo, D.; Corcho, O.;  and Gil, Y. <a href="http://www.isi.edu/~gil/papers/garijo-etal-kcap13.pdf">
+		<cite>Detecting Common Scientific Workflow Fragments Using Templates and Execution Provenance</cite></a>. 
+		Seventh ACM International Conference on Conference on Knowledge Capture, Banff, Canada, 2013</li>
+</ul>
+</div>
+<div id="acknowledgements">
+<h2>6. Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>The authors would like to thanks <a href="http://palindrom.es/phd/whoami/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment used for representing the Corss Referencing Section of this document.</p>
+</div>
+<div id="changelog">
+<h2> Changes from last version</h2>
+<ul>
+<li>Added the wffd:foundIn relationship</li>
+<li>Added the wffd:detectedByAlgorithm relationship</li>
+<li>Renamed wffd:overlapsWithWorkflowFragment to wffd:isPartOfWorkflowFragment</li>
+</ul>
+</div>
+</body></html>

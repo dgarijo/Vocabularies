@@ -1,0 +1,859 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY ns2 "http://rdfs.org/sioc/ns#" >
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY ns "http://purl.org/net/opmv/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY mpeg7 "http://metadata.net/mpeg7/mpeg7.owl#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY opmo2 "http://openprovenance.org/model/opmo#" >
+    <!ENTITY wgs84_pos "http://www.w3.org/2003/01/geo/wgs84_pos#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ontology "http://webenemasuno.linkeddata.es/ontology/" >
+    <!ENTITY OPMO "http://webenemasuno.linkeddata.es/ontology/OPMO/" >
+    <!ENTITY opmo "http://openprovenance.org/model/opmo-20101012.owl" >
+]>
+
+
+<rdf:RDF xmlns="http://webenemasuno.linkeddata.es/ontology/"
+     xml:base="http://webenemasuno.linkeddata.es/ontology/"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:mpeg7="http://metadata.net/mpeg7/mpeg7.owl#"
+     xmlns:opmo2="http://openprovenance.org/model/opmo#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:OPMO="&ontology;OPMO/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:opmo="http://openprovenance.org/model/opmo-20101012.owl"
+     xmlns:ontology="http://webenemasuno.linkeddata.es/ontology/"
+     xmlns:ns="http://purl.org/net/opmv/ns#"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns2="http://rdfs.org/sioc/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="&ontology;OPMO/">
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <terms:title xml:lang="en">El Viajero Ontology</terms:title>
+        <terms:description xml:lang="en">OPMO profile for a News and Blogs scenario. Extension for modeling travels and routes.</terms:description>
+        <dc:creator>http://boris.villazon.terrazas.name/foaf.ttl#boricles</dc:creator>
+        <terms:creator xml:lang="en">http://purl.org/net/dgarijo#me</terms:creator>
+        <owl:imports rdf:resource="http://openprovenance.org/model/opmo-20101012.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/hasDistance -->
+
+    <owl:ObjectProperty rdf:about="&ontology;OPMO/hasDistance">
+        <rdfs:label xml:lang="en">distance</rdfs:label>
+        <rdfs:label xml:lang="es">distacia</rdfs:label>
+        <rdfs:range rdf:resource="&ontology;OPMO/DistanceRangeValue"/>
+        <rdfs:domain rdf:resource="&ontology;OPMO/Trip"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/hasDuration -->
+
+    <owl:ObjectProperty rdf:about="&ontology;OPMO/hasDuration">
+        <rdfs:label xml:lang="en">hasDuration</rdfs:label>
+        <rdfs:label xml:lang="es">tieneDuracion</rdfs:label>
+        <rdfs:range rdf:resource="&ontology;OPMO/DurationRangeValue"/>
+        <rdfs:domain rdf:resource="&ontology;OPMO/Trip"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/hasItinerary -->
+
+    <owl:ObjectProperty rdf:about="&ontology;OPMO/hasItinerary">
+        <rdfs:label xml:lang="en">hasItinerary</rdfs:label>
+        <rdfs:label xml:lang="es">tieneItinerario</rdfs:label>
+        <rdfs:comment xml:lang="en">A trip has one (or more) itineraries</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un Viaje tiene un itinerario (o mas)</rdfs:comment>
+        <rdfs:range rdf:resource="&ontology;OPMO/Itinerary"/>
+        <rdfs:domain rdf:resource="&ontology;OPMO/Trip"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/hasPart -->
+
+    <owl:ObjectProperty rdf:about="&ontology;OPMO/hasPart">
+        <rdfs:label xml:lang="en">hasPart</rdfs:label>
+        <rdfs:label xml:lang="es">tieneElementoDeItinerario</rdfs:label>
+        <rdfs:comment xml:lang="es">An itinerary has elements which contains points and order to be able to visualize the trip</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un itinerario tiene elementos que contienen puntos y orden para poder visualizar el viaje</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;OPMO/Itinerary"/>
+        <rdfs:range rdf:resource="&ontology;OPMO/PathElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/hasPoint -->
+
+    <owl:ObjectProperty rdf:about="&ontology;OPMO/hasPoint">
+        <rdfs:label xml:lang="en">hasPoint</rdfs:label>
+        <rdfs:label xml:lang="en">tienePunto</rdfs:label>
+        <rdfs:comment xml:lang="en">A path element has a point (with cooordinates)</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un elemento del itinerario tiene un punto (coordenadas)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;OPMO/PathElement"/>
+        <rdfs:range rdf:resource="&wgs84_pos;Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/hasPrice -->
+
+    <owl:ObjectProperty rdf:about="&ontology;OPMO/hasPrice">
+        <rdfs:label xml:lang="en">hasPrice</rdfs:label>
+        <rdfs:label xml:lang="es">tienePrecio</rdfs:label>
+        <rdfs:range rdf:resource="&ontology;OPMO/PriceRangeValue"/>
+        <rdfs:domain rdf:resource="&ontology;OPMO/Trip"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/hasRecommended -->
+
+    <owl:ObjectProperty rdf:about="&ontology;OPMO/hasRecommended">
+        <rdfs:label xml:lang="en">hasRecommended</rdfs:label>
+        <rdfs:label xml:lang="es">HaRecomendado</rdfs:label>
+        <rdfs:comment xml:lang="en">An agent has recommended some artifact (e.g. guide)</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un agente recomienda un artefacto (ej. guía)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ns;Agent"/>
+        <rdfs:range rdf:resource="&ns;Artifact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/place -->
+
+    <owl:ObjectProperty rdf:about="&ontology;OPMO/place">
+        <rdfs:label xml:lang="en">place</rdfs:label>
+        <rdfs:label xml:lang="es">lugar</rdfs:label>
+        <rdfs:comment xml:lang="en">Place where the artifact was produced</rdfs:comment>
+        <rdfs:comment xml:lang="es">Lugar en el que se produjo el artefacto</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/spatialRelationship"/>
+        <rdfs:range rdf:resource="&wgs84_pos;SpatialThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/recommendedBy -->
+
+    <owl:ObjectProperty rdf:about="&ontology;OPMO/recommendedBy">
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label xml:lang="en">recommendedBy</rdfs:label>
+        <rdfs:label xml:lang="es">RecomendadoPor</rdfs:label>
+        <rdfs:comment xml:lang="en">A content is recommended by someone</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un contenido es recomendado por alguien</rdfs:comment>
+        <rdfs:range rdf:resource="&ns;Agent"/>
+        <rdfs:domain rdf:resource="&ns;Artifact"/>
+        <owl:inverseOf rdf:resource="&ontology;OPMO/hasRecommended"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/refersTo -->
+
+    <owl:ObjectProperty rdf:about="&ontology;OPMO/refersTo">
+        <rdfs:label xml:lang="en">refersTo</rdfs:label>
+        <rdfs:label xml:lang="es">seRefiereA</rdfs:label>
+        <rdfs:comment xml:lang="en">Location which something (e.g. a guide) refers to</rdfs:comment>
+        <rdfs:comment xml:lang="es">Lugar al que se refiere algo (como una guía)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/spatialRelationship"/>
+        <rdfs:range rdf:resource="&wgs84_pos;SpatialThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/spatialRelationship -->
+
+    <owl:ObjectProperty rdf:about="&ontology;OPMO/spatialRelationship">
+        <rdfs:label xml:lang="en">spatialRelationship</rdfs:label>
+        <rdfs:label xml:lang="es">Relacion espacial</rdfs:label>
+        <rdfs:comment xml:lang="en">Relates an OPM concept to a location</rdfs:comment>
+        <rdfs:comment xml:lang="es">Relaciona un concepto del OPM con un lugar</rdfs:comment>
+        <rdfs:domain rdf:resource="&opmo2;Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+    <owl:ObjectProperty rdf:about="&owl;sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://openprovenance.org/model/opmo#content -->
+
+    <owl:DatatypeProperty rdf:about="&opmo2;content"/>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#content -->
+
+    <owl:DatatypeProperty rdf:about="&ns2;content">
+        <rdfs:subPropertyOf rdf:resource="&opmo2;content"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/IPTCMediaType -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/IPTCMediaType">
+        <rdfs:label xml:lang="en">IPTCMediaType</rdfs:label>
+        <rdfs:label xml:lang="es">TipoIPTC</rdfs:label>
+        <rdfs:domain rdf:resource="&ontology;OPMO/Guide"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/artifactDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/IPTCMimeType -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/IPTCMimeType">
+        <rdfs:label xml:lang="en">IPTCMimeType</rdfs:label>
+        <rdfs:label xml:lang="es">TipoMIMEIPTC</rdfs:label>
+        <rdfs:domain rdf:resource="&ontology;OPMO/Guide"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/artifactDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/artifactDescription -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/artifactDescription">
+        <rdfs:label xml:lang="en">artifactDescription</rdfs:label>
+        <rdfs:label xml:lang="es">descripcionDelArtefacto</rdfs:label>
+        <rdfs:comment xml:lang="en">Description of the artifact</rdfs:comment>
+        <rdfs:domain rdf:resource="&ns;Artifact"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/hasOrder -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/hasOrder">
+        <rdfs:label xml:lang="en">hasOrder</rdfs:label>
+        <rdfs:label xml:lang="es">tieneOrden</rdfs:label>
+        <rdfs:comment xml:lang="en">Order of the element in the itinerary</rdfs:comment>
+        <rdfs:comment xml:lang="es">Orden del elemento en el itinerario</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;OPMO/PathElement"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/language -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/language">
+        <rdfs:label xml:lang="en">Languaje</rdfs:label>
+        <rdfs:label xml:lang="es">Lenguaje</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/artifactDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/lessEurosThan -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/lessEurosThan">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">less euros than</rdfs:label>
+        <rdfs:label xml:lang="es">menor cantidad de euros que</rdfs:label>
+        <rdfs:comment xml:lang="en">The total cost of the trip is less than (...) euros</rdfs:comment>
+        <rdfs:comment xml:lang="es">El coste total del viaje es inferior a (...) euros</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;OPMO/PriceRangeValue"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/lessThan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/lessKmThan -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/lessKmThan">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">less kilometers than</rdfs:label>
+        <rdfs:label xml:lang="es">menos kilómetros que</rdfs:label>
+        <rdfs:comment xml:lang="en">the total distance of the trip is less than (...) km</rdfs:comment>
+        <rdfs:comment xml:lang="es">La distancia total del viaje es inferior a (...) km</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;OPMO/DistanceRangeValue"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/lessThan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/lessThan -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/lessThan">
+        <rdfs:label xml:lang="en">lessThan</rdfs:label>
+        <rdfs:label xml:lang="es">menosQue</rdfs:label>
+        <rdfs:domain rdf:resource="&ontology;OPMO/RangeValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/lessWeeksThan -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/lessWeeksThan">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">less weeks than</rdfs:label>
+        <rdfs:label xml:lang="es">duración menor a número de semanas</rdfs:label>
+        <rdfs:comment xml:lang="en">the duration of the trip is less than (...) weeks</rdfs:comment>
+        <rdfs:comment xml:lang="es">La duración del viaje en semanas es inferior a</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;OPMO/DurationRangeValue"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/lessThan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/longit -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/longit">
+        <rdfs:label xml:lang="en">longit</rdfs:label>
+        <rdfs:label xml:lang="es">longit</rdfs:label>
+        <rdfs:comment xml:lang="en">Longitude of the content of the artifact (number of words, bytes, etc)</rdfs:comment>
+        <rdfs:comment xml:lang="es">Longitud del contenido del artefacto (en palabras, bytes, etc)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/artifactDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/longitMeasure -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/longitMeasure">
+        <rdfs:label xml:lang="es">longitMeasure</rdfs:label>
+        <rdfs:label xml:lang="es">medidaLongitud</rdfs:label>
+        <rdfs:comment xml:lang="en">Longitude measure (words, bytes, etc)</rdfs:comment>
+        <rdfs:comment xml:lang="es">Medida de longitud (palabra, byte, etc.)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/artifactDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/moreEurosThan -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/moreEurosThan">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">more euros than</rdfs:label>
+        <rdfs:label xml:lang="es">precio superior en euros a</rdfs:label>
+        <rdfs:comment xml:lang="en">the total cost of the trip is greater than (...) euros</rdfs:comment>
+        <rdfs:comment xml:lang="es">El coste total del viaje es superior a (...) euros</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;OPMO/PriceRangeValue"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/moreThan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/moreKmThan -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/moreKmThan">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">more kilometers than</rdfs:label>
+        <rdfs:label xml:lang="es">distancia mayor a kilómetros</rdfs:label>
+        <rdfs:comment xml:lang="en">the distance covered by the trip is greater than (...) km</rdfs:comment>
+        <rdfs:comment xml:lang="es">La distancia cubierta por el viaje es superior a (...) km</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;OPMO/DistanceRangeValue"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/moreThan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/moreThan -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/moreThan">
+        <rdfs:label xml:lang="en">more than</rdfs:label>
+        <rdfs:label xml:lang="es">más que</rdfs:label>
+        <rdfs:domain rdf:resource="&ontology;OPMO/RangeValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/moreWeeksThan -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/moreWeeksThan">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">more weeks than</rdfs:label>
+        <rdfs:label xml:lang="es">duración mayor en semanas</rdfs:label>
+        <rdfs:comment xml:lang="en">The duration of the trip is greater than (..) weeks</rdfs:comment>
+        <rdfs:comment xml:lang="es">La duración del viaje en semanas es superior a</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;OPMO/DurationRangeValue"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/moreThan"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/page -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/page">
+        <rdfs:label xml:lang="en">page</rdfs:label>
+        <rdfs:label xml:lang="es">página</rdfs:label>
+        <rdfs:comment xml:lang="en">Page in which the guide was published</rdfs:comment>
+        <rdfs:comment xml:lang="es">Página en la que la guía se publicó</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;OPMO/Guide"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/artifactDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/subtitle -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/subtitle">
+        <rdfs:label xml:lang="en">subtitle</rdfs:label>
+        <rdfs:label xml:lang="es">subtítulo</rdfs:label>
+        <rdfs:comment xml:lang="en">Subtitle of the artifact (e.g. subtitle of the photo, video, guide, etc)</rdfs:comment>
+        <rdfs:comment xml:lang="es">Subtítulo del artefacto (guía, foto, vídeo, post, etc.)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&ontology;OPMO/artifactDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/tripDescription -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;OPMO/tripDescription">
+        <rdfs:domain rdf:resource="&ontology;OPMO/Trip"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:DatatypeProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:DatatypeProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Image -->
+
+    <owl:Class rdf:about="&mpeg7;Image">
+        <owl:equivalentClass rdf:resource="&ontology;OPMO/Image"/>
+    </owl:Class>
+    
+
+
+    <!-- http://metadata.net/mpeg7/mpeg7.owl#Video -->
+
+    <owl:Class rdf:about="&mpeg7;Video">
+        <owl:equivalentClass rdf:resource="&ontology;OPMO/Video"/>
+    </owl:Class>
+    
+
+
+    <!-- http://openprovenance.org/model/opmo#Entity -->
+
+    <owl:Class rdf:about="&opmo2;Entity"/>
+    
+
+
+    <!-- http://openprovenance.org/model/opmo#Role -->
+
+    <owl:Class rdf:about="&opmo2;Role"/>
+    
+
+
+    <!-- http://openprovenance.org/model/opmo#WasDerivedFrom -->
+
+    <owl:Class rdf:about="&opmo2;WasDerivedFrom"/>
+    
+
+
+    <!-- http://purl.org/net/opmv/ns#Agent -->
+
+    <owl:Class rdf:about="&ns;Agent"/>
+    
+
+
+    <!-- http://purl.org/net/opmv/ns#Artifact -->
+
+    <owl:Class rdf:about="&ns;Artifact"/>
+    
+
+
+    <!-- http://purl.org/net/opmv/ns#Process -->
+
+    <owl:Class rdf:about="&ns;Process"/>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#Container -->
+
+    <owl:Class rdf:about="&ns2;Container"/>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#Item -->
+
+    <owl:Class rdf:about="&ns2;Item"/>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#Post -->
+
+    <owl:Class rdf:about="&ns2;Post">
+        <owl:equivalentClass rdf:resource="&ontology;OPMO/Post"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/AditionalInformationRole -->
+
+    <owl:Class rdf:about="&ontology;OPMO/AditionalInformationRole">
+        <rdfs:label xml:lang="en">AditionalInformationRole</rdfs:label>
+        <rdfs:label xml:lang="es">RolDeInformaciónAdicional</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&opmo2;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/AggregationProcess -->
+
+    <owl:Class rdf:about="&ontology;OPMO/AggregationProcess">
+        <rdfs:label xml:lang="en">Content aggregation process</rdfs:label>
+        <rdfs:label xml:lang="es">Proceso de agregación de contenidos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/ContentCreatorRole -->
+
+    <owl:Class rdf:about="&ontology;OPMO/ContentCreatorRole">
+        <rdfs:label xml:lang="en">ContentCreatorRole</rdfs:label>
+        <rdfs:label xml:lang="es">RolDeCreadorDeContenidos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&opmo2;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/ContentModifierRole -->
+
+    <owl:Class rdf:about="&ontology;OPMO/ContentModifierRole">
+        <rdfs:label xml:lang="en">ContentModifierRole</rdfs:label>
+        <rdfs:label xml:lang="es">Rol de modificación de contenidos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&opmo2;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/ContentProvider -->
+
+    <owl:Class rdf:about="&ontology;OPMO/ContentProvider">
+        <rdfs:label xml:lang="en">ContentProvider</rdfs:label>
+        <rdfs:label xml:lang="es">ProveedorDeContenidos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/CreationProcess -->
+
+    <owl:Class rdf:about="&ontology;OPMO/CreationProcess">
+        <rdfs:label xml:lang="en">Content creation process</rdfs:label>
+        <rdfs:label xml:lang="es">Proceso de creación de contenidos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/DistanceRangeValue -->
+
+    <owl:Class rdf:about="&ontology;OPMO/DistanceRangeValue">
+        <rdfs:label xml:lang="en">Distance range values</rdfs:label>
+        <rdfs:label xml:lang="es">Rango de valores de distancia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;OPMO/RangeValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/DurationRangeValue -->
+
+    <owl:Class rdf:about="&ontology;OPMO/DurationRangeValue">
+        <rdfs:label xml:lang="en">Duration range value</rdfs:label>
+        <rdfs:label xml:lang="es">Rango de valores de duración</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;OPMO/RangeValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/ExternalResource -->
+
+    <owl:Class rdf:about="&ontology;OPMO/ExternalResource">
+        <rdfs:label xml:lang="en">External resource</rdfs:label>
+        <rdfs:label xml:lang="es">Recurso externo (a la plataforma)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Artifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/Guide -->
+
+    <owl:Class rdf:about="&ontology;OPMO/Guide">
+        <rdfs:label xml:lang="en">Guide</rdfs:label>
+        <rdfs:label xml:lang="es">Guía</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Artifact"/>
+        <rdfs:subClassOf rdf:resource="&ns2;Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/IllustrationRole -->
+
+    <owl:Class rdf:about="&ontology;OPMO/IllustrationRole">
+        <rdfs:label xml:lang="en">IllustrationRole</rdfs:label>
+        <rdfs:label xml:lang="es">RolDeIlustrarUnContenido</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&opmo2;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/Image -->
+
+    <owl:Class rdf:about="&ontology;OPMO/Image">
+        <rdfs:label xml:lang="en">Image</rdfs:label>
+        <rdfs:label xml:lang="es">Imagen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Artifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/Itinerary -->
+
+    <owl:Class rdf:about="&ontology;OPMO/Itinerary">
+        <rdfs:label xml:lang="en">Itinerary</rdfs:label>
+        <rdfs:label xml:lang="es">Itinerario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Artifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/LaterVersionThan -->
+
+    <owl:Class rdf:about="&ontology;OPMO/LaterVersionThan">
+        <rdfs:label xml:lang="en">LaterVersionThan</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&opmo2;WasDerivedFrom"/>
+        <rdfs:comment>It is used to define that an artifact is a later version of another artifact.</rdfs:comment>
+        <owl:versionInfo xml:lang="es">VersionPosteriorA</owl:versionInfo>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/ModificationProcess -->
+
+    <owl:Class rdf:about="&ontology;OPMO/ModificationProcess">
+        <rdfs:label xml:lang="en">Content modification process</rdfs:label>
+        <rdfs:label xml:lang="es">Proceso de modificación</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/Organization -->
+
+    <owl:Class rdf:about="&ontology;OPMO/Organization">
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+        <rdfs:label xml:lang="es">Organización</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/PathElement -->
+
+    <owl:Class rdf:about="&ontology;OPMO/PathElement">
+        <rdfs:label xml:lang="en">PathElement</rdfs:label>
+        <rdfs:label xml:lang="es">Elemento del Itinerario</rdfs:label>
+        <rdfs:comment xml:lang="en">Element of the Itinerary</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/Post -->
+
+    <owl:Class rdf:about="&ontology;OPMO/Post">
+        <rdfs:label xml:lang="en">Post</rdfs:label>
+        <rdfs:label xml:lang="es">Post</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Artifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/PriceRangeValue -->
+
+    <owl:Class rdf:about="&ontology;OPMO/PriceRangeValue">
+        <rdfs:label xml:lang="en">Price range value</rdfs:label>
+        <rdfs:label xml:lang="es">Rango de valores de precio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;OPMO/RangeValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/PublicationProcess -->
+
+    <owl:Class rdf:about="&ontology;OPMO/PublicationProcess">
+        <rdfs:label xml:lang="en">Content publication process</rdfs:label>
+        <rdfs:label xml:lang="es">Proceso de publicación</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/PublisherRole -->
+
+    <owl:Class rdf:about="&ontology;OPMO/PublisherRole">
+        <rdfs:label xml:lang="en">ContentPublisherRole</rdfs:label>
+        <rdfs:label xml:lang="es">RolDeEditorDeContenidos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&opmo2;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/RangeValue -->
+
+    <owl:Class rdf:about="&ontology;OPMO/RangeValue">
+        <rdfs:label xml:lang="en">Range values</rdfs:label>
+        <rdfs:label xml:lang="es">Rango de valores</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/ReferenceRole -->
+
+    <owl:Class rdf:about="&ontology;OPMO/ReferenceRole">
+        <rdfs:label xml:lang="en">ReferenceRole</rdfs:label>
+        <rdfs:label xml:lang="es">RolDeReferencia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&opmo2;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/SummaryRole -->
+
+    <owl:Class rdf:about="&ontology;OPMO/SummaryRole">
+        <rdfs:label xml:lang="en">SummaryRole</rdfs:label>
+        <rdfs:label xml:lang="es">RolDeResumenDeOtrosContenidos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&opmo2;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/Trip -->
+
+    <owl:Class rdf:about="&ontology;OPMO/Trip">
+        <rdfs:label xml:lang="en">Trip</rdfs:label>
+        <rdfs:label xml:lang="es">Viaje</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Artifact"/>
+        <rdfs:subClassOf rdf:resource="&ns2;Container"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;OPMO/hasItinerary"/>
+                <owl:someValuesFrom rdf:resource="&ontology;OPMO/Itinerary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://webenemasuno.linkeddata.es/ontology/OPMO/Video -->
+
+    <owl:Class rdf:about="&ontology;OPMO/Video">
+        <rdfs:label xml:lang="en">Video</rdfs:label>
+        <rdfs:label xml:lang="es">Video</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ns;Artifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#Point -->
+
+    <owl:Class rdf:about="&wgs84_pos;Point"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+    <owl:Class rdf:about="&wgs84_pos;SpatialThing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+

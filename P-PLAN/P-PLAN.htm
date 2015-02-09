@@ -1,0 +1,1320 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="dc: http://purl.org/dc/terms/ schema: http://schema.org/ prov: http://www.w3.org/ns/prov# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl#"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<style type="text/css">
+		/*
+		   This template uses the W3C css for working drafts, with small modiications.
+		   Original copyright:
+		   Copyright 1997-2003 W3C (MIT, ERCIM, Keio). All Rights Reserved.
+		   The following software licensing rules apply:
+		   http://www.w3.org/Consortium/Legal/copyright-software */
+
+		/* $Id: base.css,v 1.26 2012/08/31 21:24:31 ijacobs Exp $ */
+
+		body {
+		  padding: 2em 1em 2em 70px;
+		  margin: 0;
+		  font-family: sans-serif;
+		  color: black;
+		  background: white;
+		  background-position: top left;
+		  background-attachment: fixed;
+		  background-repeat: no-repeat;
+		}
+		:link { color: #00C; background: transparent }
+		:visited { color: #609; background: transparent }
+		a:active { color: #C00; background: transparent }
+
+		a:link img, a:visited img { border-style: none } /* no border on img links */
+
+		a img { color: white; }        /* trick to hide the border in Netscape 4 */
+		@media all {                   /* hide the next rule from Netscape 4 */
+		  a img { color: inherit; }    /* undo the color change above */
+		}
+
+		th, td { /* ns 4 */
+		  font-family: sans-serif;
+		}
+
+		h1, h2, h3, h4, h5, h6 { text-align: left }
+		/* background should be transparent, but WebTV has a bug */
+		h1, h2, h3 { color: #005A9C; background: white }
+		h1 { font: 170% sans-serif }
+		h2 { font: 140% sans-serif }
+		h3 { font: 120% sans-serif }
+		h3 {
+			border-bottom: 1px solid navy;
+			margin-top: 3px;
+			padding-bottom: 5px;
+		}
+		h4 { font: bold 100% sans-serif }
+		h5 { font: italic 100% sans-serif }
+		h6 { font: small-caps 100% sans-serif }
+
+		.hide { display: none }
+
+		div.head { margin-bottom: 1em }
+		div.head h1 { margin-top: 2em; clear: both }
+		div.head table { margin-left: 2em; margin-top: 2em }
+
+		p.copyright { font-size: small }
+		p.copyright small { font-size: small }
+
+		@media screen {  /* hide from IE3 */
+		a[href]:hover { background: #ffa }
+		}
+
+		pre { margin-left: 2em }
+		
+		p {
+		  margin-top: 0.6em;
+		  margin-bottom: 0.6em;		  
+		  text-align: justify;
+		}
+		
+		dt, dd { margin-top: 0; margin-bottom: 0 } /* opera 3.50 */
+		dt { font-weight: bold }
+
+		ul.toc, ol.toc {
+		  list-style: disc;		/* Mac NS has problem with 'none' */
+		  list-style: none;
+		}
+
+		@media aural {  
+		  h1, h2, h3 { stress: 20; richness: 90 }
+		  .hide { speak: none }
+		  p.copyright { volume: x-soft; speech-rate: x-fast }
+		  dt { pause-before: 20% }
+		  pre { speak-punctuation: code } 
+		}
+		
+		/*Additional css*/
+		.hlist {
+			background-color: #F4FFFF;
+			border: 1px solid navy;
+			padding: 5px;
+		}
+		.hlist li {
+			display: inline-table;
+			list-style-type: none;
+			padding-right: 20px;
+		}
+		.backlink {
+			background-color: #F4FFFF;
+			border: 1px dotted navy;
+			color: black;
+			float: right;
+			font-size: 10pt;
+			padding: 2px;
+			text-align: right;
+		}
+		.entity {
+			border: 1px solid navy;
+			margin: 5px 0;
+			padding: 5px;
+		}
+		table {
+			background-color: #F4FFFF;
+			border: 1px solid navy;
+			margin: 20px;
+		}
+		table {
+			text-align: center;
+			vertical-align: middle;
+		}
+		table td {
+			padding: 5px 15px;
+			text-align: left;
+		}
+		table th {
+			background-color: LightGoldenRodYellow;
+		}
+		pre {
+			background-color: #F9F9F9;
+			border: 1px dashed #2F6FAB;
+			color: black;
+			line-height: 1.1em;
+			padding: 1em;
+		}
+		</style>
+		</head>
+ <span resource="" typeOf="foaf:Document schema:WebPage">
+	<title property="dc:title schema:name">The P-Plan Ontology</title>
+	<span property="dc:created schema:dateCreated" content="17 September 2013"></span>
+	<span property="dc:isVersionOf" resource="http://purl.org/net/p-plan"></span>	
+	<span property="dc:creator prov:wasAttributedTo schema:creator" resource="http://delicias.dia.fi.upm.es/members/DGarijo/#me"></span>
+</span>
+		<body resource="http://purl.org/net/p-plan#" typeOf="owl:Ontology schema:TechArticle"><div class="head">
+						<h1 property="dc:title schema:name">The P-PLAN Ontology</h1>
+						<h2 property="dc:modified schema:dateModified">Release 12 March 2014</h2>
+							<dl>
+							<dt>This version:</dt>
+							<dd><a href="http://vocab.linkeddata.es/p-plan/version/13032014/">http://vocab.linkeddata.es/p-plan/version/13032014/</a></dd>
+							</dl><dl><dt>Latest version:</dt>
+								<dd><a href="http://purl.org/net/p-plan">http://purl.org/net/p-plan#</a></dd>
+							</dl>
+							</dl><dl><dt>Previous version:</dt>
+								<dd><a href="http://vocab.linkeddata.es/p-plan/version/17092013/">http://vocab.linkeddata.es/p-plan/version/17092013/</a></dd>
+							</dl>
+							<dl>
+							<dt>Revision</dt>
+								<dd property="schema:version">1.3</dd>
+								</dl><dl><dt>Authors:</dt>
+									<dd><a href="http://delicias.dia.fi.upm.es/members/DGarijo/#me" property="dc:creator prov:wasAttributedTo schema:author">Daniel Garijo</a>,  Ontology Engineering Group, Universidad Polit&eacute;cnica de Madrid</dd>
+									<dd><a href="http://www.isi.edu/~gil/" property="dc:creator prov:wasAttributedTo schema:author">Yolanda Gil</a>, Information Sciences Institute, University of Southern California, US </dd>
+								</dl><dl>
+								<dt>Extended Ontologies:</dt>
+									<dd><a href="http://www.w3.org/TR/prov-o/" property="schema:mentions">PROV-O: The PROV Ontology</a> </dd>									
+								</dl>
+								<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/" property="dc:rights"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License</a>.
+						</div>
+						<hr>
+						<h2>Abstract</h2>
+							<p>The Ontology for Provenance and Plans (P-Plan) is an extension of the PROV-O ontology [<cite><a href="#PROV-O" class="bibref">PROV-O</a></cite>] created to represent the plans that guided the execution of scientific processes.
+							P-Plan describes how the plans are composed and their correspondence to provenance records that describe the execution itself.
+							</p>							
+							<p style="text-align: center;"> <strong>The latest OWL encoding of the P-Plan Ontology can be found <a href="http://www.opmw.org/p-plan.owl"> here </a></strong></p>
+						<div id="toc">
+						<h2>Table of Contents</h2><ul><li>
+							<a href="#introduction">1. Introduction</a></li>
+								<ul><li><a href="#namespacedeclarations">1.1 Namespace declarations</a></li></ul>
+							<a href="#ontOverview">2. P-PLAN Overview</a></li><li>
+							<a href="#ontDescription">3. P-PLAN Description</a></li>							
+							<li><a href="#crossReference">4. Cross reference for P-PLAN classes, properties and dataproperties</a></li>
+							<ul>
+								<li><a href="#classes">4.1 Classes</a></li>
+								<li><a href="#objectproperties">4.2 Object Properties</a></li>
+								<!--<li><a href="#dataproperties">4.3 Data Properties</a></li>-->
+							</ul>
+							<li>
+							<a href="#references">5. References</a></li><li>
+							<a href="#acknowledgements">6. Acknowledgements</a></li>
+							</ul>
+						</div>
+						<div id="introduction">
+						<h2>1. Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+						<p>
+						P-Plan is an OWL2 ontology developed to describe abstract scientific workflows as plans and link them to their past executions. 
+						</p>
+						<p>
+						P-Plan extends the W3C PROV-O Ontology [<cite><a href="#PROV-O" class="bibref" property="schema:mentions">PROV-O</a></cite>], which encodes the W3C PROV 
+						data model [<cite><a href="#PROV-DM" class="bibref" property="schema:mentions">PROV-DM</a></cite>]. PROV-DM describes the provenance 
+						of objects (<code>prov:Entities</code>) as a record of assertions about the steps (<code>prov:Activities</code>) that generated them and the entities used in those steps. 
+						Provenance describes past execution, but does not offer a vocabulary to express the <strong>plan</strong> that the execution was supposed to follow.
+						</p><p>
+						As an example, provenance vocabularies are appropriate for describing assays once they are executed, but are not designed to describe protocols.
+						Therefore, in addition to the provenance record, it is often desirable to publish the plan that was followed during the execution. 
+						This would allow the provenance record to include what was envisioned would happen prior to the execution. 
+						</p><p>
+						Publishing the plan has several benefits: 
+						<ol>
+							<li>The plan can provide a higher-level, more abstract description of what was executed  
+							which improves understandability and facilitates reuse in future situations</li> 
+							<li>The plan can describe the expectations for the execution, 
+							which can then be contrasted with the provenance to detect deviations and correct abnormalities. </li>
+						</ol>
+						</p><p>Acknowledging this need, PROV includes the term “<code>prov:Plan</code>”. However, it does not elaborate any further how plans can be described or
+						related to other provenance elements of the execution, which is precisely the scope of the P-Plan ontology.
+						</p>						
+						<p>
+							This document specifies the classes and properties of the P-Plan ontology.
+						</p>
+						<div id="namespacedeclarations">
+						<h2>1.1. Namespace declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+						</p><div id="ns" align="center">
+						 <table>
+							<caption> <a href="#ns"> Table 2</a>: Namespaces used in the document </caption>
+							<tbody>
+							<tr><td><strong>p-plan</strong></td><td>&lt;http://purl.org/net/p-plan#&gt;</td></tr>
+							<tr><td><strong>owl</strong></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+							<tr><td><strong>rdfs</strong></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+							<tr><td><strong>prov</strong></td><td>&lt;http://www.w3.org/ns/prov#&gt;</td></tr>							
+							</tbody>
+						  </table>
+						  </div>
+						</div>
+						</div>
+						<div id="ontOverview">
+						<h2>2. P-Plan Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>					
+						
+						<p>P-Plan extends PROV to link the provenance traces to their plan descriptions.
+						The next tables summarize the classes and properties that have been used to extend or complement the <a href="http://www.w3.org/TR/prov-o/#description-starting-point-terms">
+						PROV-O Starting Point Terms</a> to our domain.
+						No dataproperties are included, because P-Plan doesn't define any:</p>
+						<h4>Classes</h4>
+						<ul class="hlist">
+							<li>
+							<a href="#Entity" title="http://purl.org/net/p-plan#Entity">p-plan:Entity</a>
+							</li>
+							<li>
+							<a href="#Activity" title="http://purl.org/net/p-plan#Activity">p-plan:Activity</a>
+							</li>
+							<li>
+							<a href="#Bundle" title="http://purl.org/net/p-plan#Bundle">p-plan:Bundle</a>
+							</li>
+							<li>
+							<a href="#MultiStep" title="http://purl.org/net/p-plan#MultiStep">p-plan:MultiStep</a>
+							</li>
+							<li>
+							<a href="#Plan" title="http://purl.org/net/p-plan#Plan">p-plan:Plan</a>
+							</li>
+							<li>
+							<a href="#Step" title="http://purl.org/net/p-plan#Step">p-plan:Step</a>
+							</li>
+							<li>
+							<a href="#Variable" title="http://purl.org/net/p-plan#Variable">p-plan:Variable</a>
+							</li>							
+						</ul>
+						<h4>Object properties</h4>
+						<ul class="hlist">
+							<li>
+							<a href="#correspondsToStep" title="http://purl.org/net/p-plan#correspondsToStep">p-plan:correspondsToStep</a>
+							</li>
+							<li>
+							<a href="#correspondsToVariable" title="http://purl.org/net/p-plan#">p-plan:correspondsToVariable</a>
+							</li>							
+							<li>
+							<a href="#hasInputVar" title="http://purl.org/net/p-plan#hasInputVar">p-plan:hasInputVar</a>
+							</li>
+							<li>
+							<a href="#hasOutputVar" title="http://purl.org/net/p-plan#hasOutputVar">p-plan:hasOutputVar</a>
+							</li>
+							<li>
+							<a href="#isDecomposedAsPlan" title="http://purl.org/net/p-plan#isDecomposedAsPlan">p-plan:isDecomposedAsPlan</a>
+							</li>
+							<li>
+							<a href="#isInputVarOf" title="http://purl.org/net/p-plan#isInputVarOf">p-plan:isInputVarOf</a>
+							</li>
+							<li>
+							<a href="#isOutputVarOf" title="http://purl.org/net/p-plan#isOutputVarOf">p-plan:isOutputVarOf</a>
+							</li>
+							<li>
+							<a href="#isPrecededBy" title="http://purl.org/net/p-plan#isPrecededBy">p-plan:isPrecededBy</a>
+							</li>
+							<li>
+							<a href="#isStepOfPlan" title="http://purl.org/net/p-plan#isStepOfPlan">p-plan:isStepOfPlan</a>
+							</li>
+							<li>
+							<a href="#isSubPlanOfPlan" title="http://purl.org/net/p-plan#isSubPlanOfPlan">p-plan:isSubPlanOfPlan</a>
+							</li>	
+							<li>
+							<a href="#isVariableOfPlan" title="http://purl.org/net/p-plan#isVariableOfPlan">p-plan:isVariableOfPlan</a>
+							</li>							
+						</ul>						
+						
+						</div>
+						<div id="ontDescription">
+							<h2>3. P-Plan Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2> 							
+							<p>
+							P-plan uses PROV to represent the provenance of the execution and extends it to link it to the different parts of the plan.
+							PROV describes the usage and generation of entities through two main properties: <code>prov:wasGeneratedBy</code> 
+							(an Entity wasGeneratedBy an Activity) and <code>prov:used</code> (an Activity used an Entity for the execution). 
+							The agents responsible for the execution are linked to the activity as <code>prov:Agent</code> with the property 
+							<code>prov:wasAssociatedWith</code>. All properties can be qualified with <code>prov:Roles</code>. Provenance assertions can be 
+							grouped in <code>prov:Bundles</code>, so that provenance can be asserted for the bundle.
+							</p>
+							<p>
+							In PROV plans are defined as entities associated with an agent and an activity. PROV does not specify anything
+							further about plans and how they correspond to parts of the execution, as it is considered out of the scope of
+							the model for provenance.
+							</p>
+							<p>
+							<a href="#figure_mapping_example">Figure 1</a> shows an overview of P-PLAN and how it relates to PROV concepts, 
+							showing plans at the top and plan executions at the bottom.
+							The provenance of the execution is entirely captured with PROV. Entity, activity and bundle concepts are subclasses
+							of PROV classes (<code>p-plan:Bundle</code>, <code>p-plan:Entity</code> and <code>p-plan:Activity</code>) to be able 
+							to represent their relationship with the parts of the plan (</code>p-plan:correspondsToStep</code> property for activities,
+							<code>p-plan:correspondsToVariable</code> property for entities and <code>prov:wasDerivedFrom</code> to connect
+							the bundle representing the execution to the plan).
+							</p>
+							<div id="figure_mapping_example" class="figure" style="text-align: center;">
+							<img src="img/overview.png" alt="P-PLAN as an extension of PROV to describe plans." width="636" height="429">
+								<div style="text-align: center;">
+								<a href="#figure_mapping_example">Figure 1</a>. P-PLAN as an extension of PROV to describe plans: 
+								The execution trace is captured with PROV-O statements (prov:used, prov:wasGeneratedBy) and the plan is captured with p-plan.
+								</div>
+							</div>
+							<p>
+							<code>p-plan:Plan</code> is a subclass of <code>prov:Plan</code>. <code>p-plan:Steps</code> represent the planned execution
+							activities. Plan steps may be bound to a specific executable step or refer to a class of steps, providing an abstraction
+							layer over the execution. As a result, a plan step could be carried out in different ways in different executions 
+							of the same plan. In addition, a step may not have a corresponding activity, for example if there is an execution failure. Dependencies 
+							between <code>p-plan:Steps</code> are captured with the <code>p-plan:isPrecededBy</code> relationship.
+							<code>p-plan:Variables</code> represent the inputs of the steps and can have proper-ties (i.e., type, restrictions, metadata, etc.). 
+							<code>p-plan:Steps</code> have <code>p-plan:Variables</code> as input and <code>p-plan:Variables</code> are output of 
+							<code>p-plan:Steps</code>. Both of them are associated to
+							a <code>p-plan:Plan</code>. The relation of the plan with agents and activities is not specified P-PLAN, since it can be modeled with PROV
+							(with the <code>prov:hadPlan</code> property).
+							Note that <code>prov:Plan</code> is <code>a prov:Entity</code>, so its provenance can be modeled with PROV.
+							</p>
+							<div id="subPlans">
+							<h2>3.1 Subplan representation</h2>
+							<p>
+								Plans may be included as part of other plans, and they can be represented in P-PLAN. However, if a plan A is directly included as a step of plan B, we may find inconsistencies when retrieving the steps that Preceded A (specifically if A is included in other plans appart from B). Therefore if a <code>p-plan:Step</code> represents a <code>p-plan:Plan</code>, it becomes a <code>p-plan:MultiStep</code>, and links to its correspondent <code>p-plan:Plan</code> with the <code>p-plan:isDecomposedAsPlan</code> relationship. This way the plan specification is separated from the plan composition.
+							</p>
+							<p>An example can be seen in <a href="#figure_subplans">Figure 2</a>. The plan P2 (which has 2 steps: Step1P2, Step2P2) is included in plan P1 (which has 3 steps: Step1p1, Step2p1, and Step3p1) as the third step (Step3p1). Therefore, Step3p1 is a <code>p-plan:MultiStep</code>, linked with P2 via the <code>p-plan:isDecomposedAsPlan</code> relationship. P2 is also linked to P1 with the <code>p-plan:isSubPlanOf</code>, which states the inclusion between the two plans explicitly. Every representation of P2 in a plan should be a <code>p-plan:MultiStep</code>, and linked back to P2.
+							</p>
+							<div id="figure_subplans" class="figure" style="text-align: center;">
+							<img src="img/subplans.png" alt="Subplan representation in p-plan." width="500" height="449">
+								<div style="text-align: center;">
+								<a href="#figure_subplans">Figure 2</a>.Subplan representation in P-PLAN: 
+								A Plan (P2) with 2 steps is contained as the third step of another plan (P1) with 3 steps.
+								</div>
+							</div>
+							</div>
+							</div>							
+						</div>
+						<div id="crossReference">
+							<h2>4. Cross reference for P-Plan classes and properties</h2>
+							This section provides details for each class and property defined by the P-Plan Ontology.
+							<div id="classes">
+								<h2>4.1 Classes</h2>
+								<ul class="hlist">
+								<li>
+							<a href="#Entity" title="http://purl.org/net/p-plan#Entity">p-plan:Entity</a>
+							</li>
+							<li>
+							<a href="#Activity" title="http://purl.org/net/p-plan#Activity">p-plan:Activity</a>
+							</li>
+							<li>
+							<a href="#Bundle" title="http://purl.org/net/p-plan#Bundle">p-plan:Bundle</a>
+							</li>
+							<li>
+							<a href="#MultiStep" title="http://purl.org/net/p-plan#MultiStep">p-plan:MultiStep</a>
+							</li>
+							<li>
+							<a href="#Plan" title="http://purl.org/net/p-plan#Plan">p-plan:Plan</a>
+							</li>
+							<li>
+							<a href="#Step" title="http://purl.org/net/p-plan#Step">p-plan:Step</a>
+							</li>
+							<li>
+							<a href="#Variable" title="http://purl.org/net/p-plan#Variable">p-plan:Variable</a>
+							</li>	
+								</ul>
+								<div class="entity" id="Entity">
+								<a name="http://purl.org/net/p-plan#Entity"></a>
+								<h3>p-plan:Entity<sup class="type-c" title="class">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span>
+								</h3>
+								<p>
+								<strong>IRI:</strong>http://purl.org/net/p-plan#Entity</p>
+								<div class="comment">
+								<p>A p-plan:Entity is a subclass of prov:Entity that represents the input of an executed p-plan:Activity. The p-plan:Entity corresponds to a p-plan:Variable in the overall p-plan:Plan.</p>
+								<p>Example:
+								<pre>
+	@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .	
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionArtifact/a1&gt;
+		a p-plan:Entity ; #Applying inference, it becomes a prov:Entity implicitly.
+		rdfs:label "Execution entity with id: a1" ;			
+		prov:wasGeneratedBy &lt;http://www.opmw.org/export/resource/WorkflowExecutionProcess/p1S&gt; .
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">prov:Entity</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#correspondsToVariable" title="http://purl.org/net/p-plan#correspondsToVariable">p-plan:correspondsToVariable</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>															
+							
+								<div class="entity" id="Activity">
+								<a name="http://purl.org/net/p-plan#Activity"/></a>
+								<h3>p-plan:Activity<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#Activity</p>
+								<div class="comment">
+								<p>A p-plan:Activity represents the execution of the process planned in a p-plan:Step. p-plan:Activity is a subclass of prov:Activity</p>
+								<p>Example:
+								<pre>
+	@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+	@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/ConvertToStandardFormat1&gt; 
+		a p-plan:Activity ;#Applying inference, it is a prov:Activity as well.
+		rdfs:label "Execution activity ConvertToStandardFormat" ;			
+		prov:used &lt;http://www.opmw.org/export/resource/6C7CF277338D9590EE18534D4D78924F&gt; ;			
+		p-plan:correspondsToStep &lt;http://www.opmw.org/export/resource/ConvertToStandardFormat1&gt; .
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">prov:Activity</a></span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#correspondsToStep" title="http://purl.org/net/p-plan#correspondsToStep">p-plan:correspondsToStep</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>								
+							
+								<div class="entity" id="Bundle">
+								<a name="http://purl.org/net/p-plan#Bundle"/></a>
+								<h3>p-plan:Bundle<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#Bundle</p>
+								<div class="comment">
+								<p>A p-plan:Bundle is a specific type of prov:Bundle that contains the provenance assertions of the execution of a p-plan:Plan. prov:Bundles are prov:Entities. Therefore p-plan:Bundle is a subClass of p-plan:Entity.</p>
+								<p>Example:
+								<pre>
+	@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/BUNDLE1335533097598&gt;
+		a       p-plan:Bundle&gt; ;#Aplying inference, it is a prov:Bundle as well.
+		rdfs:label "Bundle created on 1335533097598" .			
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="http://www.w3.org/ns/prov#Bundle" title="Bundle">prov:Bundle</span>
+								<sup class="type-c" title="class">c</sup></a>, <a href="#Entity" title="Entity">p-plan:Entity</span>
+								<sup class="type-c" title="class">c</sup></a>
+								</li>
+								</ul>
+								</dd>																
+								</dl>
+								</div>		
+
+								<div class="entity" id="MultiStep">
+								<a name="http://purl.org/net/p-plan#MultiStep"/></a>
+								<h3>p-plan:MultiStep<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#MultiStep</p>
+								<div class="comment">
+								<p>A p-plan:MultiStep is the representation of a plan that appears as a step of another plan. p-plan:MultiStep is a subClass of p-plan:Plan and p-plan:Step.</p>
+								<p>Example:
+								<pre>
+	@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/MultiStep1&gt;
+		a       p-plan:MultiStep; #Aplying inference, it becomes a p-plan:Step and p-plan:Plan as well.
+		rdfs:label "MultiStep created on 1335533097598";
+		p-plan:isDecomposedAsPlan &lt;http://www.opmw.org/export/resource/Plan/Plan1&gt;.#The plan represented by this multiStep		
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Plan" title="Plan">p-plan:Plan</span>
+								<sup class="type-c" title="class">c</sup></a>, <a href="#Step" title="Step">p-plan:Step</span>
+								<sup class="type-c" title="class">c</sup></a>
+								</li>
+								</ul>
+								</dd>
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#isDecomposedAsPlan" title="http://purl.org/net/p-plan#isDecomposedAsPlan">p-plan:isDecomposedAsPlan</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>
+								
+								<div class="entity" id="Plan">
+								<a name="http://purl.org/net/p-plan#Plan"/></a>
+								<h3>p-plan:Plan<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#Plan</p>
+								<div class="comment">
+								<p>A p-plan:Plan is a specific type of prov:Plan. It is composed of smaller steps (p-plan:Step) that use and produce Variables (p-plan:Variable).</p>
+								<p>Example:
+								<pre>	
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+	@prefix dc:  &lt;http://purl.org/dc/terms/&gt; .
+	
+	&lt;http://www.opmw.org/export/resource/AQUAFLOW_NTM&gt; 
+		a p-plan:Plan;
+		rdfs:label "AquaFlow_NTM" ;
+		dc:contributor	&lt;http://www.opmw.org/export/resource/Agent/WATER&gt; ;
+		dc:modified  "2011-06-08T09:57:12-07:00"^^xsd:dateTime .
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="http://www.w3.org/ns/prov#Plan" title="http://www.w3.org/ns/prov#Plan">prov:Plan</span></a>
+								<sup class="type-c" title="class">c</sup>, <a href="#Entity" title="http://purl.org/net/p-plan#Entity">p-plan:Entity</span></a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>								
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#isSubPlanOfPlan" title="http://purl.org/net/p-plan#isSubPlanOfPlan">p-plan:isSubPlanOfPlan</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								<dt>is in range of</dt>
+								<dd>
+								<a href="#isStepOfPlan" title="http://purl.org/net/p-plan#isStepOfPlan">p-plan:isStepOfPlan</a>
+								<sup class="type-op" title="object property">op</sup>, <a href="#isVariableOfPlan" title="http://purl.org/net/p-plan#isVariableOfPlan">p-plan:isVariableOfPlan</a>
+								<sup class="type-op" title="object property">op</sup>, <a href="#isSubPlanOfPlan" title="http://purl.org/net/p-plan#isSubPlanOfPlan">p-plan:isSubPlanOfPlan</a>
+								<sup class="type-op" title="object property">op</sup>,<a href="#isDecomposedAsPlan" title="http://purl.org/net/p-plan#isDecomposedAsPlan">p-plan:isDecomposedAsPlan</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>
+								
+								<div class="entity" id="Step">
+								<a name="http://purl.org/net/p-plan#Step"/></a>
+								<h3>p-plan:Step<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#Step</p>
+								<div class="comment">
+								<p>A p-plan:Step represents the planned execution activity.</p>
+								<p>Example:
+								<pre>	
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+	
+	&lt;http://www.opmw.org/export/resource/AQUAFLOW_NTM_STEP_1&gt; 
+		a p-plan:Step;
+		rdfs:label "AquaFlow_NTM" ;
+		p-plan:hasInputVar http://www.opmw.org/export/resource/Var1;
+		p-plan:isStepOfPlan http://www.opmw.org/export/resource/AQUAFLOW_NTM.
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>								
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#hasInputVar" title="http://purl.org/net/p-plan#hasInputVar">p-plan:hasInputVar</a>
+								<sup class="type-op" title="object property">op</sup>, 
+								<a href="#hasOutputVar" title="http://purl.org/net/p-plan#hasOutputVar">p-plan:hasOutputVar</a>
+								<sup class="type-op" title="object property">op</sup>,
+								<a href="#isStepOfPlan" title="http://purl.org/net/p-plan#isStepOfPlan">p-plan:isStepOfPlan</a>
+								<sup class="type-op" title="object property">op</sup>,
+								<a href="#isPrecededBy" title="http://purl.org/net/p-plan#isPrecededBy">p-plan:isPrecededBy</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								<dt>is in range of</dt>
+								<dd>
+								<a href="#correspondsToStep" title="http://purl.org/net/p-plan#correspondsToStep">p-plan:correspondsToStep</a>
+								<sup class="type-op" title="object property">op</sup>, <a href="#isOutputVarOf" title="http://purl.org/net/p-plan#isOutputVarOf">p-plan:isOutputVarOf</a>
+								<sup class="type-op" title="object property">op</sup>, <a href="#isInputVarOf" title="http://purl.org/net/p-plan#isInputVarOf">p-plan:isInputVarOf</a>
+								<sup class="type-op" title="object property">op</sup>,
+								<a href="#isPrecededBy" title="http://purl.org/net/p-plan#isPrecededBy">p-plan:isPrecededBy</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>
+								
+								<div class="entity" id="Variable">
+								<a name="http://purl.org/net/p-plan#Variable"/></a>
+								<h3>p-plan:Variable<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#Variable</p>
+								<div class="comment">
+								<p>A p-plan:Variable represents a description of the input or output of the planned Activity (p-plan:Step).</p>
+								<p>Example:</p>
+								<pre>
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/AQUAFLOW_NTM_VAR_3&gt; 
+		a p-plan:Variable;
+		p-plan:isOutputVarOf &lt;http://www.opmw.org/export/resource/AQUAFLOW_NTM_STEP_1&gt; 
+		p-plan:isVariableOfPlan &lt;http://www.opmw.org/export/resource/AQUAFLOW_NTM&gt; .
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#isOutputVarOf" title="http://purl.org/net/p-plan#isOutputVarOf">p-plan:isOutputVarOf</a>
+								<sup class="type-op" title="object property">op</sup>,
+								<a href="#isInputVarOf" title="http://purl.org/net/p-plan#isInputVarOf">p-plan:isInputVarOf</a>
+								<sup class="type-op" title="object property">op</sup>,
+								<a href="#isVariableOfPlan" title="http://purl.org/net/p-plan#isVariableOfPlan">p-plan:isVariableOfPlan</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>								
+								<dt>is in range of</dt>
+								<dd>
+								<a href="#hasInputVar" title="http://purl.org/net/p-plan#hasInputVar">p-plan:hasInputVar</a>
+								<sup class="type-op" title="object property">op</sup>,
+								<a href="#hasOutputVar" title="http://purl.org/net/p-plan#hasOutputVar">p-plan:hasOutputVar</a>
+								<sup class="type-op" title="object property">op</sup>,
+								<a href="#correspondsToVariable" title="http://purl.org/net/p-plan#correspondsToVariable">p-plan:correspondsToVariable</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>
+							</div>
+							<div id="objectproperties">
+								<h2>4.2 Object Properties</h2>
+								<ul class="hlist">
+									<li>
+									<a href="#correspondsToStep" title="http://purl.org/net/p-plan#correspondsToStep">p-plan:correspondsToStep</a>
+									</li>
+									<li>
+									<a href="#correspondsToVariable" title="http://purl.org/net/p-plan#">p-plan:correspondsToVariable</a>
+									</li>							
+									<li>
+									<a href="#hasInputVar" title="http://purl.org/net/p-plan#hasInputVar">p-plan:hasInputVar</a>
+									</li>
+									<li>
+									<a href="#hasOutputVar" title="http://purl.org/net/p-plan#hasOutputVar">p-plan:hasOutputVar</a>
+									</li>
+									<li>
+									<a href="#isDecomposedAsPlan" title="http://purl.org/net/p-plan#isDecomposedAsPlan">p-plan:isDecomposedAsPlan</a>
+									</li>
+									<li>
+									<a href="#isInputVarOf" title="http://purl.org/net/p-plan#isInputVarOf">p-plan:isInputVarOf</a>
+									</li>
+									<li>
+									<a href="#isOutputVarOf" title="http://purl.org/net/p-plan#isOutputVarOf">p-plan:isOutputVarOf</a>
+									</li>
+									<li>
+									<a href="#isPrecededBy" title="http://purl.org/net/p-plan#isPrecededBy">p-plan:isPrecededBy</a>
+									</li>
+									<li>
+									<a href="#isStepOfPlan" title="http://purl.org/net/p-plan#isStepOfPlan">p-plan:isStepOfPlan</a>
+									</li>
+									<li>
+									<a href="#isSubPlanOfPlan" title="http://purl.org/net/p-plan#isSubPlanOfPlan">p-plan:isSubPlanOfPlan</a>
+									</li>	
+									<li>
+									<a href="#isVariableOfPlan" title="http://purl.org/net/p-plan#isVariableOfPlan">p-plan:isVariableOfPlan</a>
+									</li>							
+								</ul>
+								
+								<div class="entity" id="correspondsToStep">
+								<a name="http://purl.org/net/p-plan#correspondsToStep"/></a>
+								<h3>p-plan:correspondsToStep<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#correspondsToStep</p>
+								<div class="comment">
+								<p>p-plan:correspondsToStep links a p-plan:Activity to its planned p-plan:Step.</p>
+								<p>Example:
+								<pre>
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .	
+
+	&lt;http://www.opmw.org/export/resource/acc1&gt; 
+		a p-plan:Activity;
+		p-plan:correspondsToStep &lt;http://www.opmw.org/export/resource/AQUAFLOW_NTM_STEP_1&gt;.
+
+	&lt;http://www.opmw.org/export/resource/AQUAFLOW_NTM_STEP_1&gt; 
+		a p-plan:Step.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Activity" title="http://purl.org/net/p-plan/Activity">p-plan:Activity</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Step" title="http://purl.org/net/p-plan/prov#Step">p-plan:Step</span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="correspondsToVariable">
+								<a name="http://purl.org/net/p-plan#correspondsToVariable"/></a>
+								<h3>p-plan:correspondsToVariable<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#correspondsToVariable</p>
+								<div class="comment">
+								<p>p-plan:correspondsToVariable binds a p-plan:Entity (used by a p-plan:Activity in the execution of a plan) to the p-plan:Variable it represented it in the p-plan:Plan..</p>
+								<p>Example:
+								<pre>
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+	@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/Entity_1&gt;
+		a p-plan:Entity;
+		p-plan:correspondsToVariable &lt;http://www.opmw.org/export/resource/ReaerationEDM/Variable_1&gt;.
+	
+	&lt;http://www.opmw.org/export/resource/ReaerationEDM/Variable_1&gt;
+		a p-plan:Variable.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Entity" title="http://purl.org/net/p-plan#Entity">p-plan:Entity</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Variable" title="http://purl.org/net/p-plan#Variable">p-plan:Variable</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="hasInputVar">
+								<a name="http://purl.org/net/p-plan#hasInputVar"/></a>
+								<h3>p-plan:hasInputVar<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#hasInputVar</p>
+								<div class="comment">
+								<p>p-plan:hasInputVar binds a p-plan:Step to the p-plan:Variable that takes as input for the planned execution.</p>
+								<p>Example:
+								<pre>
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionProcess/acc1&gt;
+		a p-plan:Step;
+		p-plan:hasInputVar &lt;http://www.opmw.org/export/resource/AQUAFLOW_EDM_VAR_1&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>								
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href ="#Step" title="http://purl.org/net/p-plan#Step">p-plan:Step</span></a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Variable" title="http://purl.org/net/p-plan#Variable">p-plan:Variable</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has inverse</dt>
+									<dd>
+									<ul>
+									<li>
+									<a href="#isInputVarOf" title="http://purl.org/net/p-plan#isInputVarOf">p-plan:isInputVarOf</a>
+									<sup class="type-p" title="class">op</sup>
+									</li>
+									</ul>
+									</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="hasOutputVar">
+								<a name="http://purl.org/net/p-plan#hasOutputVar"/></a>
+								<h3>p-plan:hasOutputVar<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#hasOutputVar</p>
+								<div class="comment">
+								<p>p-plan:hasOutputVar binds a p-plan:Step to the p-plan:Variable that will be produced as output in the planned execution</p>
+								<p>Example:
+								<pre>
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionProcess/acc1&gt;
+		a p-plan:Step;
+		p-plan:hasOutputVar &lt;http://www.opmw.org/export/resource/AQUAFLOW_EDM_VAR_2&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>								
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href ="#Step" title="http://purl.org/net/p-plan#Step">p-plan:Step</span></a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Variable" title="http://purl.org/net/p-plan#Variable">p-plan:Variable</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has inverse</dt>
+									<dd>
+									<ul>
+									<li>
+									<a href="#isOutputVarOf" title="http://purl.org/net/p-plan#isOutputVarOf">p-plan:isOutputVarOf</a>
+									<sup class="type-p" title="class">op</sup>
+									</li>
+									</ul>
+									</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="isDecomposedAsPlan">
+								<a name="http://purl.org/net/p-plan#isDecomposedAsPlan"/></a>
+								<h3>p-plan:isDecomposedAsPlan<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#isDecomposedAsPlan</p>
+								<div class="comment">
+								<p>The p-plan:isDecomposedAsPlan relationship binds a p-plan:MultiStep to the p-plan:Plan holding the definition of that step. That is, p-plan:isDecomposedAsPlan links the MultiStep to the Plan sptecification where it is decomposed.</p>
+								<p>Example:
+								<pre>
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionProcess/acc1&gt;
+		a p-plan:MultiStep;
+		p-plan:isDecomposedAsPlan &lt;http://www.opmw.org/export/resource/AQUAFLOW_EDM&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>								
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href ="#MultiStep" title="http://purl.org/net/p-plan#MultiStep">p-plan:MultiStep</span></a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Plan" title="http://purl.org/net/p-plan#Plan">p-plan:Plan</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>								
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="isInputVarOf">
+								<a name="http://purl.org/net/p-plan#isInputVarOf"/></a>
+								<h3>p-plan:isInputVarOf<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#isInputVarOf</p>
+								<div class="comment">
+								<p>p-plan:isInputVarOf links an input variable of the planned execution of a step to the step itself.</p>
+								<p>Example:
+								<pre>
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/DEPTH&gt; 
+		a p-plan;
+		opmw:isInputVarOf &lt;http://www.opmw.org/export/resource/AQUAFLOW_EDM_STEP_4&gt; ;
+	
+	&lt;http://www.opmw.org/export/resource/AQUAFLOW_EDM_STEP_2&gt; a p-plan:Step
+								</pre>
+								</p>
+								</div>
+								<div class="description">								
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Variable" title="http://purl.org/net/p-plan#Variable">p-plan:Variable</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Step" title="http://purl.org/net/p-plan#Step">p-plan:Step</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has inverse</dt>
+									<dd>
+									<ul>
+									<li>
+									<a href="#hasInputVar" title="http://purl.org/net/p-plan#hasInputVar">p-plan:hasInputVar</a>
+									<sup class="type-p" title="class">op</sup>
+									</li>
+									</ul>
+									</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="isOutputVarOf">
+								<a name="http://purl.org/net/p-plan#isOutputVarOf"/></a>
+								<h3>p-plan:isOutputVarOf<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#isOutputVarOf</p>
+								<div class="comment">
+								<p>p-plan:isOutputVarOf is intended to link an output variable of a step to the step.</p>
+								<p>Example:
+								<pre>
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/DEPTH&gt; 
+		a p-plan;
+		opmw:isOutputVarOf &lt;http://www.opmw.org/export/resource/AQUAFLOW_EDM_STEP_2&gt; ;
+	
+	&lt;http://www.opmw.org/export/resource/AQUAFLOW_EDM_STEP_2&gt; a p-plan:Step
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Variable" title="http://purl.org/net/p-plan#Variable">p-plan:Variable</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Step" title="http://purl.org/net/p-plan#Step">p-plan:Step</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has inverse</dt>
+									<dd>
+									<ul>
+									<li>
+									<a href="#hasOutputVar" title="http://purl.org/net/p-plan#hasOutputVar">p-plan:hasOutputVar</a>
+									<sup class="type-p" title="class">op</sup>
+									</li>
+									</ul>
+									</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="isStepOfPlan">
+								<a name="http://purl.org/net/p-plan#isStepOfPlan"/></a>
+								<h3>p-plan:isStepOfPlan<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#isStepOfPlan</p>
+								<div class="comment">
+								<p>p-plan:isStepOfPlan links a p-plan:Step to the p-plan:Plan which it corresponds to.</p>
+								<p>Example:
+								<pre>
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/REAERATIONEDM_STEP_1&gt;
+		a p-plan:Step;
+		p-plan:isStepOfPlan &lt;http://www.opmw.org/export/resource/WorkflowTemplateProcess/AQUAFLOW_EDM_REAERATIONEDM&gt;. 
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>								
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Step" title="http://purl.org/net/p-plan#Step">p-plan:Step</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Plan" title="http://purl.org/net/p-plan#Plan">p-plan:Plan</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="isPrecededBy">
+								<a name="http://purl.org/net/p-plan#isPrecededBy"/></a>
+								<h3>p-plan:isPrecededBy<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/p-plan#isPrecededBy</p>
+								<div class="comment">
+								<p>p-plan:isPrecededBy links a p-plan:Step to the p-plan:Step preceeding it.</p>
+								<p>Example:
+								<pre>
+	@prefix p-plan: &lt;http://purl.org/net/p-plan#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/REAERATIONEDM_STEP_2&gt;
+		a p-plan:Step;
+		p-plan:isPrecededBy &lt;http://www.opmw.org/export/resource/WorkflowTemplateProcess/REAERATIONEDM_STEP_1&gt;. 
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> transitive</p>								
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Step" title="http://purl.org/net/p-plan#Step">p-plan:Step</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Step" title="http://purl.org/net/p-plan#Step">p-plan:Step</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="isSubPlanOfPlan">
+								<a name="http://purl.org/net/p-plan#isSubPlanOfPlan"/></a>
+								<h3>p-plan:isSubPlanOfPlan<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong>http://purl.org/net/p-plan#isSubPlanOfPlan</p>
+								<div class="comment">
+								<p>A p-plan:Plan may be a subplan of another bigger p-plan:Plan. p-plan:isSubPlanOfPlan is used to state the link among the two different plans. Note that if p1 is a p-plan:subPlan of p2, p1will not necessarily be a step of p2. A multistep will represent p1 in p2, and link to p1 with the p-plan.hasStepDecomposition relationship.</p>
+								<p>Example:
+								<pre>							
+	@prefix p-plan: &lt;http://purl.org/net/p-plan&gt; .
+
+	&lt;http://www.opmw.org/export/resource/AQUAFLOW_EDM_REAERATIONPARAMS&gt;
+		a p-plan:Plan;
+		p-plan:isSubPlanOfPlan &lt;http://www.opmw.org/export/resource/AQUAFLOW_EDM_REAERATIONEDM&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Plan" title="http://purl.org/net/p-plan#Plan">p-plan:Plan</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Plan" title="http://purl.org/net/p-plan#Plan">p-plan:Plan</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="isVariableOfPlan">
+								<a name="http://purl.org/net/p-plan#isVariableOfPlan"/></a>
+								<h3>p-plan:isVariableOfPlan<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong>http://purl.org/net/p-plan#isVariableOfPlan</p>
+								<div class="comment">
+								<p>p-plan:IsVariableOfPlan binds a p-plan:Variable to the p-plan:Plan it corresponds to.</p>
+								<p>Example:
+								<pre>							
+	@prefix p-plan: &lt;http://purl.org/net/p-plan&gt; .
+
+	&lt;http://www.opmw.org/export/resource/AQUAFLOW_EDM_REAERATIONPARAMS&gt;
+		a p-plan:Variable;
+		opmw:VariableOfPlan &lt;http://www.opmw.org/export/resource/AQUAFLOW_EDM_REAERATIONEDM&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Variable" title="http://purl.org/net/p-plan#Variable">p-plan:Variable</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Plan" title="http://purl.org/net/p-plan#Plan">p-plan:Plan</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+							</div>							
+						</div>
+						
+						<div id="references">
+								<h2>5. References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+								<ul>
+								<li id="PROV-O"><strong>[PROV-O]</strong>: Timothy Lebo, Satya Sahoo, Deborah McGuinness (eds).
+									<a href="http://www.w3.org/TR/2012/CR-prov-o-20121211/">
+									<cite>PROV-O: The PROV Ontology</cite>
+									</a>11 December 2012, W3C Candidate Recommendation. URL:
+									<a href="http://www.w3.org/TR/2012/CR-prov-o-20121211/">http://www.w3.org/TR/2012/CR-prov-o-20121211/</a></li>
+									
+								<li id="PROV-DM"><strong>[PROV-DM]</strong>:Luc Moreau; Paolo Missier; eds. <a href="http://www.w3.org/TR/2012/CR-prov-dm-20121211/">
+								<cite>PROV-DM: The PROV Data Model</cite></a>. 11 December 2012, W3C Candidate Recommendation. URL: 
+								<a href="http://www.w3.org/TR/2012/CR-prov-dm-20121211/">http://www.w3.org/TR/2012/CR-prov-dm-20121211/</a></li>
+								</ul>
+						</div>
+						<div id="acknowledgements">
+								<h2>6. Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+								<p>
+								We would like thank <strong>Varun Ratnakar</strong> and <strong>Raul Alcazar</strong> for his help and his technical support and Silvio Peroni for developing LODE, tool 
+								used to create part of the cross-reference sections of this document.
+								</p>
+						</div>
+						<div id="changelog">
+								<h2>Changes since last release <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+								<ul>
+									<li>Added PROV's hierarchy in the ontology to avoid confusion.</li>
+									<li>Added class MultiStep to represent plans that are steps in other steps.</li>
+									<li>Added the relationship isDecomposedAsPlan to link the multiSteps to their correspondent Plan specifications</li>
+									<li>Added the relationship isSubPlanOfPlan to indicate that a plan is part of another plan</li>
+								</ul>
+						</div>
+</body></html>

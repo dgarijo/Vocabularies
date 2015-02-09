@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1401475892994" name="http://purl.org/net/p-plan" uri="p-plan.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401475892994" name="http://purl.org/net/wf-invocation" uri="Extensions/Wf-invoc/wf-invocation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401475892994" name="duplicate:http://purl.org/net/wfd" uri="Extensions/WFFD/wffd1.0.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401475892994" name="duplicate:http://purl.org/net/wfd" uri="Extensions/WFFD/wffd1.1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401475892994" name="shadowed:http://purl.org/net/p-plan" uri="Releases/Release17052013/p-plan1.1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401475892994" name="shadowed:http://purl.org/net/p-plan" uri="Releases/Release12032014/p-plan.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401475892994" name="shadowed:http://purl.org/net/p-plan" uri="Releases/Release17092013/p-plan.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1401475892994" name="shadowed:http://purl.org/net/p-plan" uri="Releases/Release10112012/p-plan1.0.owl"/>
+    </group>
+</catalog>
