@@ -1,0 +1,1564 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="dc: http://purl.org/dc/terms/ schema: http://schema.org/ prov: http://www.w3.org/ns/prov# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl#"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<style type="text/css">
+		/*
+		   This template uses the W3C css for working drafts, with small modiications.
+		   Original copyright:
+		   Copyright 1997-2003 W3C (MIT, ERCIM, Keio). All Rights Reserved.
+		   The following software licensing rules apply:
+		   http://www.w3.org/Consortium/Legal/copyright-software */
+
+		/* $Id: base.css,v 1.26 2012/08/31 21:24:31 ijacobs Exp $ */
+
+		body {
+		  padding: 2em 1em 2em 70px;
+		  margin: 0;
+		  font-family: sans-serif;
+		  color: black;
+		  background: white;
+		  background-position: top left;
+		  background-attachment: fixed;
+		  background-repeat: no-repeat;
+		}
+		:link { color: #00C; background: transparent }
+		:visited { color: #609; background: transparent }
+		a:active { color: #C00; background: transparent }
+
+		a:link img, a:visited img { border-style: none } /* no border on img links */
+
+		a img { color: white; }        /* trick to hide the border in Netscape 4 */
+		@media all {                   /* hide the next rule from Netscape 4 */
+		  a img { color: inherit; }    /* undo the color change above */
+		}
+
+		th, td { /* ns 4 */
+		  font-family: sans-serif;
+		}
+
+		h1, h2, h3, h4, h5, h6 { text-align: left }
+		/* background should be transparent, but WebTV has a bug */
+		h1, h2, h3, h4 { color: #005A9C; background: white }
+		h1 { font: 170% sans-serif }
+		h2 { font: 140% sans-serif }
+		h3 { font: 120% sans-serif }
+		h3 {
+			border-bottom: 1px solid navy;
+			margin-top: 3px;
+			padding-bottom: 5px;
+		}
+		h4 { font: 110% sans-serif; }
+		h5 { font: italic 100% sans-serif }
+		h6 { font: small-caps 100% sans-serif }
+
+		.hide { display: none }
+
+		div.head { margin-bottom: 1em }
+		div.head h1 { margin-top: 2em; clear: both }
+		div.head table { margin-left: 2em; margin-top: 2em }
+
+		p.copyright { font-size: small }
+		p.copyright small { font-size: small }
+
+		@media screen {  /* hide from IE3 */
+		a[href]:hover { background: #ffa }
+		}
+
+		pre { margin-left: 2em }
+		
+		p {
+		  margin-top: 0.6em;
+		  margin-bottom: 0.6em;		  
+		  text-align: justify;
+		}
+		
+		dt, dd { margin-top: 0; margin-bottom: 0 } /* opera 3.50 */
+		dt { font-weight: bold }
+
+		ul.toc, ol.toc {
+		  list-style: disc;		/* Mac NS has problem with 'none' */
+		  list-style: none;
+		}
+
+		@media aural {  
+		  h1, h2, h3 { stress: 20; richness: 90 }
+		  .hide { speak: none }
+		  p.copyright { volume: x-soft; speech-rate: x-fast }
+		  dt { pause-before: 20% }
+		  pre { speak-punctuation: code } 
+		}
+		
+		/*Additional css*/
+		.hlist {
+			background-color: #F4FFFF;
+			border: 1px solid navy;
+			padding: 5px;
+		}
+		.hlist li {
+			display: inline-table;
+			list-style-type: none;
+			padding-right: 20px;
+		}
+		.backlink {
+			background-color: #F4FFFF;
+			border: 1px dotted navy;
+			color: black;
+			float: right;
+			font-size: 10pt;
+			padding: 2px;
+			text-align: right;
+		}
+		.entity {
+			border: 1px solid navy;
+			margin: 5px 0;
+			padding: 5px;
+		}
+		table {
+			background-color: #F4FFFF;
+			border: 1px solid navy;
+			margin: 20px;
+		}
+		table {
+			text-align: center;
+			vertical-align: middle;
+		}
+		table td {
+			padding: 5px 15px;
+			text-align: left;
+		}
+		table th {
+			background-color: LightGoldenRodYellow;
+		}
+		pre {
+			background-color: #F9F9F9;
+			border: 1px dashed #2F6FAB;
+			color: black;
+			line-height: 1.1em;
+			padding: 1em;
+		}
+		</style>
+		</head>
+	<span resource="" typeOf="foaf:Document schema:WebPage">
+		<title property="dc:title schema:name">The Workflow Motif Ontology</title>
+		<span property="dc:created schema:dateCreated" content="15 June 2013"></span>
+		<span property="dc:isVersionOf" resource="http://purl.org/net/wf-motifs"></span>	
+		<span property="dc:creator prov:wasAttributedTo schema:creator" resource="http://delicias.dia.fi.upm.es/members/DGarijo/#me"></span>
+	</span>
+		<body resource="http://purl.org/net/wf-motifs#" typeOf="owl:Ontology schema:TechArticle"><div class="head">
+						<h1 property="dc:title schema:name">The Workflow Motif Ontology</h1>
+						<h2 property="dc:modified schema:dateModified">Release 15 June 2013</h2>
+						</head><dl>
+							<dt>This version:</dt>
+							<dd><a href="http://vocab.linkeddata.es/motifs/version/13052013/">http://vocab.linkeddata.es/motifs/version/13052013/</a></dd>
+							</dl>
+							<dl>
+							<dt>Previous version:</dt>
+							<dd><a href="http://vocab.linkeddata.es/motifs/version/15032013/" property="prov:wasRevisionOf">http://vocab.linkeddata.es/motifs/version/15032013/</a></dd>
+							</dl>
+							<dl><dt>Latest version:</dt>
+								<dd><a href="http://purl.org/net/wf-motifs">http://purl.org/net/wf-motifs</a></dd>
+							</dl><dl>
+							<dt>Revision</dt>
+								<dd>Revision 1.2</dd>
+								</dl><dl><dt>Authors:</dt>
+									<dd><a href="http://delicias.dia.fi.upm.es/members/DGarijo/" property="dc:creator prov:wasAttributedTo schema:author">Daniel Garijo</a>,  Ontology Engineering Group, Universidad Polit&eacute;cnica de Madrid, Spain</dd>
+									<dd><a href="http://semanticweb.org/wiki/Pinar_Alper" property="dc:creator prov:wasAttributedTo schema:author">Pinar Alper</a>, University of Manchester, UK </dd>
+									<dd><a href="http://semanticweb.org/wiki/Khalid_Belhajjame" property="dc:creator prov:wasAttributedTo schema:author">Khalid Belhajjame</a>, University of Manchester, UK </dd>
+								</dl>
+								<dl><dt>Contributors:</dt>
+								<dd><a href="http://www.oeg-upm.net/index.php/teachers/11-ocorcho" property="dc:contributor prov:wasAttributedTo schema:contributor">Oscar Corcho</a>,  Ontology Engineering Group, Universidad Polit&eacute;cnica de Madrid, Spain</dd>
+								<dd><a href="http://www.isi.edu/~gil/" property="dc:contributor prov:wasAttributedTo schema:contributor">Yolanda Gil</a>, University of Southern California, USA</dd>
+								<dd><a href="http://www.cs.man.ac.uk/~carole/" property="dc:contributor prov:wasAttributedTo schema:contributor">Carole Goble</a>, University of Manchester, UK</dd>
+								</dl>
+								<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/" property="dc:license"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic License</a>.
+						</div>
+						<hr>
+						<h2>Abstract</h2>
+							<p>
+							This document explains the ontology for the Workflow Motif catalogue described in [<cite><a class="bibref" href="#bib-wf-Catalogue" property="dc:references schema:mentions">Workflow Catalogue</a></cite>]. The catalogue highlights the results obtained 
+							from a manual analysis performed over a set of real-world scientific workflows from Taverna [<cite><a class="bibref" href="#bib-Taverna" property="dc:references schema:mentions">Taverna</a></cite>], 
+							Wings [<cite><a class="bibref" href="#bib-Wings" property="dc:references schema:mentions">Wings</a></cite>], Galaxy [<cite><a class="bibref" href="#bib-Galaxy"property="dc:references schema:mentions">Galaxy</a></cite>] and Vistrails 
+							[<cite><a class="bibref" href="#bib-Vistrails" property="dc:references schema:mentions">Vistrails</a></cite>]. 
+							Workflow Motifs outline the kinds of data-intensive activities that are observed in  workflows (<i>data-operation motifs</i>) and the different manners in which activities 
+							are implemented within workflows (<i>workflow-oriented motifs</i>). These motifs are helpful to identify the functionality of the steps in a given workflow, 
+							to develop best practices for workflow design, and to develop approaches for automated generation of workflow abstractions
+							</p>							
+							<p style="text-align: center;"> <b>The latest OWL encoding of the Workflow Motifs Ontology can be found <a href="motif-ontology1.1.owl"> here </a></b></p>
+							<p>Most of the content displayed in this document has been retrieved from [<cite><a class="bibref" href="#bib-wf-Catalogue">Workflow Catalogue</a></cite>].</p>
+						<div id="toc">
+						<h2>Table of Contents</h2><ul><li>
+							<a href="#introduction">1. Introduction</a></li>
+								<ul><li><a href="#namespacedeclarations">1.1 Namespace declarations</a></li></ul>
+							<a href="#ontOverview">2. Workflow Motifs Overview</a></li><li>
+							<a href="#ontDescription">3. Workflow Motifs Description</a></li>							
+								<ul>
+								<li><a href="#howto">3.1 Describing workflows with the Workflow Motif ontology</a></li></li>
+									<ul>
+										<li><a href="#howto_tav">3.1.1 Annotating a Taverna workflow defined with the wfdesc ontology</a></li>
+										<li><a href="#howto_wings">3.1.2 Annotating a Wings workflow defined with the OPMW ontology</a></li>
+									</ul>
+									
+								</ul>
+							<li><a href="#crossReference">4. Cross reference for Workflow Motifs classes, properties and dataproperties</a></li>
+							<ul>
+								<li><a href="#classes">4.1 Classes</a></li>
+								<li><a href="#objectproperties">4.2 Object Properties</a></li>
+								<!--<li><a href="#dataproperties">4.3 Data Properties</a></li>-->
+							</ul>
+							<li>
+							<a href="#references">6. References</a></li>
+							<li><a href="#acknowledgements">7. Acknowledgements</a></li>
+							<li><a href="#changes">8. Changes from last release</a></li>
+							</ul>
+						</div>
+						<div id="introduction">
+						<h2>1. Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+						<p>
+						Scientific workflows have been increasingly used in the last decade as an instrument for data intensive science. 
+						Workflows serve a dual function: first, as detailed documentation of the scientific method used for an experiment 
+						(i. e. the input sources and processing steps taken for the derivation of a certain data item), and second, as re-usable, 
+						executable artifacts for data-intensive analysis. Scientific workflows are composed of a variety of data manipulation activities 
+						such as Data Movement, data transformation, Data Analysis and Data Visualization to serve the goals of the scientific study. 
+						The composition is done through the constructs made available by the workflow system used, and is largely shaped by the function 
+						undertaken by the workflow and the environment in which the system operates.
+						</p>
+						<p>
+						A major difficulty in understanding workflows is their complex nature. A workflow may contain several scientifically-significant
+						analysis steps, combined with other Data Preparation or result delivery activities, and in different implementation styles depending on the
+						environment and context in which the workflow is executed. This difficulty in understanding stands in the way of reusing workflows.
+						</p>
+						<p>
+						As a first step towards addressing this issue [<cite><a class="bibref" href="#bib-wf-Catalogue" property="dc:references schema:mentions">Workflow Catalogue</a></cite>] describes a catalogue of domain independent conceptual abstractions 
+						for workflow steps called <i>scientific Workflow Motifs</i>. The catalogue was built based on an empirical analysis performed 
+						over 260 workflow descriptions from Taverna [<cite><a class="bibref" href="#bib-Taverna">Taverna</a></cite>], Wings [<cite><a class="bibref" href="#bib-Wings">Wings</a></cite>], Galaxy 
+						[<cite><a class="bibref" href="#bib-Galaxy">Galaxy</a></cite>] and Vistrails [<cite><a class="bibref" href="#bib-Vistrails">Vistrails</a></cite>]. Motifs are provided through i) a characterization 
+						of the kinds of data-operation activities that are carried out within workflows, which are referred to as 
+						 <i>data-operation motifs</i>, and ii) a characterization of the different manners in which those activity motifs are realized/implemented 
+						 within workflows, referred to as <i>workflow-oriented motifs</i>.
+						</p>
+						<p>
+						This document specifies the classes and properties of the Workflow Motifs ontology, the OWL 2 encoding ot the aforementioned motif catalogue. The goal of this ontology
+						is to provide the means to annotate workflows and their steps with the motifs of the vocabulary, without setting any restriction on how the workflows are defined
+						themselves.
+						</p>						
+						<div id="namespacedeclarations">
+						<h2>1.1. Namespace declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+						</p><div id="ns" align="center">
+						 <table>
+							<caption> <a href="#ns"> Table 2</a>: Namespaces used in the document </caption>
+							<tbody>
+							<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+							<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>							
+							<tr><td><b>wfm</b></td><td>&lt;http://purl.org/net/wf-motifs#&gt;</td></tr>
+							<tr><td><b>ex</b></td><td>A prefix used for the examples. It could be, for instance, &lt;http:example.org#&gt;</td></tr>
+							</tbody>
+						  </table>
+						  </div>
+						</div>
+						
+						<div id="ontOverview" >
+						<h2>2. Workflow Motifs Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>					
+						The Workflow Motifs Ontology represents the concepts of Workflow Motif Catalogue [<cite><a class="bibref" href="#bib-wf-Catalogue">Workflow Catalogue</a></cite>], 
+						which follow the next hierarchy:
+						<div>
+						<ul>
+						<li><a href="#Motif">Motif</a></li>
+							<ul>
+							<li><a href="#DataOperationMotif">Data Operation Motif</a></li>
+								<ul>
+								<li><a href="#DataPreparation">Data Preparation</a></li>
+									<ul>
+										<li><a href="#Filter">Filter</a></li>
+										<li><a href="#Group">Group</a></li>									
+										<li><a href="#Sort">Sort</a></li>
+										<li><a href="#FormatTransformation">Format Transformation</a></li>
+										<li><a href="#InputAugmentation">Input Augmentation</a></li>
+										<li><a href="#OutputExtraction">Output Extraction</a></li>
+										<li><a href="#Split">Split</a></li>
+										<li><a href="#Combine">Combine</a></li>									
+									</ul>
+								<li><a href="#DataCleaning">Data Cleaning</a></li>							
+								<li><a href="#DataVisualization">Data Visualization</a></li>
+								<li><a href="#DataAnalysis">Data Analysis</a></li>
+								<li><a href="#DataRetrieval">Data Retrieval</a></li>
+								<li><a href="#DataMovement">Data Movement</a></li>
+								</ul>
+							<li><a href="#WorkflowMotif">Workflow Motif</a></li>
+								<ul>
+								<li><a href="#InterWorkflowMotif">Inter-workflow Motif</a></li>
+									<ul>
+									<li><a href="#AtomicWorkflow">Atomic Workflow</a></li>
+									<li><a href="#CompositeWorkflow">Composite Workflow</a></li>
+									<li><a href="#WorkflowOverload">Workflow Overload</a></li>
+									</ul>
+								<li><a href="#IntraWorkflowMotif">Intra-Workflow Motif</a></li>
+									<ul>
+									<li><a href="#StatefulInvocation">Stateful Invocation</a></li>
+									<li><a href="#ComputationalStep">Computational Step</a></li>
+									<li><a href="#HumanInteractionStep">Human Interaction Step</a></li>
+									<li><a href="#InternalMacro">Internal Macro</a></li>
+									<li><a href="#StatelessInvocation">Stateless Invocation</a></li>
+									</ul>
+								</ul>
+							</ul>
+						</ul>
+						</div>						
+						<p>
+						The classes and properties of the ontology can be found below. It is important to note that in order to keep the ontology simple the properties that 
+						link a workflow step with a motif have no domain specified. This decission has been taken due to the possibilities of representing workflows. 
+						How workflows are represented is out of the scope 
+						of this ontology. Examples on how to annotate workflows can be found in <a href="#howto">section 3.1</a>.
+						</p>
+						<h4>Classes</h4>
+						<p>
+						The classes identify the different motifs obtained after performing the manual analysis. They correspond to those shown in the previous hierarchy.
+						</p>
+						<ul class="hlist">							
+							<li>
+							<a href="#AtomicWorkflow" title="http://purl.org/net/wf-motifs#AtomicWorkflow">wfm:AtomicWorkflow</a>
+							</li>
+							<li>
+							<a href="#Combine" title="http://purl.org/net/wf-motifs#Combine">wfm:Combine</a>
+							</li>
+							<li>
+							<a href="#CompositeWorkflow" title="http://purl.org/net/wf-motifs#CompositeWorkflow">wfm:CompositeWorkflow</a>
+							</li>
+							<li>
+							<a href="#ComputationalStep" title="http://purl.org/net/wf-motifs#ComputationalStep">wfm:ComputationalStep</a>
+							</li>
+							<li>
+							<a href="#DataAnalysis" title="http://purl.org/net/wf-motifs#DataAnalysis">wfm:DataAnalysis</a>
+							</li>
+							<li>
+							<a href="#DataCleaning" title="http://purl.org/net/wf-motifs#DataCleaning">wfm:DataCleaning</a>
+							</li>
+							<li>
+							<a href="#DataMovement" title="http://purl.org/net/wf-motifs#DataMovement">wfm:DataMovement</a>
+							</li>
+							<li>
+							<a href="#DataOperationMotif" title="http://purl.org/net/wf-motifs#DataOperationMotif">wfm:DataOperationMotif</a>
+							</li>
+							<li>
+							<a href="#DataPreparation" title="http://purl.org/net/wf-motifs#DataPreparation">wfm:DataPreparation</a>
+							</li>
+							<li>
+							<a href="#DataRetrieval" title="http://purl.org/net/wf-motifs#DataRetrieval">wfm:DataRetrieval</a>
+							</li>
+							<li>
+							<a href="#DataVisualization" title="http://purl.org/net/wf-motifs#DataVisualization">wfm:DataVisualization</a>
+							</li>
+							<li>
+							<a href="#Filter" title="http://purl.org/net/wf-motifsl#Filter">wfm:Filter</a>
+							</li>
+							<li>
+							<a href="#FormatTransformation" title="http://purl.org/net/wf-motifs#FormatTransformation">wfm:FormatTransformation</a>
+							</li>
+							<li>
+							<a href="#Group" title="http://purl.org/net/wf-motifs#Group">wfm:Group</a>
+							</li>
+							<li>
+							<a href="#HumanInteractionStep" title="http://purl.org/net/wf-motifs#HumanInteractionStep">wfm:HumanInteractionStep</a>
+							</li>
+							<li>
+							<a href="#InputAugmentation" title="http://purl.org/net/wf-motifs#InputAugmentation">wfm:InputAugmentation</a>
+							</li>
+							<li>
+							<a href="#InterWorkflowMotif" title="http://purl.org/net/wf-motifs#InterWorkflowMotif">wfm:InterWorkflowMotif</a>
+							</li>
+							<li>
+							<a href="#InternalMacro" title="http://purl.org/net/wf-motifs#InternalMacro">wfm:InternalMacro</a>
+							</li>
+							<li>
+							<a href="#IntraWorkflowMotif" title="http://purl.org/net/wf-motifs#IntraWorkflowMotif">wfm:IntraWorkflowMotif</a>
+							</li>														
+							<li>
+							<a href="#Motif" title="http://purl.org/net/wf-motifs#Motif">wfm:Motif</a>
+							</li>							
+							<li>
+							<a href="#OutputExtraction" title="http://purl.org/net/wf-motifs#OutputExtraction">wfm:OutputExtraction</a>
+							</li>
+							<li>
+							<a href="#Sort" title="http://purl.org/net/wf-motifs#Sort">wfm:Sort</a>
+							</li>
+							<li>
+							<a href="#Split" title="http://purl.org/net/wf-motifsl#Split">wfm:Split</a>
+							</li>
+							<li>
+							<a href="#StatefulInvocation" title="http://purl.org/net/wf-motifs#StatefulInvocation">wfm:StatefulInvocation</a>
+							</li>
+							<li>
+							<a href="#StatelessInvocation" title="http://purl.org/net/wf-motifs#StatelessInvocation">wfm:StatelessInvocation</a>
+							</li>							
+							<li>
+							<a href="#WorkflowMotif" title="http://purl.org/net/wf-motifs#WorkflowMotif">
+							<span>wfm:WorkflowMotif</span>
+							</a>
+							</li>
+							<li>
+							<a href="#WorkflowOverload" title="http://purl.org/net/wf-motifs#WorkflowOverload">wfm:WorkflowOverload</a>
+							</li>
+							</ul>
+						<h4>Object properties</h4>
+						<p>
+						The object properties relate a workflow or step of a workflow to the motif or motifs describing its functionality.
+						</p>
+							<ul class="hlist">
+							<li>
+							<a href="#hasMotif" title="http://purl.org/net/wf-motifs#hasMotif">wfm:hasMotif</a>
+							</li>
+							<li>
+							<a href="#hasDataOperationMotif" title="http://purl.org/net/wf-motifs#hasDataOperationMotif">wfm:hasDataOperationMotif</a>
+							</li>
+							<li>
+							<a href="#hasWorkflowMotif" title="http://purl.org/net/wf-motifs#hasWorkflowMotif">wfm:hasWorkflowMotif</a>
+							</li>
+							</ul>
+						
+						</div>
+						<div id="ontDescription">
+							<h2>3. Workflow Motifs Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2> 							
+							<p>
+							The goal of this document is to define an OWL 2 ontology for the motif catalogue proposed in 
+							[<cite><a class="bibref" href="#bib-wf-Catalogue">Workflow Catalogue</a></cite>]. 
+							The Workflow Motif ontology provides the means to annotate scientific workflows, helping creators and curators to describe their functionality 
+							and facilitating the search of workflows with a particular purpose (e.g., retrieving workflows with merging, analysis and filtering steps). 
+							</p>
+							<p>
+							The Workflow Motif ontology can also be used to annotate other types of scientific processes 
+							such as laboratory protocols or business workflows. Since these scientific processes may be defined according to different models, 
+							we define no domain for the object properties that bind a motif to a process (or a workflow step).
+							</p>
+							
+							<!--<h3>3.1 Catalogue Description</h3>
+							 Short description taken from the paper goes here. Figures with the workflows should be included in order to clarify
+							 I don't think it's necessary to state this since we already define each term below
+							 -->
+							<div id="howto">
+								<h3>3.1 Describing workflows with the Workflow Motif ontology</h3>	
+								<p>
+							<a href="#figure_1_example">Figure 1</a> shows an example of how the Workflow Motif ontology can be used, considering a workflow specification 
+							that has workflows (<i>ex:Workflow</i>) and workflow steps (<i>ex:WorkflowStep</i>). In this case we also use the notion of processes (<i>ex:Process</i>) 
+							to identify a generic class used to refer to both workflow steps and workflows. 
+							To annotate a workflow, the user can associate it with the corresponding Workflow Motif using the <i>wfm:hasWorkflowMotif</i> property. 
+							Similarily, to annotate a given workflow step the user can associate it with the 
+							corresponding data operation motif using the <i>wfm:hasDataOperationMotif</i> property. Finally, in order to simplify the annotation 
+							process, the user may use the more general property <i>wfm:hasMotif</i> to associate a workflow or a workflow step to
+							a motif (represented by the class <i>wfm:Motif</i>). 	
+							</p>
+								<div id = "figure_1_example" style="text-align: center;">
+									<img src="img/motif-overview.png" width="50%" alt="Figure 1 example"></img>
+									<div style="text-align: center;">
+									<a href="#figure_1_example">Figure 1</a>. 
+									Example of the Workflow Motif ontology. If the workflow being annotated has <i>ex:WorkflowSteps</i> <br> 
+									and	<i>ex:Workflows</i>, these classes could be used as domain of the properties of the Workflow Motif<br> 
+									ontology for annotation. The <i>ex:Process</i> class has been added in case the user doesn't want to <br>
+									specify if the resource being annotated is a step or a workflow.
+									</div>
+								</div>
+								<p>
+								<a href=""#howto_tav>Section 3.1.1</a> and <a href=""#howto_wings>Section 3.1.2</a> show how to annotate workflows from Taverna and Wings with the Workflow Motif ontology. Both systems use different
+								workflow specification ontologies (wfdesc [<cite><a class="bibref" href="#bib-wfdesc" property="dc:references schema:mentions">Wfdesc</a></cite>] and OPMW 
+								[<cite><a class="bibref" href="#bib-OPMW" property="dc:references schema:mentions">OPMW</a></cite>]) but they are easily annotated with the Workflow Motif ontology.
+								</p>
+							</div>
+							<div id="howto_tav">
+								<h4>3.1.1 Annotating a Taverna workflow defined with the wfdesc ontology</h3>									
+								<p>
+								<a href="#figure_2_example">Figure 2</a> shows a workflow created in the Taverna workflow system for functional genomics, where different 
+								motifs have been identified in the workflow steps (dotted boxes). Three processes are stateful invocations of web services 
+								(<i>getJobState</i>, <i>sleep</i> and <i>warp2D</i>), two are moving data to external servers (<i>DataUpload</i> and <i>DownloadResults</i>), 
+								 one performs the data analysis of the workflow (<i>warp2D</i>) and one augments the input for the <i>warp2D</i> from several input parameters 
+								 of the workflow (<i>warp2D_input</i>). 
+								<!--
+								<a href="#figure_2_example">Figure 2</a> shows how a sample workflow specification could be described with different motifs of the catalog. 
+								The left part of the figure shows a sample specification where the workflow steps are represented with squares (<i>ex:p1</i>, <i>ex:p2</i>, <i>ex:p3</i> and <i>ex:p4</i>)
+								and the different data variables being accepted or produced are represented with grey ellipses (<i>ex:a</i>, <i>ex:b</i>, ..., <i>ex:f</i>). On the right side of the figure 
+								we can see the different motif instances represented with blue ellipses (<i>ex:motif_DataMoving1</i>, <i>ex:motif_Filter1</i>, etc.). 
+								</p><p>
+								Motif instances are bound to the different steps of the workflow specification with the <i>wfm:hasDataOperationMotif</i> and 
+								<i>wfm:hasWorkflowMotif</i> properties, describing semantically the function of the annotated steps.
+								-->
+								</p>
+								<p>
+								The workflow is defined according to the wfdesc ontology [<cite><a class="bibref" href="#bib-wfdesc">Wfdesc</a></cite>], where all the workflow steps
+								are encoded as <code>wfdesc:Processes</code>, and have associated a different URI. Each <code>wfdesc:Process</code> has one or more inputs and produces an output.
+								More details about the ontology are available on the <a href="http://www.wf4ever-project.org/wiki/display/docs/Research+Object+Vocabulary+Specification+v0.2">wfdesc specification web page</a>.
+								</p>								
+								<div id = "figure_2_example" style="text-align: center;">
+									<img src="img/tav-wf.png" width="75%" alt="Figure 2 example"></img>
+									<div style="text-align: center;">
+									<a href="#figure_2_example">Figure 2</a>. 
+									A Taverna workflow example for functional genomics, with some motifs highlighted.<br>
+									The workflow transfers data files containing proteomics data to a remote server and <br>
+									augments several parameters for the invocation request. Then the workflow waits for <br>
+									job completion and inquires about the state of the submitted warping job. Once the <br>
+									inquiry call is returned the results are downloaded from the remote server.
+									</div>								 
+								</div>
+								<p>
+								<a href="#figure_3_example">Figure 3</a> illustrates how to annotate four of the processors of the workflow in <a href="#figure_2_example">Figure 2</a> with their correspondent motif instances (the rest have 
+								been excluded for simplicity). Each processor (of type <code>wfdesc:Process</code>) is taken as subject for the <i>wfm:hasDataOperationMotif</i> or 
+								<i>wfm:hasWorkflowMotif</i> properties, which link them to the appropriate instances of the motifs of the catalog. In this example the motif instances 
+								are blank nodes, but any other identifier would be valid as well.
+								</p>
+								<div id = "figure_3_example" style="text-align: center;">
+									<img src="img/tav-wf-annotated.png" width="60%" alt="Figure 3 example"></img>
+									<div style="text-align: center;">
+									<a href="#figure_3_example">Figure 3</a>. 
+									Annotation of part of the workflow of Figure 2 with the Workflow Motif ontology. <br>
+									Each instance has the class it belongs to highlighted before its identifier. <br>
+									Workflow fragment instances (processors) are represented in purple, while <br>
+									workflow motif instances (blank nodes) are represented in blue.
+									</div>								 
+								</div>
+							</div>
+							
+							<div id="howto_wings">
+								<h4>3.1.2 Annotating a Wings workflow defined with the OPMW ontology</h4>
+								<p>
+								<a href="#figure_4_example">Figure 4</a> shows a workflow created in the Wings workflow system for performing a ligand binding sites comparison of the inputs. 
+								Eight motifs have been identified in the workflow: two perform the data anlysis of the input datasets (both instances of <i>SMAPV2</i>), 
+								two sort the obtained results (both instances of <i>ResultSorter</i>), two merge both branches of the workflow (<i>Merger</i> and <i>SMAPAlignementMerger</i>)
+								and two identify a repetitive sequence (the sequence <i>SMAPV2</i> plus <i>ResultSorter</i> occur two times).
+								</p>
+								<p>
+								The workflow is defined according to the OPMW ontology [<cite><a class="bibref" href="#bib-OPMW">OPMW</a></cite>], where each step of the workflow is defined as
+								a <code>opmw:WorkflowTemplateProcess</code>. Each <code>opmw:WorkflowTemplateProcess</code> uses one or more inputs and produces an output. More information about the 
+								OPMW ontology can be found in the <a href="http://www.opmw.org/model/OPMW/">ontology specification web page</a>.
+								</p>
+								<div id = "figure_4_example" style="text-align: center;">
+									<img src="img/wings-wf.png" height="90%" alt="Figure 4 example"></img>
+									<div style="text-align: center;">
+									<a href="#figure_4_example">Figure 4</a>. 
+									A Wings workflow for ligand binding sites comparison. The workflow takes as input <br> 
+									the proteins and homology models of TB-Drugome and compares them against the <br>
+									approved drugs in parallel. The results are then sorted, filtered according <br>
+									to a p-value and finally merged. 
+									</div>								 
+								</div>
+								<p>
+								<a href="#figure_5_example">Figure 5</a> shows how some of the motifs identified in <a href="#figure_4_example">Figure 4</a> can be annotated with the Workflow Motif ontology
+								(the rest have been ommited for clarity). The way the annotations are performed is similar to the method followed in <a href="#howto_tav">Section 3.1.1</a>. 
+								Each <code>opmw:WorkflowTemplateProcess</code> is bound to a motif instance with the <i>wfm:hasDataOperationMotif</i> or the <i>wfm:hasWorkflowMotif</i> object properties. 
+								A special case is the binding to the internal macro (<i>_:mtf3</i>), where the subject of the property is the sequence of the <i>:SMAP_V2_1</i> and 
+								the <i>:SMAPResultSorter_1</i> steps. In this case a named graph is used to group the steps (<i>:namedGraph1</i>) and bind them to the internal macro motif instance (<i>_:mtf3</i>).
+								</p>
+								<div id = "figure_5_example" style="text-align: center;">
+									<img src="img/wings-wf-annotated.png" height="60%" alt="Figure 5 example"></img>
+									<div style="text-align: center;">
+									<a href="#figure_5_example">Figure 5</a>. 
+									Annotation of part of the workflow of Figure 4 with the Workflow Motif ontology. Each instance has the class <br>
+									it belongs to highlighted before its identifier. Workflow fragment instances (processors) are represented <br> 
+									in purple, while workflow motif instances (blank nodes) are represented in blue. Two processors have <br> 
+									been grouped in a named graph in order to associate a motif to the sub-workflow they compose.
+									</div>								 
+								</div>
+							</div>
+						
+						<div id="crossReference">							
+							<h2>4. Cross reference for Workflow Motifs classes and properties</h2>
+							This section provides details for each class and property defined by the Workflow Motifs Ontology.
+							<div id="classes">
+							<h3>4.1 Classes</h3>
+							<ul class="hlist">							
+							<li>
+							<a href="#AtomicWorkflow" title="http://purl.org/net/wf-motifs#AtomicWorkflow">wfm:AtomicWorkflow</a>
+							</li>
+							<li>
+							<a href="#Combine" title="http://purl.org/net/wf-motifs#Combine">wfm:Combine</a>
+							</li>
+							<li>
+							<a href="#CompositeWorkflow" title="http://purl.org/net/wf-motifs#CompositeWorkflow">wfm:CompositeWorkflow</a>
+							</li>
+							<li>
+							<a href="#ComputationalStep" title="http://purl.org/net/wf-motifs#ComputationalStep">wfm:ComputationalStep</a>
+							</li>
+							<li>
+							<a href="#DataAnalysis" title="http://purl.org/net/wf-motifs#DataAnalysis">wfm:DataAnalysis</a>
+							</li>
+							<li>
+							<a href="#DataCleaning" title="http://purl.org/net/wf-motifs#DataCleaning">wfm:DataCleaning</a>
+							</li>
+							<li>
+							<a href="#DataMovement" title="http://purl.org/net/wf-motifs#DataMovement">wfm:DataMovement</a>
+							</li>
+							<li>
+							<a href="#DataOperationMotif" title="http://purl.org/net/wf-motifs#DataOperationMotif">wfm:DataOperationMotif</a>
+							</li>
+							<li>
+							<a href="#DataPreparation" title="http://purl.org/net/wf-motifs#DataPreparation">wfm:DataPreparation</a>
+							</li>
+							<li>
+							<a href="#DataRetrieval" title="http://purl.org/net/wf-motifs#DataRetrieval">wfm:DataRetrieval</a>
+							</li>
+							<li>
+							<a href="#DataVisualization" title="http://purl.org/net/wf-motifs#DataVisualization">wfm:DataVisualization</a>
+							</li>
+							<li>
+							<a href="#Filter" title="http://purl.org/net/wf-motifsl#Filter">wfm:Filter
+							</a>
+							</li>
+							<li>
+							<a href="#FormatTransformation" title="http://purl.org/net/wf-motifs#FormatTransformation">wfm:FormatTransformation</a>
+							</li>
+							<li>
+							<a href="#Group" title="http://purl.org/net/wf-motifs#Group">wfm:Group</a>
+							</li>
+							<li>
+							<a href="#HumanInteractionStep" title="http://purl.org/net/wf-motifs#HumanInteractionStep">wfm:HumanInteractionStep</a>
+							</li>
+							<li>
+							<a href="#InputAugmentation" title="http://purl.org/net/wf-motifs#InputAugmentation">wfm:InputAugmentation</a>
+							</li>
+							<li>
+							<a href="#InterWorkflowMotif" title="http://purl.org/net/wf-motifs#InterWorkflowMotif">wfm:InterWorkflowMotif</a>
+							</li>
+							<li>
+							<a href="#InternalMacro" title="http://purl.org/net/wf-motifs#InternalMacro">wfm:InternalMacro</a>
+							</li>
+							<li>
+							<a href="#IntraWorkflowMotif" title="http://purl.org/net/wf-motifs#IntraWorkflowMotif">wfm:IntraWorkflowMotif</a>
+							</li>														
+							<li>
+							<a href="#Motif" title="http://purl.org/net/wf-motifs#Motif">wfm:Motif</a>
+							</li>
+							<li>
+							<a href="#OutputExtraction" title="http://purl.org/net/wf-motifs#OutputExtraction">wfm:OutputExtraction</a>
+							</li>
+							<li>
+							<a href="#Sort" title="http://purl.org/net/wf-motifs#Sort">wfm:Sort</a>
+							</li>
+							<li>
+							<a href="#Split" title="http://purl.org/net/wf-motifsl#Split">wfm:Split</a>
+							</li>
+							<li>
+							<a href="#StatefulInvocation" title="http://purl.org/net/wf-motifs#StatefulInvocation">wfm:StatefulInvocation</a>
+							</li>
+							<li>
+							<a href="#StatelessInvocation" title="http://purl.org/net/wf-motifs#StatelessInvocation">wfm:StatelessInvocation</a>
+							</li>							
+							<li>
+							<a href="#WorkflowMotif" title="http://purl.org/net/wf-motifs#WorkflowMotif">
+							<span>wfm:WorkflowMotif</span>
+							</a>
+							</li>
+							<li>
+							<a href="#WorkflowOverload" title="http://purl.org/net/wf-motifs#WorkflowOverload">wfm:WorkflowOverload</a>
+							</li>
+							</ul>							
+							<div class="entity" id="AtomicWorkflow">
+								<a name="http://purl.org/net/wf-motifs#AtomicWorkflow"/></a>
+								<h3>Atomic Workflow<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#AtomicWorkflow</p>
+								<div class="comment">
+								<p>Inter-workflow Motif used to characterize the workflows that perform an atomic unit of functionality, which effectively requires no sub-workflow usage. Typically these workflows are designed to be included in other workflows. Atomic Workflows are the main mechanism of modularizing functionality within scientific workflows.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#InterWorkflowMotif" title="http://purl.org/net/wf-motifs#InterWorkflowMotif">Inter-workflow Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="Combine">
+								<a name="http://purl.org/net/wf-motifs#Combine"/></a>
+								<h3>Combine<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#Combine</p>
+								<div class="comment">
+								<p>
+									Data Preparation motif that refers to the step or group of steps in the workflow aggregating information from different sources. For example, the joining of two tables in a new one or the merging of three different files in a bigger one
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataPreparation" title="http://purl.org/net/wf-motifs#DataPreparation">Data Preparation</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="CompositeWorkflow">
+								<a name="http://purl.org/net/wf-motifs#CompositeWorkflow"/></a>
+								<h3>Composite Workflow<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#CompositeWorkflow</p>
+								<div class="comment">
+								<p>Inter-workflow Motif referring to all those workflows that have one or more sub-workflows included in them (when these sub-workflows overlap they offer different views of the global workflow). </p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#InterWorkflowMotif" title="http://purl.org/net/wf-motifs#InterWorkflowMotif">Inter-workflow Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="ComputationalStep">
+								<a name="http://purl.org/net/wf-motifs#ComputationalStep"/></a>
+								<h3>Computational Step<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#ComputationalStep</p>
+								<div class="comment">
+								<p>Intra-Workflow Motif used to refer to activities performed by a computer. This motif applies to most of the steps of the workflow, except for those being Human Interaction Steps.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#IntraWorkflowMotif" title="http://purl.org/net/wf-motifs#IntraWorkflowMotif">Intra-Workflow Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="DataAnalysis">
+								<a name="http://purl.org/net/wf-motifs#DataAnalysis"/></a>
+								<h3>Data Analysis<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#DataAnalysis</p>
+								<div class="comment">
+								<p>Data Operation Motif that refers to a broad category of tasks in diverse domains. An important number of workflows are designed with the purpose of analyzing different features of input data, ranging from simple comparisons between the datasets to complex protein analysis to see whether two molecules can be docked successfully or not.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataOperationMotif" title="http://purl.org/net/wf-motifs#DataOperationMotif">Data Operation Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="DataCleaning">
+								<a name="http://purl.org/net/wf-motifs#DataCleaning"/></a>
+								<h3>Data Cleaning<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#DataCleaning</p>
+								<div class="comment">
+								<p>Data Operation Motif that refers to the step or series of steps for cleaning and curating data in a workflow. Typically these steps are undertaken by sophisticated tooling/services, or by human interactions. A Data Cleaning step preserves and enriches the content of data (e.g., by a user’s annotation of a result with additional information, detecting and removing inconsistencies on the data, etc.).</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataOperationMotif" title="http://purl.org/net/wf-motifs#DataOperationMotif">Data Operation Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="DataMovement">
+								<a name="http://purl.org/net/wf-motifs#DataMovement"/></a>
+								<h3>Data Movement<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#DataMovement</p>
+								<div class="comment">
+								<p>Certain analysis activities that are performed via external tools or services require the submission of data to a location accessible by the service/tool (i.e., a web or a local directory respectively). In such cases the workflow contains dedicated step(s) for the upload/transfer of data to these locations. The same applies to the outputs, in which case a data download/retrieval step is used to chain the data to the next steps of the workflow.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataOperationMotif" title="http://purl.org/net/wf-motifs#DataOperationMotif">Data Operation Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="DataPreparation">
+								<a name="http://purl.org/net/wf-motifs#DataPreparation"/></a>
+								<h3>Data Preparation<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#DataPreparation</p>
+								<div class="comment">
+								<p>Data, as it is originally retrieved, may need several transformations before being able to be used in a workflow step. 
+								These steps, typically known as ”Shims” [<cite><a class="bibref" href="#bib-Shims">SHIMS</a></cite>], can be annotated 
+								using the Data Preparation Motif.
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataOperationMotif" title="http://purl.org/net/wf-motifs#DataOperationMotif">Data Operation Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has sub-classes</dt>
+								<dd>
+								<a href="#Combine" title="http://purl.org/net/wf-motifs#Combine">Combine</a>
+								<sup class="type-c" title="class">c</sup>, 
+								<a href="#Filter" title="http://purl.org/net/wf-motifs#Filter">Filter</a>
+								<sup class="type-c" title="class">c</sup>,
+								<a href="#FormatTransformation" title="http://purl.org/net/wf-motifs#Filter">Format Transformation</a>
+								<sup class="type-c" title="class">c</sup>,
+								<a href="#Group" title="http://purl.org/net/wf-motifs#Group">Group</a>
+								<sup class="type-c" title="class">c</sup>,
+								<a href="#InputAugmentation" title="http://purl.org/net/wf-motifs#InputAugmentation">Input Augmentation</a>
+								<sup class="type-c" title="class">c</sup>,
+								<a href="#OutputExtraction" title="http://purl.org/net/wf-motifs#OutputExtraction">Output Extraction</a>
+								<sup class="type-c" title="class">c</sup>,
+								<a href="#Sort" title="http://purl.org/net/wf-motifs#Sort">Sort</a>
+								<sup class="type-c" title="class">c</sup>,
+								<a href="#Split" title="http://purl.org/net/wf-motifs#Split">Split</a>
+								<sup class="type-c" title="class">c</sup>.
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="DataRetrieval">
+								<a name="http://purl.org/net/wf-motifs#DataRetrieval"/></a>
+								<h3>Data Retrieval<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#DataRetrieval</p>
+								<div class="comment">
+								<p>Workflows exploit heterogeneous data sources, remote databases, repositories and other web resources mostly exposed via SOAP or REST services. Scientific data deposited in these repositories are retrieved through query and retrieval steps inside workflows. The Data Retrieval motif identifies those tasks within the workflow which are responsible for retrieving data from external sources into the workflow environment.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataOperationMotif" title="http://purl.org/net/wf-motifs#DataOperationMotif">Data Operation Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+								
+							<div class="entity" id="DataVisualization">
+								<a name="http://purl.org/net/wf-motifs#DataVisualization"/></a>
+								<h3>Data Visualization<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#DataVisualization</p>
+								<div class="comment">
+								<p>Being able to show the results is as important as producing them in some workflows. Scientists use visualizations to show the conclusions of their experiments and to take important decisions in the pipeline itself. Therefore certain steps in workflows are dedicated to generation of plots and graph outputs from input data. The Data Visualization motif also includes the generation of tables and files for browsing and reading the results of the workflow.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataOperationMotif" title="http://purl.org/net/wf-motifs#DataOperationMotif">Data Operation Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="Filter">
+								<a name="http://purl.org/net/wf-motifsl#Filter"/></a>
+								<h3>Filter
+								<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifsl#Filter</p>
+								<div class="comment">
+								<p> Data Preparation motif that refers to a filtering step or set of steps. For example, A file filtered by a set of set of keywords, 
+								a table filtered by a threshold, etc.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataPreparation" title="http://purl.org/net/wf-motifs#DataPreparation">Data Preparation</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+								
+							<div class="entity" id="FormatTransformation">
+								<a name="http://purl.org/net/wf-motifs#FormatTransformation"/></a>
+								<h3>Format Transformation<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#FormatTransformation</p>
+								<div class="comment">
+								<p>Workflows that bring together multiple access or analysis activities usually contain steps for Format Transformations. These steps preserve the content of the inputs while converting its representation format. An example would be a converter from CSV to VOTable format in the astronomy domain, a converter from FASTA to Swiss-Prott sequence in biology, or an Arff formating component for Weka in the text analysis domain.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataPreparation" title="http://purl.org/net/wf-motifs#DataPreparation">Data Preparation</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="Group">
+								<a name="http://purl.org/net/wf-motifs#Group"/></a>
+								<h3>Group<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#Group</p>
+								<div class="comment">
+								<p>
+									Data Preparation motif that refers to the step or set of steps that reorganize the input into different groups. For example, grouping a table by a certain category.
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataPreparation" title="http://purl.org/net/wf-motifs#DataPreparation">Data Preparation</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="HumanInteractionStep">
+								<a name="http://purl.org/net/wf-motifs#HumanInteractionStep"/></a>
+								<h3>Human Interaction Step<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#HumanInteractionStep</p>
+								<div class="comment">
+								<p>Intra-Workflow Motif used to characterize the activities that require human inputs during their execution. For example, manual data curation of a table for a future step in the workflow, cleaning and filtering steps (such as selecting a specific dataset to continue the experiment), etc. </p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#IntraWorkflowMotif" title="http://purl.org/net/wf-motifs#IntraWorkflowMotif">Intra-Workflow Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="InputAugmentation">
+								<a name="http://purl.org/net/wf-motifs#InputAugmentation"/></a>
+								<h3>Input Augmentation<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#InputAugmentation</p>
+								<div class="comment">
+								<p> Data Preparation motif that refers to the step or set of steps dedicated to generate an aggregation of multiple parameters and scripts for tools and external services. For example, the generation of queries for input retrieval through an aggregation of multiple parameters, the generation of scripts to be executed in further steps, etc.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataPreparation" title="http://purl.org/net/wf-motifs#DataPreparation">Data Preparation</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="InterWorkflowMotif">
+								<a name="http://purl.org/net/wf-motifs#InterWorkflowMotif"/></a>
+								<h3>Inter-workflow Motif<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#InterWorkflowMotif</p>
+								<div class="comment">
+								<p>Workflow Motif that relates workflows with each other by determining whether different workflows are a composition of each other (Composite Workflow) or not (Atomic Workflow), or they have a very similar composition but work for different inputs (Workflow Overloading).</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowMotif" title="http://purl.org/net/wf-motifs#WorkflowMotif">WorkflowMotif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has sub-classes</dt>
+								<dd>
+								<a href="#AtomicWorkflow" title="http://purl.org/net/wf-motifs#AtomicWorkflow">Atomic Workflow</a>
+								<sup class="type-c" title="class">c</sup>, <a href="#CompositeWorkflow" title="http://purl.org/net/wf-motifs#CompositeWorkflow">Composite Workflow</a>
+								<sup class="type-c" title="class">c</sup>, <a href="#WorkflowOverload" title="http://purl.org/net/wf-motifs#WorkflowOverload">Workflow Overload</a>
+								<sup class="type-c" title="class">c</sup>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="InternalMacro">
+								<a name="http://purl.org/net/wf-motifs#InternalMacro"/></a>
+								<h3>Internal Macro<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#InternalMacro</p>
+								<div class="comment">
+								<p>Intra-Workflow Motif that refers to those groups of steps in the workflow that correspond to repetitive patterns of combining tasks. For example, if a workflow has several branches with the same sequence of repeated steps, the sequence becomes an Internal Macro.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#IntraWorkflowMotif" title="http://purl.org/net/wf-motifs#IntraWorkflowMotif">Intra-Workflow Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+							
+							<div class="entity" id="IntraWorkflowMotif">
+								<a name="http://purl.org/net/wf-motifs#IntraWorkflowMotif"/></a>
+								<h3>Intra-Workflow Motif<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#IntraWorkflowMotif</p>
+								<div class="comment">
+								<p>Workflow Motif that describes a step or a series of steps within a single workflow.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowMotif" title="http://purl.org/net/wf-motifs#WorkflowMotif">WorkflowMotif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has sub-classes</dt>
+								<dd>
+								<a href="#StatefulInvocation" title="http://purl.org/net/wf-motifs#StatefulInvocation">Asynchronous invocation</a>
+								<sup class="type-c" title="class">c</sup>, <a href="#ComputationalStep" title="http://purl.org/net/wf-motifs#ComputationalStep">Computational interaction</a>
+								<sup class="type-c" title="class">c</sup>, <a href="#HumanInteractionStep" title="http://purl.org/net/wf-motifs#HumanInteractionStep">Human interaction</a>
+								<sup class="type-c" title="class">c</sup>, <a href="#InternalMacro" title="http://purl.org/net/wf-motifs#InternalMacro">Internal Macro</a>
+								<sup class="type-c" title="class">c</sup>, <a href="#StatelessInvocation" title="http://purl.org/net/wf-motifs#StatelessInvocation">Synchronous invocation</a>
+								<sup class="type-c" title="class">c</sup>
+								</dd>
+								</dl>
+							</div>					
+														
+							<div class="entity" id="Motif">
+								<a name="http://purl.org/net/wf-motifs#Motif"/></a>
+								<h3>Motif<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#Motif</p>
+								<div class="comment">
+								<p>A motif is a domain independent conceptual abstraction of one or more steps of a given workflow.</p>
+								</div>
+								<dl class="description">
+								<dt>has sub-classes</dt>
+								<dd>
+								<a href="#DataOperationMotif" title="http://purl.org/net/wf-motifs#DataOperationMotif">Data Operation Motif</a>
+								<sup class="type-c" title="class">c</sup>, 
+								<a href="#WorkflowMotif" title="http://purl.org/net/wf-motifs#WorkflowMotif">WorkflowMotif</a>
+								<sup class="type-c" title="class">c</sup>
+								</dd>
+								<dt>is in range of</dt>
+								<dd>
+								<a href="#hasMotif" title="http://purl.org/net/wf-motifs#hasMotif">has motif</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>
+								
+								<div class="entity" id="DataOperationMotif">
+								<a name="http://purl.org/net/wf-motifs#DataOperationMotif"/></a>
+								<h3>Data Operation Motif<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#DataOperationMotif</p>
+								<div class="comment">
+								<p>A Data Operation Motif describes the data manipulation and/or transformation carried out by 
+								a step in the workflow, a collection of steps in the workflow or a sub-workflow.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Motif" title="http://purl.org/net/wf-motifs#Motif">Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has sub-classes</dt>
+								<dd>
+								<a href="#DataPreparation" title="http://purl.org/net/wf-motifs#DataPreparation">Data Preparation</a>
+								<sup class="type-c" title="class">c</sup>, 
+								<a href="#DataCleaning" title="http://purl.org/net/wf-motifs#DataCleaning">Data Cleaning</a>
+								<sup class="type-c" title="class">c</sup>,
+								<a href="#DataAnalysis" title="http://purl.org/net/wf-motifs#DataAnalysis">Data Analysis</a>
+								<sup class="type-c" title="class">c</sup>,
+								<a href="#DataRetrieval" title="http://purl.org/net/wf-motifs#DataRetrieval">Data Retrieval</a>
+								<sup class="type-c" title="class">c</sup>,
+								<a href="#DataVisualization" title="http://purl.org/net/wf-motifs#DataVisualization">Data Visualization</a>
+								<sup class="type-c" title="class">c</sup>,
+								<a href="#DataMovement" title="http://purl.org/net/wf-motifs#DataMovement">Data Movement</a>
+								<sup class="type-c" title="class">c</sup>
+								</dd>
+								<dt>is in range of</dt>
+								<dd>
+								<a href="#hasDataOperationMotif" title="http://purl.org/net/wf-motifs#hasDataOperationMotif">has Data Operation Motif</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>
+								
+								<div class="entity" id="OutputExtraction">
+								<a name="http://purl.org/net/wf-motifs#OutputExtraction"/></a>
+								<h3>Output Extraction<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#OutputExtraction</p>
+								<div class="comment">
+								<p>Data Preparation motif that refers to the step or set of steps in the workflow retrieving only the relevant portion from the the output of a previous step. For example, retrieving the tag value of an XML fragment.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataPreparation" title="http://purl.org/net/wf-motifs#DataPreparation">Data Preparation</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								
+								<div class="entity" id="Sort">
+								<a name="http://purl.org/net/wf-motifs#Sort"/></a>
+								<h3>Sort<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#Sort</p>
+								<div class="comment">
+								<p>
+									Data Preparation motif that refers to the step or set of steps ordering the input by certain parameter. For example, a quicksort algorithm that takes an unordered vector and produces a sorted output.
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataPreparation" title="http://purl.org/net/wf-motifs#DataPreparation">Data Preparation</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								
+								<div class="entity" id="Split">
+								<a name="http://purl.org/net/wf-motifsl#Split"/></a>
+								<h3>Split<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifsl#Split</p>
+								<div class="comment">
+								<p>Data Preparation motif that refers to the step or steps in the workflow separating an input into different outputs. For example, splitting a dataset in three different subsets to be processed in parallel in a workflow.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataPreparation" title="http://purl.org/net/wf-motifs#DataPreparation">Data Preparation</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								
+								<div class="entity" id="StatefulInvocation">
+								<a name="http://purl.org/net/wf-motifs#StatefulInvocation"/></a>
+								<h3>Stateful (asynchronous) invocation<sup class="type-c" title="class">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#StatefulInvocation</p>
+								<div class="comment">
+								<p>Certain activities such as analysis or visualizations could be performed through interaction with stateful (web) services that allow for creation of jobs over remote grid environments. These are typically performed via invocation of multiple operations at a service endpoint. An example would be a BLAST job submission where the service invoker is responsible to first create a job, then submit the data, check the status and retrieve the results once it has finished.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#IntraWorkflowMotif" title="http://purl.org/net/wf-motifs#IntraWorkflowMotif">Intra-Workflow Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+							</div>
+								
+								<div class="entity" id="StatelessInvocation">
+								<a name="http://purl.org/net/wf-motifs#StatelessInvocation"/></a>
+								<h3>Stateless (synchronous) invocation<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#StatelessInvocation</p>
+								<div class="comment">
+								<p>Intra-Workflow Motif that requires a step in the workflow for performing a service call or tool invocation. All the steps of a workflow are by default stateless (synchronous) invocations unless they are explicitly declared to be stateful.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#IntraWorkflowMotif" title="http://purl.org/net/wf-motifs#IntraWorkflowMotif">Intra-Workflow Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								
+								
+								
+								<div class="entity" id="WorkflowMotif">
+								<a name="http://purl.org/net/wf-motifs#WorkflowMotif"/></a>
+								<h3>WorkflowMotif<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#WorkflowMotif</p>
+								<div class="comment">
+								<p> Motif that describes how a Data Operation Motif is realized (i.e., implemented) within a workflow. For example, a visualization step (Data Operation Motif) can be realized in different ways: via a stateful multi-step invocation, through a single Stateless Invocation (depending on the environmental constraints and nature of the services), or via a sub-workflow.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Motif" title="http://purl.org/net/wf-motifs#Motif">Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has sub-classes</dt>
+								<dd>
+								<a href="#InterWorkflowMotif" title="http://purl.org/net/wf-motifs#InterWorkflowMotif">Inter-workflow Motif</a>
+								<sup class="type-c" title="class">c</sup>, <a href="#IntraWorkflowMotif" title="http://purl.org/net/wf-motifs#IntraWorkflowMotif">Intra-Workflow Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</dd>
+								<dt>is in range of</dt>
+								<dd>
+								<a href="#hasWorkflowMotif" title="http://purl.org/net/wf-motifs#hasWorkflowMotif">has Workflow Motif</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>
+								
+								<div class="entity" id="WorkflowOverload">
+								<a name="http://purl.org/net/wf-motifs#WorkflowOverload"/></a>
+								<h3>Workflow Overload<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#WorkflowOverload</p>
+								<div class="comment">
+								<p>Inter-workflow Motif used to characterize workflows that are used to operate over different input parameter types. An example is performing an analysis over a String input parameter, or performing it over the contents of a specified File. Overloading is a direct response to the heterogeneity of environments in which workflows are used.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#InterWorkflowMotif" title="http://purl.org/net/wf-motifs#InterWorkflowMotif">Inter-workflow Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								
+							<div id="objectproperties">
+								<h3>4.2 Object Properties</h3>
+								<ul class="hlist">
+								<li>
+								<a href="#hasMotif" title="http://purl.org/net/wf-motifs#hasMotif">wfm:hasMotif</a>
+								</li>
+								<li>
+								<a href="#hasDataOperationMotif" title="http://purl.org/net/wf-motifs#hasDataOperationMotif">wfm:hasDataOperationMotif</a>
+								</li>
+								<li>
+								<a href="#hasWorkflowMotif" title="http://purl.org/net/wf-motifs#hasWorkflowMotif">wfm:hasWorkflowMotif</a>
+								</li>
+								</ul>
+								
+								<div class="entity" id="hasMotif">
+								<a name="http://purl.org/net/wf-motifs#hasMotif"/></a>
+								<h3>has motif<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#hasMotif</p>
+								<div class="comment">
+								<p>Object property used to annotate a step in the workflow, a group of steps, a subworkflow, or a workflow with a motif.</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has sub-properties</dt>
+								<dd>
+								<a href="#hasDataOperationMotif" title="http://purl.org/net/wf-motifs#hasDataOperationMotif">has Data Operation Motif</a>
+								<sup class="type-op" title="object property">op</sup>, <a href="#hasWorkflowMotif" title="http://purl.org/net/wf-motifs#hasWorkflowMotif">has Workflow Motif</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#Motif" title="http://purl.org/net/wf-motifs#Motif">Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="hasDataOperationMotif">								
+								<a name="http://purl.org/net/wf-motifs#hasDataOperationMotif"/></a>
+								<h3>has Data Operation Motif<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#hasDataOperationMotif</p>
+								<div class="comment">
+								<p>Object property that connects a workflow step with its correspondent Data Operation Motif.</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has super-properties</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#hasMotif" title="http://purl.org/net/wf-motifs#hasMotif">has motif</a>
+								<sup class="type-op" title="object property">op</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataOperationMotif" title="http://purl.org/net/wf-motifs#DataOperationMotif">Data Operation Motif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								
+								<div class="entity" id="hasWorkflowMotif">
+								<a name="http://purl.org/net/wf-motifs#hasWorkflowMotif"/></a>
+								<h3>has Workflow Motif<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://purl.org/net/wf-motifs#hasWorkflowMotif</p>
+								<div class="comment">
+								<p>    Object property that relates a workflow to its correspondent Workflow Motif.</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has super-properties</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#hasMotif" title="http://purl.org/net/wf-motifs#hasMotif">has motif</a>
+								<sup class="type-op" title="object property">op</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowMotif" title="http://purl.org/net/wf-motifs#WorkflowMotif">WorkflowMotif</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								</div>							
+						</div>
+						
+						<div id="references">
+								<h2>6. References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+								<dt id="bib-Galaxy">[Galaxy]</dt><dd>Jeremy Goecks, Anton Nekrutenko, and James Taylor. Galaxy: a comprehensive
+									approach for supporting accessible, reproducible, and transparent computational research in the life sciences. Genome Biology,
+									11(8):R86, 2010.
+									<a href="http://genomebiology.com/2010/11/8/R86">http://genomebiology.com/2010/11/8/R86</a></dd>
+								
+								<dt id="bib-OPMW">[OPMW]</dt><dd>Daniel Garijo and Yolanda Gil. A new approach for publishing workflows: 
+								Abstractions, standards, and Linked Data. In Proceedings of the 6th workshop on Workflows in support 
+								of large-scale science, Proceedings of the 6th workshop on Workflows in support of large-scale science, 
+								pages 47-56, Seattle, 2011. ACM.
+								<a href="http://www.isi.edu/~gil/papers/garijo-gil-works11.pdf"></a>http://www.isi.edu/~gil/papers/garijo-gil-works11.pdf</dd>
+								
+								<dt id="bib-Shims">[SHIMS]</dt><dd>Hull, Duncan, Robert Stevens, Phillip Lord, Chris Wroe, and Carole Goble. 2004. 
+								Treating shimantic web syndrome with ontologies. In AKT Workshop on Semantic Web Services, ed. John Domingue, 
+								Liliana Cabral, and Enrico Motta. Vol. 122. 
+								<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.127.1644">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.127.1644</a>.</dd>
+								
+								<dt id="bib-Taverna">[Taverna]</dt><dd>Paolo Missier, Stian Soiland-Reyes, Stuart Owen, Wei Tan, Alex Nenadic,
+									Ian Dunlop, Alan Williams, Tom Oinn, and Carole Goble.
+									Taverna, reloaded. In M Gertz, T Hey, and B Ludaescher, editors, Procs.
+									SSDBM 2010, Heidelberg, Germany, 2010.
+									<a href="http://www.taverna.org.uk/pages/wp-content/uploads/2010/04/T2Architecture.pdf">http://www.taverna.org.uk/pages/wp-content/uploads/2010/04/T2Architecture.pdf</a></dd>
+								<dt id="bib-Vistrails">[Vistrails]</dt><dd>Carlos E. Scheidegger, Huy T. Vo, David Koop, Juliana Freire, and
+									Claudio T. Silva. Querying and re-using workflows with vistrails. In Proceedings of the 2008 ACM SIGMOD international conference on Man-
+									agement of data, SIGMOD '08, pages 1251-1254, New York, NY, USA,
+									2008. ACM.
+									<a href="http://dl.acm.org/citation.cfm?id=1376747">http://dl.acm.org/citation.cfm?id=1376747</a></dd>
+								<dt id="bib-wf-Catalogue">[Workflow Catalogue]</dt><dd>Common Motifs in Scientific Workflows: An Empirical Analysis. 
+									Garijo, D.; Alper, P.; Belhajjame, K.; Corcho, O.; Gil, Y.; and Goble, C. 2012. In 8th IEEE International 
+									Conference on eScience 2012, IEEE Computer Society Press, USA, Chicago. 
+									<a href="http://www.isi.edu/~gil/papers/garijo-etal-escience12.pdf">http://www.isi.edu/~gil/papers/garijo-etal-escience12.pdf</a>.</dd>
+									
+								<dt id="bib-wfdesc">[Wfdesc]</dt><dd>Khalid Belhajjame, Oscar Corcho, Daniel Garijo, Jun Zhao, Paolo Missier, 
+									David Newman, Raul Palma, Sean Bechhofer, Esteban Garcia-Cuesta, Jose-Manuel Gomez-Perez, Graham Klyne, Kevin Page, 
+									Marco Roos, Jose Enrique Ruiz, Stian Soiland-Reyes, Lourdes Verdes-Montenegro, David De Roure, and Carole Goble. 
+									Workflow-centric research objects: First class citizens in scholarly discourse. In Proceedings of Sepublica2012, 
+									pages 1-12, 2012.
+									<a href="http://users.ox.ac.uk/~oerc0033/preprints/sepublica2012.pdf">http://users.ox.ac.uk/~oerc0033/preprints/sepublica2012.pdf</a></dd>
+									
+								<dt id="bib-Wings">[Wings]</dt><dd>Yolanda Gil, Varun Ratnakar, Jihie Kim, Pedro A. Gonz&aacutelez-Calero,
+									Paul T. Groth, Joshua Moody, and Ewa Deelman. Wings: Intelligent workflow-based design of computational experiments. 
+									IEEE Intelligent Systems, 26(1):62–72, 2011.
+									<a href="http://www.isi.edu/~gil/papers/gil-etal-ieee-is-11.pdf">http://www.isi.edu/~gil/papers/gil-etal-ieee-is-11.pdf</a></dd>	
+																
+						</div>
+						<div id="acknowledgements">
+								<h2>7. Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+								<p>
+								We would like to thank Silvio Peroni for developing the <a href="http://www.essepuntato.it/lode">LODE framework</a>, 
+								partially used in for the cross reference section of this document and Raul Alcazar and Miguel Angel Garc&iacutea Delgado for their technical support.
+								</p>
+						</div>
+						<div id="changes">
+								<h2>8. Changes from the last release <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+								<ul>
+									<li>Renamed "OperationMotif" to "DataOperationMotif".</li>
+									<li>Removed "StructuredDataPreparation" and "UnstructuredDataPreparation" classes.</li>
+									<li>Replaced "Merge" and "Join" with the "Combine" class.</li>
+									<li>Removed the "DataCreation" class.</li>
+									<li>Renamed "AsynchronousInvocation" and "SynchronousInvocation" to "StatefulInvocation" and "StatelessInvocation" respectively.</li>
+									<li>Renamed "implementsMotif" to "hasMotif". The change applies to its subproperties as well.</li>									
+									<li>Renamed "ComputationalInteraction" to "ComputationalStep".</li>	
+								</ul>
+						</div>						
+</body></html>

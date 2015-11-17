@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY wf-fd "http://purl.org/net/wf-fd#" >
+    <!ENTITY p-plan "http://purl.org/net/p-plan#" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/net/wfd#"
+     xml:base="http://purl.org/net/wfd"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:p-plan="http://purl.org/net/p-plan#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:wf-fd="http://purl.org/net/wf-fd#">
+    <owl:Ontology rdf:about="http://purl.org/net/wf-fd#">
+        <rdfs:label xml:lang="en">Workflow Fragment Description Ontology</rdfs:label>
+        <terms:created rdf:datatype="&xsd;date">2013-09-17</terms:created>
+        <terms:modified rdf:datatype="&xsd;date">2014-03-12</terms:modified>
+        <terms:creator rdf:datatype="&xsd;anyURI">http://delicias.dia.fi.upm.es/members/DGarijo/#me</terms:creator>
+        <vann:preferredNamespaceUri>http://purl.org/net/wf-fd#</vann:preferredNamespaceUri>
+        <vann:preferredNamespacePrefix>wffd</vann:preferredNamespacePrefix>
+        <owl:versionInfo>1.1</owl:versionInfo>
+        <terms:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</terms:license>
+        <rdfs:comment>P-Plan extension to represent workflow fragments and their relationships to workflow templates</rdfs:comment>
+        <terms:description xml:lang="en">P-Plan extension to represent workflow fragments and their relationships to workflow templates</terms:description>
+        <terms:title xml:lang="en">The Workflow Fragment Description ontology</terms:title>
+        <owl:imports rdf:resource="http://purl.org/net/p-plan#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/p-plan#isSubPlanOfPlan -->
+
+    <owl:ObjectProperty rdf:about="&p-plan;isSubPlanOfPlan"/>
+    
+
+
+    <!-- http://purl.org/net/wf-fd#foundAs -->
+
+    <owl:ObjectProperty rdf:about="&wf-fd;foundAs">
+        <rdfs:label xml:lang="en">found As</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that links a Detected Result Workflow Fragment to a Bound Result Workflow Fragment. That is, this property links a workflow fragment found as a result of applying graph mining techniques to a collection of workflows to the correspondant fragment of the workflow itself.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/wf-fd#"/>
+        <rdfs:domain rdf:resource="&wf-fd;DetectedResutlWorkflowFragment"/>
+        <rdfs:range rdf:resource="&wf-fd;TiedResultWorkflowFragment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/wf-fd#foundIn -->
+
+    <owl:ObjectProperty rdf:about="&wf-fd;foundIn">
+        <rdfs:label xml:lang="en">found In</rdfs:label>
+        <prov:definition xml:lang="en">Property used to state in which workflows (p-plan:Plans) has a wffd:DetectedResultWorkflowFragment been found</prov:definition>
+        <rdfs:range rdf:resource="&p-plan;Plan"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/wf-fd#"/>
+        <rdfs:domain rdf:resource="&wf-fd;DetectedResutlWorkflowFragment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/wf-fd#isPartOfWorkflowFragment -->
+
+    <owl:ObjectProperty rdf:about="&wf-fd;isPartOfWorkflowFragment">
+        <rdfs:label xml:lang="en">is part of workflow fragment</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that specifies which Detected Result Workflow Fragments are part of another one. </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&p-plan;isSubPlanOfPlan"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/wf-fd#"/>
+        <rdfs:range rdf:resource="&wf-fd;DetectedResutlWorkflowFragment"/>
+        <rdfs:domain rdf:resource="&wf-fd;DetectedResutlWorkflowFragment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/wf-fd#detectedByAlgorithm -->
+
+    <owl:DatatypeProperty rdf:about="&wf-fd;detectedByAlgorithm">
+        <rdfs:label xml:lang="en">detected by algorithm</rdfs:label>
+        <prov:definition xml:lang="en">Property used to link a wffd:DetectedResultWorkflowFragment with the algorithm used to detect it. The name of the algorithm will be a Literal.</prov:definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/wf-fd#"/>
+        <rdfs:domain rdf:resource="&wf-fd;DetectedResutlWorkflowFragment"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/wf-fd#DetectedResutlWorkflowFragment -->
+
+    <owl:Class rdf:about="&wf-fd;DetectedResutlWorkflowFragment">
+        <rdfs:label xml:lang="en">Detected Result Workflow Fragment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wf-fd;WorkflowFragment"/>
+        <rdfs:comment xml:lang="en">A Detected Result Workflow Fragment is a Workflow Fragment detected automatically by using graph matching tecnhiques over a workflow collection. This fragment is a result of the algortihms and it is composed of Detected Result Steps.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/wf-fd#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/wf-fd#TiedResultWorkflowFragment -->
+
+    <owl:Class rdf:about="&wf-fd;TiedResultWorkflowFragment">
+        <rdfs:label xml:lang="en">Tied Result Workflow Fragment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wf-fd;WorkflowFragment"/>
+        <rdfs:comment xml:lang="en">A Tied Workflow Result Fragment  is an auxiliary structure to point to workflow steps of a collection of workflows were a Detected Result Workflow Fragment has been found. In this regard, a Tied Result could be considered as the pointer to the part of the workflow were the Detected result was found. Each Tied Result would represent a single pointer. It is a subclass of a Workflow Fragment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/wf-fd#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/wf-fd#WorkflowFragment -->
+
+    <owl:Class rdf:about="&wf-fd;WorkflowFragment">
+        <rdfs:label xml:lang="en">Workflow Fragment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&p-plan;Plan"/>
+        <rdfs:comment xml:lang="en">A Workflow Fragment is a set of connected steps which belongs as part of a scientific workflow. A Workflow Fragment is a directed acyclic graph (DAG) and may have one or more Steps.
+
+There are two types of Workflow Fragments: The Bound Result Workflow Fragments and the Detected Result Workflow Fragments. On one hand, the Detected Result Workflow Fragments are used to describe the results of the graph matching algorithms applied to a workflow collection. On the other hand, the Bound Workflow Result Fragments are auxiliary structures to point out the Steps of a Workflow belonging to a Detected Result Workflow Fragment .</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/wf-fd#"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/wf-fd# -->
+
+    <owl:Thing rdf:about="http://purl.org/net/wf-fd#">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+

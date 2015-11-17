@@ -1,0 +1,1114 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY ro "http://purl.org/wf4ever/ro#" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY wfdesc "http://purl.org/wf4ever/wfdesc#" >
+    <!ENTITY wfprov "http://purl.org/wf4ever/wfprov#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY terms "http://www.openarchives.org/ore/terms/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/net/RO-optimization#"
+     xml:base="http://purl.org/net/RO-optimization"
+     xmlns:wfdesc="http://purl.org/wf4ever/wfdesc#"
+     xmlns:ro="http://purl.org/wf4ever/ro#"
+     xmlns:terms="http://www.openarchives.org/ore/terms/"
+     xmlns:wfprov="http://purl.org/wf4ever/wfprov#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://purl.org/net/RO-optimization#">
+        <dcterms:created rdf:datatype="&xsd;date">2012-08-05</dcterms:created>
+        <dcterms:creator rdf:datatype="&xsd;anyURI">http://delicias.dia.fi.upm.es/members/DGarijo/#me</dcterms:creator>
+        <dcterms:creator rdf:datatype="&xsd;anyURI">http://semanticweb.org/wiki/Khalid_Belhajjame</dcterms:creator>
+        <dcterms:creator rdf:datatype="&xsd;anyURI">http://www.fz-juelich.de/SharedDocs/Personen/IAS/JSC/EN/staff/holl_s.html?nn=361682</dcterms:creator>
+        <vann:preferredNamespaceUri>http://purl.org/net/RO-optimization#</vann:preferredNamespaceUri>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <dcterms:description xml:lang="en">RO-Optimization is an extension of the RO model in order to be able to describe ooptimizations of workflows and their results.</dcterms:description>
+        <rdfs:comment>RO-Optimization is an extension of the RO model in order to be able to describe ooptimizations of workflows and their results. Created by Sonja Holl, by Daniel Garijo and Khalid Belhajjame</rdfs:comment>
+        <dcterms:title xml:lang="en">The Research Object Optimization Ontology</dcterms:title>
+        <dcterms:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</dcterms:license>
+        <vann:preferredNamespacePrefix>opt</vann:preferredNamespacePrefix>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#belongsToGeneration -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#belongsToGeneration">
+        <rdfs:label xml:lang="en">belongsToGeneration</rdfs:label>
+        <rdfs:comment xml:lang="en">Property used to associate an optimization run to the generation
+that it belongs to.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#Generation"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationRun"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasAbortCriteria -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasAbortCriteria">
+        <rdfs:label xml:lang="en">hasAbortCriteria</rdfs:label>
+        <rdfs:comment xml:lang="en">This property links an opt:OptimizationResearchObject to an opt:TerminationCondition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationResearchObject"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#TerminationCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasAlgorithm -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasAlgorithm">
+        <rdfs:label xml:lang="en">hasAlgorithm</rdfs:label>
+        <rdfs:comment xml:lang="en">This property links an opt:OptimizationResearchObject to the description of the used optimization algorithm.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#Algorithm"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationResearchObject"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;aggregates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasAlgorithmParameter -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasAlgorithmParameter">
+        <rdfs:label xml:lang="en">hasAlgorithmParameter</rdfs:label>
+        <rdfs:comment xml:lang="en">An opt:Algorithm has different opt:AlgorithmParameters that can be linked by opt:hasAlgorithmParameter</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#Algorithm"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#AlgorithmParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasDependency -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasDependency">
+        <rdfs:label xml:lang="en">hasDependency</rdfs:label>
+        <rdfs:comment xml:lang="en">An opt:SearchSpace can have different opt:Processor or opt: OptimizationParameterInput opt:Dependencies to narrow the search space. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#Dependency"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#SearchSpace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasFitness -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasFitness">
+        <rdfs:label xml:lang="en">hasFitness</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that links an opt:OptimizationResearchObject  to an opt:Fitness </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#Fitness"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationResearchObject"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;aggregates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasFitnessFunction -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasFitnessFunction">
+        <rdfs:label xml:lang="en">hasFitnessFunction</rdfs:label>
+        <rdfs:comment xml:lang="en">opt:hasFitnessFunction links and opt:Fitness with the used fitness functions. Opt:Fitness may have one or more opt:FitnessFunctions</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#Fitness"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#FitnessFunction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasFlag -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasFlag">
+        <rdfs:label xml:lang="en">hasFlag</rdfs:label>
+        <rdfs:comment xml:lang="en">The fitness values gained during the optimization can have different origins, which are identified by opt:Flag</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#Flag"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationRun"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasInputParameter -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasInputParameter">
+        <rdfs:label xml:lang="en">hasInputParameter</rdfs:label>
+        <rdfs:comment xml:lang="en">Property used to specify the input parameter of a given opt:Processor </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#OptimizationInputParameter"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#Processor"/>
+        <rdfs:subPropertyOf rdf:resource="&wfdesc;hasInput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasNumericFunction -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasNumericFunction">
+        <rdfs:label xml:lang="en">hasNumericFunction</rdfs:label>
+        <rdfs:comment xml:lang="en">An opt:NumericInputParameter may be further specified by a opt:NumericFunction</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#NumericFunction"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#NumericInputParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasOptimizationRun -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasOptimizationRun">
+        <rdfs:label xml:lang="en">hasOptimizationRun</rdfs:label>
+        <rdfs:comment xml:lang="en">This property links an opt:OptimizationResearchObject to the results of a performed optimization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationResearchObject"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#OptimizationRun"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;aggregates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasOutputParameter -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasOutputParameter">
+        <rdfs:label xml:lang="en">hasOutputParameter</rdfs:label>
+        <rdfs:comment xml:lang="en">This object property is used to specify an output parameter as the fitness of a given opt:FitnessFunction</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#FitnessFunction"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#FunctionOutputParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasProcessor -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasProcessor">
+        <rdfs:label xml:lang="en">hasProcessor</rdfs:label>
+        <rdfs:comment xml:lang="en">An opt:SearchSpace may have one or several opt:Processors that describe the dimensions of the search space</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#Processor"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#SearchSpace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasSearchSpace -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasSearchSpace">
+        <rdfs:label xml:lang="en">hasSearchSpace</rdfs:label>
+        <rdfs:comment xml:lang="en">This property links an opt:OptimizationResearchObject to an opt:SearchSpace.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationResearchObject"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#SearchSpace"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;aggregates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasSourceProcessor -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasSourceProcessor">
+        <rdfs:label xml:lang="en">hasSourceProcessor</rdfs:label>
+        <rdfs:comment xml:lang="en">This property is used to specify the opt:Processor that acts as a source to a opt:Dependency, source and target are linked by their compatibility.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#Dependency"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#Processor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasSubWorkflow -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasSubWorkflow">
+        <rdfs:label xml:lang="en">hasSubWorkflow</rdfs:label>
+        <rdfs:comment xml:lang="en">This property links an opt:OptimizationResearchObject to a  wfdesc:Workflowin order to specify the abstract sub-workflow used for the optimization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationResearchObject"/>
+        <rdfs:range rdf:resource="&wfdesc;Workflow"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;aggregates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasTargetProcessor -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasTargetProcessor">
+        <rdfs:label xml:lang="en">hasTargetProcessor</rdfs:label>
+        <rdfs:comment xml:lang="en">This property is used to specify the opt:Processor that acts as a target to an opt:ProcessorDependency source and target are linked by their compatibility</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#Processor"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#ProcessorDependency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasWorkflow -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#hasWorkflow">
+        <rdfs:label xml:lang="en">hasWorkflow</rdfs:label>
+        <rdfs:comment xml:lang="en">This property links an opt:OptimizationResearchObject to a wfdesc:Workflow in order to specify the original actract workflow of the optimization process.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationResearchObject"/>
+        <rdfs:range rdf:resource="&wfdesc;Workflow"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;aggregates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#onParameter -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/net/RO-optimization#onParameter">
+        <rdfs:label xml:lang="en">onParameter</rdfs:label>
+        <rdfs:comment xml:lang="en">This property is used to specify the opt:OptimizationInputParameter that acts as a target to a opt:ParameterDependency, source and target are linked by their compatibility and a constraint.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:range rdf:resource="http://purl.org/net/RO-optimization#OptimizationInputParameter"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#ParameterDependency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/wf4ever/wfdesc#hasInput -->
+
+    <owl:ObjectProperty rdf:about="&wfdesc;hasInput"/>
+    
+
+
+    <!-- http://www.openarchives.org/ore/terms/aggregates -->
+
+    <owl:ObjectProperty rdf:about="&terms;aggregates"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#compatibleResource -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#compatibleResource">
+        <rdfs:label xml:lang="en">compatibleResource</rdfs:label>
+        <rdfs:comment xml:lang="en">This property can be true or false specifying if a source and target opt:Processor are usable within one workflow or not</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#Dependency"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#fitnessReached -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#fitnessReached">
+        <rdfs:label xml:lang="en">fitnessReached</rdfs:label>
+        <rdfs:comment xml:lang="en">An opt:TerminationCondition can be defined by a reached fitness value</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#TerminationCondition"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hadMaximumNumberOfExecutions -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hadMaximumNumberOfExecutions">
+        <rdfs:label xml:lang="en">hadMaximumNumberOfExecutions</rdfs:label>
+        <rdfs:comment xml:lang="en">An opt:TerminationCondition can be defined by a maximum number of performed executions</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#TerminationCondition"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hadMaximumTime -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hadMaximumTime">
+        <rdfs:label xml:lang="en">hadMaximumTime</rdfs:label>
+        <rdfs:comment xml:lang="en">An opt:TerminationCondition can be defined by a maximum time an optimization may take.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#TerminationCondition"/>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hadNumberOfSteps -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hadNumberOfSteps">
+        <rdfs:label xml:lang="en">hadNumberOfSteps</rdfs:label>
+        <rdfs:comment xml:lang="en">A opt:TerminationCondition can be defined by a maximum number of performed evolutionary steps.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#TerminationCondition"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasBestResult -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasBestResult">
+        <rdfs:label xml:lang="en">hasBestResult</rdfs:label>
+        <rdfs:comment xml:lang="en">Links an opt:OptimizationResearchObject with the best result or the best result set (Pareto front) of the specific optimization run.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationResearchObject"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasBody -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasBody">
+        <rdfs:label xml:lang="en">hasBody</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a opt:FitnessFunction with a respective body (script or source code) to calculate the fitness</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#FitnessFunction"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasBooleanValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasBooleanValue">
+        <rdfs:label xml:lang="en">hasBooleanValue</rdfs:label>
+        <rdfs:comment xml:lang="en">This property links a opt:BooleanInputParameter with its value.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#BooleanInputParameter"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasChoiceValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasChoiceValue">
+        <rdfs:label xml:lang="en">hasChoiceValue</rdfs:label>
+        <rdfs:comment xml:lang="en">This property links a opt:ChoiceInputParameter with its list of valid values.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#ChoiceInputParameter"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasFileName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasFileName">
+        <rdfs:label xml:lang="en">hasFileName</rdfs:label>
+        <rdfs:comment xml:lang="en">This property links a opt:FileInputParameter with a list of valid file names.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#FileInputParameter"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasFitnessValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasFitnessValue">
+        <rdfs:label xml:lang="en">hasFitnessValue</rdfs:label>
+        <rdfs:comment xml:lang="en">Links an opt:OptimizationRun with the specific fitness value that was calculated for the specific parameter sample set stored within this  opt:OptimizationRun.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationRun"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&xsd;float"/>
+                    <rdf:Description rdf:about="&xsd;string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasFunctionValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasFunctionValue">
+        <rdfs:label xml:lang="en">hasFunctionValue</rdfs:label>
+        <rdfs:comment xml:lang="en">opt:NumericFunctions have a function value to describe their basis, exponent or step size.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#NumericFunction"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasGenerationNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasGenerationNumber">
+        <rdfs:label xml:lang="en">hasGenerationNumber</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that specifies the iteration that produced the generation in question.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#Generation"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasMaxValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasMaxValue">
+        <rdfs:label xml:lang="en">hasMaxValue</rdfs:label>
+        <rdfs:comment xml:lang="en">The range of a opt:NumericInputParameter is defined by a maximum value and minimum value.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#NumericInputParameter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasMinValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasMinValue">
+        <rdfs:label xml:lang="en">hasMinValue</rdfs:label>
+        <rdfs:comment xml:lang="en">The range of a opt:NumericInputParameter is defined by a minimum value and maximum value.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#NumericInputParameter"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasName">
+        <rdfs:label xml:lang="en">hasName</rdfs:label>
+        <rdfs:comment xml:lang="en">Links the name of an opt:OptimizationInputParameter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#OptimizationInputParameter"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasParameterConstraint -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasParameterConstraint">
+        <rdfs:label xml:lang="en">hasParameterConstraint</rdfs:label>
+        <rdfs:comment xml:lang="en">The dependency of two parameters is defined by a parameter constraint, defining e.g. a numerical function.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#ParameterDependency"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasParameterValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasParameterValue">
+        <rdfs:label xml:lang="en">hasParameterValue</rdfs:label>
+        <rdfs:comment xml:lang="en">Links the numerical value, which has been used during the optimization run to a specific opt:AlgorithmParameter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#AlgorithmParameter"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasPopulationSize -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasPopulationSize">
+        <rdfs:label xml:lang="en">hasPopulationSize</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that specifies the number of individuals that belong to a given generation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#Generation"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasRegularExpression -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasRegularExpression">
+        <rdfs:label xml:lang="en">hasRegularExpression</rdfs:label>
+        <rdfs:comment xml:lang="en">This property links the regular expression to describe a opt:StringInputParameter.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#StringInputParameter"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasRoundValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasRoundValue">
+        <rdfs:label xml:lang="en">hasRoundValue</rdfs:label>
+        <rdfs:comment xml:lang="en">Defines whether a opt:NumericInputParameter should be rounded.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#NumericInputParameter"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasValue">
+        <rdfs:label xml:lang="en">hasValue</rdfs:label>
+        <rdfs:comment xml:lang="en">Links the value of an opt:Artifact that was used for a specific optimization run.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#Artifact"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#hasWeight">
+        <rdfs:label xml:lang="en">hasWeight</rdfs:label>
+        <rdfs:comment xml:lang="en">An opt:FitnessFunction can be evaluated with respect to a specific weight.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#FitnessFunction"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#noChange -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/net/RO-optimization#noChange">
+        <rdfs:label xml:lang="en">noChange</rdfs:label>
+        <rdfs:comment xml:lang="en">An opt:TerminationCondition can be defined by a maximum number of steps within the fitness value had no change </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/RO-optimization#TerminationCondition"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#Algorithm -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#Algorithm">
+        <rdfs:label xml:lang="en">Algorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#OptimizationResource"/>
+        <rdfs:comment xml:lang="en">Workflow optimizations can be performed by different optimization algorithms. Typically, one optimization algorithm is not best suitable for each optimization problem and another may be tested. Examples are opt:GeneticAlgorithms (GA) or opt:ParticleSwarmOptimization (PSO).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#AlgorithmParameter -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#AlgorithmParameter">
+        <rdfs:label xml:lang="en">AlgorithmParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wfdesc;Parameter"/>
+        <rdfs:comment xml:lang="en">Parameter to specify the used optimization algorithm. These parameter may influence the effectiveness or convergence time of the algorithm. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#Approx -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#Approx">
+        <rdfs:label xml:lang="en">Approx</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#Flag"/>
+        <rdfs:comment xml:lang="en">The fitness value was not calculated, only approximated based on e.g. surrogate model or neighborhood values.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#Artifact -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#Artifact">
+        <rdfs:label xml:lang="en">Artifact</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wfprov;Artifact"/>
+        <rdfs:comment xml:lang="en">An opt:Artifact holds information of the used opt:OptimizationInputParameter. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#BooleanInputParameter -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#BooleanInputParameter">
+        <rdfs:label xml:lang="en">BooleanInputParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#OptimizationInputParameter"/>
+        <rdfs:comment xml:lang="en">An opt:BooleanInputParameter represents a workflow input parameter of the type boolean. Its value can be true or false, storing the initial setting. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#ChoiceInputParameter -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#ChoiceInputParameter">
+        <rdfs:label xml:lang="en">ChoiceInputParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#OptimizationInputParameter"/>
+        <rdfs:comment xml:lang="en">An opt:ChoiceInputParameter represents a workflow input parameter of the type choice. A choice represents fixed values. E.g. a parameter can have as input &quot;Gaussian&quot;, &quot;Polynomial&quot; or &quot;RBF&quot;. The algorithm may then select one of these opt:ChoiceInputParameter values [&quot;Gaussian&quot;, &quot;Polynomial&quot;, &quot;RBF&quot;] </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#Dependency -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#Dependency">
+        <rdfs:label xml:lang="en">Dependency</rdfs:label>
+        <rdfs:comment xml:lang="en">An opt:Dependency describes the dependency between two parameters or processors, which is defined by the user. Processors might only work in specific combinations, though only specific processors should be connected to each other within a workflow. Those dependencies must be defined by the user, in order that the non-compatible component combinations are excluded from the search space. Additionally, parameter values may not be compatible with each other. E.g. if a parameter value  A is within a specific range parameter value B may only be true.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#DoubleInputParameter -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#DoubleInputParameter">
+        <rdfs:label xml:lang="en">DoubleInputParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#NumericInputParameter"/>
+        <rdfs:comment xml:lang="en">An opt:DoubleInputParameter represents a workflow input parameter of the type double</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#ExponentialFunction -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#ExponentialFunction">
+        <rdfs:label xml:lang="en">ExponentialFunction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#NumericFunction"/>
+        <rdfs:comment xml:lang="en">The function value determines the basis for a function. The value for a parameter is then calculated by using 2^x whereas 2 is the fixed function value.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#FileInputParameter -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#FileInputParameter">
+        <rdfs:label xml:lang="en">FileInputParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#OptimizationInputParameter"/>
+        <rdfs:comment xml:lang="en">An opt:FileInputParameter represents a workflow input parameter of the type file. A file input can be taken from a fixed list of input files or a directory. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#Fitness -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#Fitness">
+        <rdfs:label xml:lang="en">Fitness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#OptimizationResource"/>
+        <rdfs:comment xml:lang="en">An opt:OptimizationResearchObject has a opt:Fitness description which in turn can have one or several opt:FitnessFunctions. An optimization can be a Multi-Objective Optimization or Single-Objective Optimization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#FitnessFunction -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#FitnessFunction">
+        <rdfs:label xml:lang="en">FitnessFunction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#Function"/>
+        <rdfs:comment xml:lang="en">The opt:FitnessFunctions characterize the specific functions that were used during the optimization to evaluate the workflow.  A fitness function can have a body, which is e.g. a function describing a performance measure. A fitness function can also have an opt:FunctionOutputParameter, whose numeric output value is used for the evaluation. For the evaluation a user may also want to give different weights to the fitness function, which can be defined by using the weight field.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#Flag -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#Flag">
+        <rdfs:label xml:lang="en">Flag</rdfs:label>
+        <rdfs:comment xml:lang="en">Each tested parameter sample set has a fitness value, which was calculated, approximated or taken from a prior run. To store the trustworthiness of a fitness value this flag can be set to opt:Original, opt:Approx, opt:Original or opt:LinkToOriginal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#Function -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#Function">
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+        <rdfs:comment xml:lang="en">An opt:Function groups the different typs of Functions found in an Optimization Research Object: Fitness Functions and Numeric Functions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#FunctionOutputParameter -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#FunctionOutputParameter">
+        <rdfs:label xml:lang="en">FunctionOutputParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wfdesc;Parameter"/>
+        <rdfs:comment xml:lang="en">An opt:FunctionOutputParameter specifies the output that can be used by an optimization algorithm to evaluate the fitness of a specific parameter sample set.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#Generation -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#Generation">
+        <rdfs:label xml:lang="en">Generation</rdfs:label>
+        <rdfs:comment xml:lang="en">A Generation represents the population of individuals (solutions) that
+have been produced at a given iteration of the optimization algorithm.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#GeneticAlgorithm -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#GeneticAlgorithm">
+        <rdfs:label xml:lang="en">GeneticAlgorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#Algorithm"/>
+        <rdfs:comment xml:lang="en">Class designed to indicate that the optimization was performed by a Genetic Algorithm. The used parameter for crossover and mutation rate are stored within opt:AlgorithmParameter respectively. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#IntegerInputParameter -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#IntegerInputParameter">
+        <rdfs:label xml:lang="en">IntegerInputParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#NumericInputParameter"/>
+        <rdfs:comment xml:lang="en">An opt:IntegerInputParameter represents a workflow input parameter of the type integer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#LinkToOriginal -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#LinkToOriginal">
+        <rdfs:label xml:lang="en">LinkToOriginal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#Flag"/>
+        <rdfs:comment xml:lang="en">The fitness value was not calculated, it was substituted by a result from a prior run, having equal or similar settings. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#MultiObjectiveFitness -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#MultiObjectiveFitness">
+        <rdfs:label xml:lang="en">MultiObjectiveFitness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#Fitness"/>
+        <rdfs:comment xml:lang="en">If a Fitness is a Multi-Objective Optimization, many fitness functions will be stored to define the maximization or minimization problem of a specific workflow. MO also effects the number of best results, as typically many parameter sets are optimal regarding the various fitness functions (they represent the Pareto front).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#NumericFunction -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#NumericFunction">
+        <rdfs:label xml:lang="en">NumericFunction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#Function"/>
+        <rdfs:comment xml:lang="en">An opt:NumericFunction describes a function for selecting a valid value for an opt:NumericInputParameter. Possible function types are opt:ExponentialFunction, opt:PointFunction or opt:PolynomicalFunction. The function value determines the step size for a opt:PointFunction, the basis for opt:ExponentialFunction and the exponent for a opt:PolynomicalFunction. The value for a parameter is then calculated by using e.g. 3*x whereas 3 is the fixed function value and x is a number heuristically determined by the optimization algorithm.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#NumericInputParameter -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#NumericInputParameter">
+        <rdfs:label xml:lang="en">NumericInputParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#OptimizationInputParameter"/>
+        <rdfs:comment xml:lang="en">An opt:NumericInputParameter represents a workflow input parameter of a numeric type, a double (opt:DoubleInputParameter) or interger (opt:IntegerInputParameter). The range of an opt:NumericInputParameter can be fixed by a minimum and a maximum value. A value can also be selected regarding a numerical function (opt:NumericFunction). A opt:NumericalInputParameter value may also be rounded by linking opt:hasRoundValue with true.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#OptimizationInputParameter -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#OptimizationInputParameter">
+        <rdfs:label xml:lang="en">OptimizationInputParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wfdesc;Parameter"/>
+        <rdfs:comment xml:lang="en">An opt:OptimizationInputParameter represents the workflow input parameter that has been used during an optimization. On the one hand, it stores the exact value for a specific parameter that has been used during one execution and on the other hand it stores the specification of the range in which a value can be selected. An opt:OptimizationInputParameter has a name (opt:name) and an value (opt:Value), which stores the exact value that were used during an optimization run for this specific parameter. An opt:OptimizationInputParameter can be an opt:NumericInputParameter, opt:StringInputParameter, opt:FileInputParameter, opt:BooleanInputParameter, or opt:ChoiceInputParameter. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#OptimizationResearchObject -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#OptimizationResearchObject">
+        <rdfs:label xml:lang="en">OptimizationResearchObject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ro;ResearchObject"/>
+        <rdfs:comment xml:lang="en">An opt:OptimizationResearchObject stores all relevant information and specifications that have been used to perform an optimization run as well as the optimization result. With the storage of these meta-data, the optimization run can be re-executed and/or analysed to guide future optimization runs. By reusing this knowledge, optimization runs improve workflow settings and workflows may produce more meaningful results.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#OptimizationResource -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#OptimizationResource">
+        <rdfs:label xml:lang="en">OptimizationResource</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ro;Resource"/>
+        <rdfs:comment xml:lang="en">An opt:OptimizationResource groups all those elements that are found in an OptimizationResearchObject.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#OptimizationRun -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#OptimizationRun">
+        <rdfs:label xml:lang="en">OptimizationRun</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#OptimizationResource"/>
+        <rdfs:subClassOf rdf:resource="&wfprov;WorkflowRun"/>
+        <rdfs:comment xml:lang="en">An opt:OptimizationRun represents one result of a specific paramater sample within an opt:OptimizationResearchObject. Different opt:OptimizationRuns can be specified by several properties. On the one hand, an opt:OptimizationRun has a fitness value and a flag to type the fitness value. On the other hand it has a used parameter sample set and sub-workflow. The sub-workflow specifies the exact workflow and wfprovt:Artifact describes the parameter sample set, which holds the exact parameter values for each parameter used for the execution to gain the specific fitness value.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#Original -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#Original">
+        <rdfs:label xml:lang="en">Original</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#Flag"/>
+        <rdfs:comment xml:lang="en">The fitness value was calculated by the workflow.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#ParameterDependency -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#ParameterDependency">
+        <rdfs:label xml:lang="en">ParameterDependency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#Dependency"/>
+        <rdfs:comment xml:lang="en">Paremeter dependencies are defined between a source Processor and its opt:OptimizationInputParameter and another opt:OptimizationInputParameter. A constraint can be defined, which implements a function describing the dependency between these two OptimizationInputParameters. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#ParticleSwarmOptimizationAlgorithm -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#ParticleSwarmOptimizationAlgorithm">
+        <rdfs:label xml:lang="en">ParticleSwarmOptimizationAlgorithm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#Algorithm"/>
+        <rdfs:comment xml:lang="en">Class designed to indicate that the optimization was performed by a Particle Swarm Optimization Algorithm. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#PointFunction -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#PointFunction">
+        <rdfs:label xml:lang="en">PointFunction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#NumericFunction"/>
+        <rdfs:comment xml:lang="en">The function value determines the step size for a opt:PointFunction. The value for a parameter is then calculated by using 2+x whereas 2 is the fixed function value.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#PolynomicalFunction -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#PolynomicalFunction">
+        <rdfs:label xml:lang="en">PolynomicalFunction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#NumericFunction"/>
+        <rdfs:comment xml:lang="en">The function value determines the exponent for a parameter. Is is then claculated by using e.g. x^3 whereas 3 is the fixed function value and x is a number heuristically determined by the optimization algorithm.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#Processor -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#Processor">
+        <rdfs:label xml:lang="en">Processor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wfdesc;Process"/>
+        <rdfs:comment xml:lang="en">A opt:Processor represents a node within a workflow. This can be a specific task e.g. a web service or application, or any abstract component description. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#ProcessorDependency -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#ProcessorDependency">
+        <rdfs:label xml:lang="en">ProcessorDependency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#Dependency"/>
+        <rdfs:comment xml:lang="en">opt:Processor dependencies are defined by specifying the compatibility between a source and target opt:Processor. Respectifely to the compatibility these two processors can or can not be used within one workflow for optimization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#SearchSpace -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#SearchSpace">
+        <rdfs:label xml:lang="en">SearchSpace</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#OptimizationResource"/>
+        <rdfs:comment xml:lang="en">The opt:SearchSpace describes the search space that is spanned by the different opt:Processors, their parameters and constraints. The user defines this space by setting ranges or regular expressions to opt:OptimizationInputParameter and defining dependencies between opt:Processors and opt:OptimizationInputParameter. The optimization algorithm will choose parameter values within the search space for the sampling process. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#SingleObjectiveFitness -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#SingleObjectiveFitness">
+        <rdfs:label xml:lang="en">SingleObjectiveFitness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#Fitness"/>
+        <rdfs:comment xml:lang="en">If a opt:Fitness is Single-Objective Optimization, typically only one fitness function is given. Sometimes there will be more than one fitness function defined, they are merged into one fitness value at the end regarding their weight. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#StringInputParameter -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#StringInputParameter">
+        <rdfs:label xml:lang="en">StringInputParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/RO-optimization#OptimizationInputParameter"/>
+        <rdfs:comment xml:lang="en">An opt:StringInputParameter represents a workflow input parameter of the type string. A string value can be optimized by modifying the string regarding to a respective regular expression given by the user.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/RO-optimization#TerminationCondition -->
+
+    <owl:Class rdf:about="http://purl.org/net/RO-optimization#TerminationCondition">
+        <rdfs:label xml:lang="en">TerminationCondition</rdfs:label>
+        <rdfs:comment xml:lang="en">The opt:TerminationCondition describes the finalization of the optimization. A user may want to run the optimization until i) a maximum number of executions is reached ii) a maximum number of evolutionary steps have been made iii) a maximum time has been reached iv) the fitness value has not changed within a specific number of iterations v)  a specific fitness value is reached. Sometimes a user may also want to combine those termination criteria e.g. proceed the optimization until a specific fitness value is reached but within a maximum time and maximum number of executions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/net/RO-optimization#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/wf4ever/ro#ResearchObject -->
+
+    <owl:Class rdf:about="&ro;ResearchObject"/>
+    
+
+
+    <!-- http://purl.org/wf4ever/ro#Resource -->
+
+    <owl:Class rdf:about="&ro;Resource"/>
+    
+
+
+    <!-- http://purl.org/wf4ever/wfdesc#Parameter -->
+
+    <owl:Class rdf:about="&wfdesc;Parameter"/>
+    
+
+
+    <!-- http://purl.org/wf4ever/wfdesc#Process -->
+
+    <owl:Class rdf:about="&wfdesc;Process"/>
+    
+
+
+    <!-- http://purl.org/wf4ever/wfdesc#Workflow -->
+
+    <owl:Class rdf:about="&wfdesc;Workflow"/>
+    
+
+
+    <!-- http://purl.org/wf4ever/wfprov#Artifact -->
+
+    <owl:Class rdf:about="&wfprov;Artifact"/>
+    
+
+
+    <!-- http://purl.org/wf4ever/wfprov#WorkflowRun -->
+
+    <owl:Class rdf:about="&wfprov;WorkflowRun"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/RO-optimization# -->
+
+    <owl:Thing rdf:about="http://purl.org/net/RO-optimization#">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+

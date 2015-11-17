@@ -1,0 +1,1920 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="OPMW_20121009_files/owl.css" rel="stylesheet" type="text/css"><link href="OPMW_20121009_files/Primer.css" rel="stylesheet" type="text/css"><link href="OPMW_20121009_files/rec.css" rel="stylesheet" type="text/css"><link href="OPMW_20121009_files/extra.css" rel="stylesheet" type="text/css"><script src="OPMW_20121009_files/jquery_002.js"></script><script src="OPMW_20121009_files/jquery.js"></script><script>
+                $(document).ready(
+                    function () {
+                        var list = $('a[name="http://www.opmw.org/OPMWv2.0.owl"]');
+                        if (list.size() != 0) {
+                        	var element = list.first();
+                        	$.scrollTo(element);
+                        }
+                    });
+        </script><body><div class="head">
+						<h1>The OPMW Ontology</h1>
+						<h2>Release 10 September 2012</h2>
+						</head><dl>
+							<dt>This version:</dt>
+							<dd><a href="http://www.opmw.org/model/OPMW_20121009.htm">http://www.opmw.org/model/OPMW_20121009</a></dd>
+							</dl><dl><dt>Latest version:</dt>
+								<dd><a href="http://www.opmw.org/model/OPMW">http://www.opmw.org/model/OPMW</a></dd>
+							</dl><dl><dt>Previous version</dt>
+								<dd><a href="http://www.opmw.org/model/OPMW_20123107">http://www.opmw.org/model/OPMW_20123107</a></dd>
+								<dt>Revision</dt>
+								<dd>Revision 4</dd>
+								</dl><dl><dt>Authors:</dt>
+									<dd><a href="http://www.oeg-upm.net/index.php/en/phdstudents/28-dgarijo">Daniel Garijo</a>, Universidad Polit&eacute;cnica de Madrid</dd>
+									<dd><a href="http://www.isi.edu/~gil/">Yolanda Gil</a>, Information Sciences Institute, University of Southern California, US </dd>
+								</dl><dl>
+								<dt>Imported Ontologies:</dt>
+									<dd><a href="http://openprovenance.org/model/opmo">The Open Provenance Model Ontology (OPMO)</a> </dd>
+									<dd><a href="http://purl.org/net/opmv/ns">The Open Provenance Model Vocabulary (OPMV)</a> </dd>
+									</dl>
+						</div>
+						<hr>
+						<h2>Abstract</h2>
+							<p>The Open Provenance Model for Workflows (OPMW) is an ontology for describing workflow traces and their templates based on the Open Provenance Model. 
+							It has been designed as a profile for OPM, extending and reusing OPM's core ontologies 
+							<a href="http://purl.org/net/opmv/ns">OPMV (OPM-Vocabulary)</a> and <a href="http://openprovenance.org/model/opmo">OPMO (OPM-Ontology)</a>.
+							</p>
+							<p>
+							This document specifies the classes, properties and dataproperties of OPMW.
+							</p>
+							<p style="text-align: center;"> <b>The OWL encoding of the OPMW Ontology can be found <a href="http://www.opmw.org/OPMWv2.1.owl"> here </a></b></p>
+						<div id="toc">
+						<h2>Table of Contents</h2><ul><li>
+							<a href="#introduction">1. Introduction</a></li><li>
+							<a href="#ontOverview">2. OPMW Overview</a></li><li>
+							<a href="#ontDescription">3. OPMW Description</a></li>
+							<ul>
+								<li><a href="#processView">3.1 Process view provenance</a></li>
+								<li><a href="#attribution">3.2 Attribution provenance</a></li>								
+							</ul>
+							<li><a href="#crossReference">4. Cross reference for OPMW classes, properties and dataproperties</a></li>
+							<ul>
+								<li><a href="#classes">4.1 Classes</a></li>
+								<li><a href="#objectproperties">4.2 Object Properties</a></li>
+								<li><a href="#dataproperties">4.3 Data Properties</a></li>
+							</ul>
+							<li>			
+							<a href="#namespacedeclarations">5. Namespace Declarations</a></li><li>
+							<a href="#references">6. References</a></li><li>
+							<a href="#acknowledgements">7. Acknowledgements</a></li><li>
+							<a href="#changeLog">8. Change log</a></li>
+							</ul>
+						</div>
+						<div id="introduction">
+						<h2>1. Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+						<p>OPMW is an OWL-DL ontology developed to represent abstract workflows in addition to workflow execution traces. 
+						This requirement was motivated by the goal of publishing workflows of scientific articles and their results.</p>
+						
+						<p>OPMW is based on the Open Provenance Model [Moreau el al 11], a widely-used domain-independent provenance model result of the
+						Provenance Challenge Series and years of workflow provenance standardization and exchange in the scientific workflow community. </p>
+						
+						<p>There are several reasons to use OPM: OPM has been already used successfully in many scientific workflow systems, 
+						its core definitions are domain independent	and extensible to accommodate other purposes and
+						OPM can be considered the basis of the emerging W3C Provenance Interchange Language (PROV),
+						which is currently being developed by the <a href="http://www.w3.org/2011/prov/">W3C Provenance Working Group</a> as a standard for representing and publishing
+						provenance on the Web.</p>
+						
+						<p>The OPMW profile aims to be simple and easy to use, following <a href="http://purl.org/net/opmv/ns">OPMV</a>'s style. </p>
+						</div>
+						<div id="ontOverview">
+						<h2>2. OPMW Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>					
+						
+						<p>OPMW extends OPM to fit in the scientific workflow domain. 
+						The next tables summarize the classes, properties and data properties that have been used to extend or complement the OPM core to our domain:</p>
+						<h4>Classes</h4>
+						<ul class="hlist">
+							<li>
+							<a href="#DataVariable" title="http://www.opmw.org/ontology/DataVariable">Data Variable</a>
+							</li>
+							<li>
+							<a href="#ParameterVariable" title="http://www.opmw.org/ontology/ParameterVariable">Parameter Variable</a>
+							</li>
+							<li>
+							<a href="#WorkflowExecutionAccount" title="http://www.opmw.org/ontology/WorkflowExecutionAccount">Workflow Execution Account</a>
+							</li>
+							<li>
+							<a href="#WorkflowExecutionArtifact" title="http://www.opmw.org/ontology/WorkflowExecutionArtifact">Workflow Execution Artifact</a>
+							</li>
+							<li>
+							<a href="#WorkflowExecutionProcess" title="http://www.opmw.org/ontology/WorkflowExecutionProcess">Workflow Execution Process</a>
+							</li>
+							<li>
+							<a href="#WorkflowTemplate" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a>
+							</li>
+							<li>
+							<a href="#WorkflowTemplateArtifact" title="http://www.opmw.org/ontology/WorkflowTemplateArtifact">Workflow Template Artifact</a>
+							</li>
+							<li>
+							<a href="#WorkflowTemplateProcess" title="http://www.opmw.org/ontology/WorkflowTemplateProcess">Workflow Template Process</a>
+							</li>
+						</ul>
+						<h4>Object properties</h4>
+						<ul class="hlist">
+							<li>
+							<a href="#executedInWorkflowSystem" title="http://www.opmw.org/ontology/executedInWorkflowSystem">executed in Workflow System</a>
+							</li>
+							<li>
+							<a href="#hasExecutableComponent" title="http://www.opmw.org/ontology/hasExecutableComponent">has Executable Component</a>
+							</li>							
+							<li>
+							<a href="#correspondsToTemplate" title="http://www.opmw.org/ontology/correspondsToTemplate">corresponds to Template</a>
+							</li>
+							<li>
+							<a href="#correspondsToTemplateArtifact" title="http://www.opmw.org/ontology/correspondsToTemplateArtifact">corresponds to Template Artifact</a>
+							</li>
+							<li>
+							<a href="#correspondsToTemplateProcess" title="http://www.opmw.org/ontology/correspondsToTemplateProcess">corresponds to Template Process</a>
+							</li>
+							<li>
+							<a href="#isGeneratedBy" title="http://www.opmw.org/ontology/isGeneratedBy">is Generated By</a>
+							</li>
+							<li>
+							<a href="#isParameterOfTemplate" title="http://www.opmw.org/ontology/isParameterOfTemplate">is parameter of Template</a>
+							</li>
+							<li>
+							<a href="#isVariableOfTemplate" title="http://www.opmw.org/ontology/isVariableOfTemplate">is variable of Template</a>
+							</li>
+							<li>
+							<a href="#isStepOfTemplate" title="http://www.opmw.org/ontology/isStepOfTemplate">is step of Template</a>
+							</li>
+							<li>
+							<a href="#uses" title="http://www.opmw.org/ontology/uses">uses</a>
+							</li>
+						</ul>
+						
+						<h4>Datatype properties</h4>
+						
+						<ul class="hlist">
+							<li>
+							<a href="#createdInWorkflowSystem" title="http://www.opmw.org/ontology/createdInWorkflowSystem">created in Workflow System</a>
+							</li>
+							<li>
+							<a href="#hasDimensionality" title="http://www.opmw.org/ontology/hasDimensionality">has Dimensionality</a>
+							</li>
+							<li>
+							<a href="#hasDocumentation" title="http://www.opmw.org/ontology/hasDocumentation">has Documentation</a>
+							</li>
+							<li>
+							<a href="#overallEndTime" title="http://www.opmw.org/ontology/overallEndTime">overall End Time</a>
+							</li>
+							<li>
+							<a href="#hasExecutionDiagram" title="http://www.opmw.org/ontology/hasExecutionDiagram">has Execution Diagram</a>
+							</li>
+							<li>
+							<a href="#hasFileName" title="http://www.opmw.org/ontology/hasFileName">has File Name</a>
+							</li>
+							<li>
+							<a href="#hasLocation" title="http://www.opmw.org/ontology/hasLocation">has Location</a>
+							</li>
+							<li>
+							<a href="#hasSize" title="http://www.opmw.org/ontology/hasSize">has Size</a>
+							</li>
+							<li>
+							<a href="#overallStartTime" title="http://www.opmw.org/ontology/overallStartTime">overall Start Time</a>
+							</li>
+							<li>
+							<a href="#hasStatus" title="http://www.opmw.org/ontology/hasStatus">has Status</a>
+							</li>
+							<li>
+							<a href="#hasTemplateDiagram" title="http://www.opmw.org/ontology/hasTemplateDiagram">has Template Diagram</a>
+							</li>
+							<li>
+							<a href="#hasValue" title="http://www.opmw.org/ontology/hasValue">has Value</a>
+							</li>
+							<li>
+							<a href="#hasOriginalLogFile" title="http://www.opmw.org/ontology/hasOriginalLogFile">has Original Log File</a>
+							</li>
+							<li>
+							<a href="#hasNativeSystemTemplate" title="http://www.opmw.org/ontology/hasNativeSystemTemplate">has Native System Template</a>
+							</li>
+							<li>
+							<a href="#isConcrete" title="http://www.opmw.org/ontology/isConcrete">is Concrete</a>
+							</li>
+							<li>
+							<a href="#versionNumber" title="http://www.opmw.org/ontology/versionNumber">version Number</a>
+							</li>
+						</ul>
+						</div>
+						<div id="ontDescription">
+							<h2>3. OPMW Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2> 
+							<p>The Open Provenance model offers several core concepts and relationships to represent provenance. 
+						It models the resources (datasets) as <a href="http://purl.org/net/opmv/ns#Artifact">artifacts</a> (immutable pieces of state),
+						<a href="http://purl.org/net/opmv/ns#Process">processes </a>(action or series of actions performed on artifacts), and <a href="http://purl.org/net/opmv/ns#Agent">agents</a> (controllers of processes).
+						Their relationships are modeled in a provenance graph with five causal edges: <a href="http://purl.org/net/opmv/ns#used">used</a> (a process used some artifact),
+						<a href="http://purl.org/net/opmv/ns#wasControlledBy">wasControlledBy</a> (an agent controlled some process), <a href="http://purl.org/net/opmv/ns#wasGeneratedBy">wasGeneratedBy</a> (a process generated an artifact),
+						<a href="http://purl.org/net/opmv/ns#wasDerivedFrom">wasDerivedFrom</a> (an artifact was derived from another artifact) and <a href="http://purl.org/net/opmv/ns#wasTriggeredBy">wasTriggeredBy</a> (a process was triggered by another process).
+						It also introduces the concept of <a href="http://openprovenance.org/model/opmo#term_Role">roles</a> to assign the type of activity that artifacts,
+						processes or agents played when interacting with each other, 
+						and the notion of <a href="http://openprovenance.org/model/opmo#term_Account">accounts</a> and provenance graphs to group sets of OPM assertions into different subgraphs.
+						An account represents a particular view on the provenance of an artifact based on what was executed.</p>
+						<p>
+							OPMW extends the previous relationships in order to capture the execution traces of a workflow template (process view provenance), plus
+							the metadata of the template and execution itself (attribution provenance).
+						</p>
+						
+							<div id="processView">
+							<h3>3.1 Process view provenance <span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+							<p>
+							OPMW describes the traces of the execution of a workflow along with the abstract workflow (template) used for its design. The trace is described by
+							extending opmv:Artifact with opmw:WorkflowExecutionArtifact; opmv:Process with WorkflowExecutionProcess; and reusing OPM relationships 
+							to link them(opmv:used,	opmv:wasControlledBy and opmv:wasGeneratedBy). 
+							All the assertions from an execution are grouped in a opmw:WorkflowExecutionAccount, a subclass	of opmo:Accoount that represents the view of the system
+							on the execution.
+							</p>
+							<p>
+							Templates are defined with new terms in OPMW, in a similar way to the traces. In this case, the reuse of OPM is not appropriate since we are describing
+							the plan of the workflow(which may be executed in the future or not), not the execution. Templates have opmw:WorkflowTemplateArtifacts (which can be either opmw:DataVariables
+							or opmw:ParameterVariables) and opmw:WorkflowTemplateProcesses, which represent an abstraction of the method that is being executed.
+							</p><p>
+							The opmw:WorkflowTemplateArtifacts are connected to opmw:WorkflowTemplateProcesses by opmw:uses and opmw:isGeneratedBy properties. These properties
+							define which type of opmw:WorkflowTemplateArtifact is used by each opmw:WorkflowTemplateProcess and the type of the expected result. 
+							The next figure shows a brief example.
+							</p><p>
+							Figure 1: An example of process view workflow provenance.
+							</p>
+							<p style="text-align: center;">
+							<img src="img/executionView_revised_2.png"  width="1094" height="490" title="Process view provenance"> 
+							</p>
+							<p>
+							Figure 1 shows a process view high level diagram of the OPM and OPMW representation of an abstract
+							workflow on the left and a workflow execution on the right. The example workflow shown here has one step
+							(executionNode1), which runs the workflow component (specComp1) that has one input (execInput1) 
+							and one output (executionOutput1). 
+							</p>
+							</div>
+							
+							<div id="attribution">
+							<h3>3.2 Attribution provenance<span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+							<p>Attribution is key for scientists who publish the workflow. Thus, OPMW was designed
+							to include metadata from the specification as well as from the execution itself. 
+							Figure 2 shows an attribution view on the provenance of the same workflow of Figure 1.</p>
+							<p>Figure 2: An example of attribution provenance</p>
+							<p style="text-align: center;">
+							<img src = "img/attrView_revised.png" width="743" height="590" title="Attribution provenance">
+							</p>
+							<p>							 							
+							The abstract workflow contains information of the authors of the original article, the contributors of 
+							the workflow, the version, the date of creation and documentation of the abstract workflow 
+							(that may include a pointer to the publication). OPMW reuses terms from the 
+							<a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core (DC) Metadata Terms Vocabulary</a> .
+							The executed workflow links to the workflow systems used to create and execute it, the license,
+							date of start and end of the run and the final status (succeeded or failed execution).
+							</p>
+							</div>							
+						</div>
+						<div id="crossReference">
+							<h2>4. Cross reference for OPMW classes, properties and dataproperties</h2>
+							This section provides details for each class, property and dataproperty defined by the OPMW Ontology.
+							<div id="classes">
+								<h2>4.1 Classes</h2>
+								<ul class="hlist">
+								<li>
+								<a href="#DataVariable" title="http://www.opmw.org/ontology/DataVariable">Data Variable</a>
+								</li>
+								<li>
+								<a href="#ParameterVariable" title="http://www.opmw.org/ontology/ParameterVariable">Parameter Variable</a>
+								</li>
+								<li>
+								<a href="#WorkflowExecutionAccount" title="http://www.opmw.org/ontology/WorkflowExecutionAccount">Workflow Execution Account</a>
+								</li>
+								<li>
+								<a href="#WorkflowExecutionArtifact" title="http://www.opmw.org/ontology/WorkflowExecutionArtifact">Workflow Execution Artifact</a>
+								</li>
+								<li>
+								<a href="#WorkflowExecutionProcess" title="http://www.opmw.org/ontology/WorkflowExecutionProcess">Workflow execution process</a>
+								</li>
+								<li>
+								<a href="#WorkflowTemplate" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a>
+								</li>
+								<li>
+								<a href="#WorkflowTemplateArtifact" title="http://www.opmw.org/ontology/WorkflowTemplateArtifact">Workflow Template Artifact</a>
+								</li>
+								<li>
+								<a href="#WorkflowTemplateProcess" title="http://www.opmw.org/ontology/WorkflowTemplateProcess">Workflow Template Process</a>
+								</li>
+								</ul>
+								<div class="entity" id="DataVariable">
+								<a name="http://www.opmw.org/ontology/DataVariable"></a>
+								<h3>Data Variable<sup class="type-c" title="class">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/DataVariable</p>
+								<div class="comment">
+								<p>A Data variable is a workflow template artifact that represents a variable in the workflow specification.</p>
+								<p>Example:
+								<pre>
+	@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+
+	&lt;http://www.opmw.org/export/resource/DataVariable/AQUAFLOW_NTM_SUM_CORRDO&gt;
+			a opmw:WorkflowTemplateArtifact , opmw:DataVariable ;
+			rdfs:label "Data variable Sum_CorrDO" ;
+			opmw:hasDimensionality "0"^^xsd:int ;
+			opmw:isGeneratedBy &lt;http://www.opmw.org/export/resource/WorkflowTemplateProcess/AQUAFLOW_NTM_CREATEPLOTS&gt; ;
+			opmw:template              &lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_NTM&gt; .
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplateArtifact" title="http://www.opmw.org/ontology/WorkflowTemplateArtifact">Workflow Template Artifact</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								<div class="entity" id="ParameterVariable">
+								<a name="http://www.opmw.org/ontology/ParameterVariable"></a>
+								<h3>Parameter Variable<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/ParameterVariable</p>
+								<div class="comment">
+								<p>An parameter variable represents a description of an input parameter of a process. Parameter variables can only be used by process.</p>
+								<p>Example:
+								<pre>
+	@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	&lt;http://www.opmw.org/export/resource/ParameterVariable/AQUAFLOW_NTM_LATITUDE&gt;
+			a opmw:/WorkflowTemplateArtifact , opmw:ParameterVariable ;
+			rdfs:label "Parameter variable Latitude" ;
+			opmw:template &lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_NTM&gt; .
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplateArtifact" title="http://www.opmw.org/ontology/WorkflowTemplateArtifact">Workflow Template Artifact</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								<div class="entity" id="WorkflowExecutionAccount">
+								<a name="http://www.opmw.org/ontology/WorkflowExecutionAccount"/></a>
+								<h3>Workflow Execution Account<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/WorkflowExecutionAccount</p>
+								<div class="comment">
+								<p>A workflow execution account represents the execution view from the perspective of the system.</p>
+								<p>Example:
+								<pre>
+	@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmo: &lt;http://openprovenance.org/model/opmo#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionAccount/ACCOUNT1335533097598&gt;
+			a       opmo:Account , opmw:WorkflowExecutionAccount&gt; ;
+			rdfs:label "Execution account created on 1335533097598" ;
+			opmw:executedInWorkflowSystem
+			
+	&lt;http://www.opmw.org/export/resource/Agent/SHELL&gt; ;
+			opmw:hasEndTime "2012-04-25T07:17:48-07:00"^^xsd:dateTime ;
+			opmw:hasExecutionDiagram "http://wind.isi.edu/marbles/assets/components/Water/runs/run_144.png"^^xsd:anyURI ;
+			opmw:overallStartTime               "2012-04-25T07:17:05-07:00"^^xsd:dateTime ;
+			opmw:hasStatus "SUCCESS" ;
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://openprovenance.org/model/opmo#Account">opmo:Account</span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#executedInWorkflowSystem" title="http://www.opmw.org/ontology/executedInWorkflowSystem">executed in workflow system</a>
+								<sup class="type-op" title="object property">op</sup>, <a href="#overallEndTime" title="http://www.opmw.org/ontology/overallEndTime">overall End Time</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#hasExecutionDiagram" title="http://www.opmw.org/ontology/hasExecutionDiagram">has Execution Diagram</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#overallStartTime" title="http://www.opmw.org/ontology/overallStartTime">overall Start Time</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#hasStatus" title="http://www.opmw.org/ontology/hasStatus">has Status</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#hasOriginalLogFile" title="http://www.opmw.org/ontology/hasOriginalLogFile">has Original Log File</a>
+								<sup class="type-dp" title="data property">dp</sup>
+								</dd>
+								</dl>
+								</div>
+								<div class="entity" id="WorkflowExecutionArtifact">
+								<a name="http://www.opmw.org/ontology/WorkflowExecutionArtifact"/></a>
+								<h3>Workflow Execution Artifact<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/WorkflowExecutionArtifact</p>
+								<div class="comment">
+								<p>A Workflow Execution Artifact represents a resource used or generated in the execution of a workflow.</p>
+								<p>Example:
+								<pre>
+	@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmv: &lt;http://purl.org/net/opmv/ns#&gt; .
+	@prefix opmo: &lt;http://openprovenance.org/model/opmo#&gt; .
+								
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionArtifact/25F1016C12EBE301EE7AADBC0B085C45&gt;
+			a       opmw:WorkflowExecutionArtifact , opmv:Artifact;
+			rdfs:label "Execution artifact with id: 25f1016c12ebe301ee7aadbc0b085c45" ;
+			opmo:account              &lt;http://www.opmw.org/export/resource/WorkflowExecutionAccount/ACCOUNT1335533097598&gt; ;
+			opmv:wasGeneratedBy     &lt;http://www.opmw.org/export/resource/WorkflowExecutionProcess/p1&gt; ;
+			opmw:hasLocation     "http://wings.isi.edu/opmexport/resource/1/144/Formatted_SMN_2010_03_10Z"^^xsd:anyURI ;
+			opmw:hasSize "8618"^^xsd:int ;
+			opmw:correspondsToTemplateArtifact              &lt;http://www.opmw.org/export/resource/DataVariable/AQUAFLOW_EDM_FORMATTEDDATA&gt;.
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://purl.org/net/opmv/ns#Artifact">opmv:Artifact</span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#hasDimensionality" title="http://www.opmw.org/ontology/hasDimensionality">has Dimensionality</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#hasFileName" title="http://www.opmw.org/ontology/hasFileName">has File Name</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#hasLocation" title="http://www.opmw.org/ontology/hasLocation">has Location</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#hasSize" title="http://www.opmw.org/ontology/hasSize">has Size</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#correspondsToTemplateArtifact" title="http://www.opmw.org/ontology/correspondsToTemplateArtifact">corresponds to Template Artifact</a>
+								<sup class="type-op" title="object property">op</sup>, <a href="#hasValue" title="http://www.opmw.org/ontology/hasValue">has value</a>
+								<sup class="type-dp" title="data property">dp</sup>
+								</dd>
+								</dl>
+								</div>
+								<div class="entity" id="WorkflowExecutionProcess">
+								<a name="http://www.opmw.org/ontology/WorkflowExecutionProcess"/></a>
+								<h3>Workflow execution process<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/WorkflowExecutionProcess</p>
+								<div class="comment">
+								<p>A workflow execution process represents the execution of a step in workflow template. The execution process also describes the specific method used to acomplish the task described in the proces template.</p>
+								<p>Example:
+								<pre>
+	@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmv: &lt;http://purl.org/net/opmv/ns#&gt; .
+	@prefix opmo: &lt;http://openprovenance.org/model/opmo#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionProcess/CONVERTTOSTANDARDFORMAT133553&gt; 
+			a opmw:/WorkflowExecutionProcess , opmv:Process ;
+			rdfs:label "Execution process ConvertToStandardFormat" ;
+			opmo:account &lt;http://www.opmw.org/export/resource/WorkflowExecutionAccount/ACCOUNT1335533097598&gt; ;
+			opmv:used &lt;http://www.opmw.org/export/resource/WorkflowExecutionArtifact/6C7CF277338D9590EE18534D4D78924F&gt; ;
+			opmv:wasControlledBy &lt;http://www.opmw.org/export/resource/Agent/ADMIN&gt; ;
+			opmw:correspondsToTemplateProcess &lt;http://www.opmw.org/export/resource/WorkflowTemplateProcess/CONVERTTOSTANDARDFORMAT&gt; .
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://purl.org/net/opmv/ns#Process">opmv:Process</span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#hasExecutableComponent" title="http://www.opmw.org/ontology/hasExecutableComponent">has Executable Component</a>
+								<sup class="type-op" title="object property">op</sup>, <a href="#correspondsToTemplateProcess" title="http://www.opmw.org/ontology/correspondsToTemplateProcess">corresponds to Template Process</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>
+								<div class="entity" id="WorkflowTemplate">
+								<a name="http://www.opmw.org/ontology/WorkflowTemplate"/></a>
+								<h3>Workflow Template<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/WorkflowTemplate</p>
+								<div class="comment">
+								<p>A workflow template represents the design of the workflow. In such design, the different steps and inputs don't have to be bound to a specific tool or dataset. It is a generic view of the workflow, which is instantiated in each execution.</p>
+								<p>Example:
+								<pre>
+	@prefix dc:  &lt;http://purl.org/dc/terms/&gt; .
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_NTM&gt; 
+			a opmw:WorkflowTemplate;
+			rdfs:label "AquaFlow_NTM" ;
+			dc:contributor	&lt;http://www.opmw.org/export/resource/Agent/WATER&gt; ;
+			dc:modified  "2011-06-08T09:57:12-07:00"^^xsd:dateTime ;
+			opmw:hasVersion "2"^^xsd:int .
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#createdInWorkflowSystem" title="http://www.opmw.org/ontology/createdInWorkflowSystem">created in Workflow System</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#hasDocumentation" title="http://www.opmw.org/ontology/hasDocumentation">has Documentation</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#hasTemplateDiagram" title="http://www.opmw.org/ontology/hasTemplateDiagram">has Template Diagram</a>
+								<sup class="type-dp" title="data property">dp</sup>, <a href="#hasNativeSystemTemplate" title="http://www.opmw.org/ontology/hasNativeSystemTemplate">has Native System Template</a>
+								<sup class="type-dp" title="data property">dp</sup>
+								</dd>
+								<dt>is in range of</dt>
+								<dd>
+								<a href="#correspondsToTemplate" title="http://www.opmw.org/ontology/correspondsToTemplate">corresponds to Template</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>
+								<div class="entity" id="WorkflowTemplateArtifact">
+								<a name="http://www.opmw.org/ontology/WorkflowTemplateArtifact"/></a>
+								<h3>Workflow Template Artifact<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/WorkflowTemplateArtifact</p>
+								<div class="comment">
+								<p>A workflow template artifact is part of a workflow template. It explains what kind of artifact is used or generated by the process template, along with possible restrictions that it may have.</p>
+								<p>There are two different types of workflow template artifacts: data variables and parameter variables.</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has sub-classes</dt>
+								<dd>
+								<a href="#DataVariable" title="http://www.opmw.org/ontology/DataVariable">Data Variable</a>
+								<sup class="type-c" title="class">c</sup>, <a href="#ParameterVariable" title="http://www.opmw.org/ontology/ParameterVariable">Parameter Variable</a>
+								<sup class="type-c" title="class">c</sup>
+								</dd>
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#isGeneratedBy" title="http://www.opmw.org/ontology/isGeneratedBy">is generated by</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								<dt>is in range of</dt>
+								<dd>
+								<a href="#correspondsToTemplateArtifact" title="http://www.opmw.org/ontology/correspondsToTemplateArtifact">corresponds to Template Artifact</a>
+								<sup class="type-op" title="object property">op</sup>, <a href="#uses" title="http://www.opmw.org/ontology/uses">uses</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>
+								<div class="entity" id="WorkflowTemplateProcess">
+								<a name="http://www.opmw.org/ontology/WorkflowTemplateProcess"/></a>
+								<h3>Workflow Template Process<sup class="type-c" title="class">c</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/WorkflowTemplateProcess</p>
+								<div class="comment">
+								<p>A workflow process template is an abstraction of the workflow execution process step that aims to describe the method followed by the scientist instead of its specific instantiation.</p>
+								<p>Example:</p>
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix water: &lt;http://www.isi.edu/ac/Water/library.owl#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowTemplateProcess/AQUAFLOW_NTM_CALCULATEHOURLYAVERAGES&gt; 
+			a opmw:ProcessTemplate, water:CalculateHourlyAverages;
+			opmw:template &lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_NTM&gt; ;
+			opmw:uses &lt;http://www.opmw.org/export/resource/DataVariable/AQUAFLOW_NTM_FILTEREDDATA&gt.
+								</pre>
+								</p>
+								</div>
+								<dl class="description">
+								<dt>has super-classes</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>is in domain of</dt>
+								<dd>
+								<a href="#uses" title="http://www.opmw.org/ontology/uses">uses</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								<dt>is in range of</dt>
+								<dd>
+								<a href="#correspondsToTemplateProcess" title="http://www.opmw.org/ontology/correspondsToTemplateProcess">corresponds to Template Process</a>
+								<sup class="type-op" title="object property">op</sup>, <a href="#isGeneratedBy" title="http://www.opmw.org/ontology/isGeneratedBy">is generated by</a>
+								<sup class="type-op" title="object property">op</sup>
+								</dd>
+								</dl>
+								</div>
+							</div>
+							<div id="objectproperties">
+								<h2>4.2 Object Properties</h2>
+								<ul class="hlist">
+								<li>
+								<a href="#executedInWorkflowSystem" title="http://www.opmw.org/ontology/executedInWorkflowSystem">executed in workflow system</a>
+								</li>
+								<li>
+								<a href="#hasExecutableComponent" title="http://www.opmw.org/ontology/hasExecutableComponent">has Executable Component</a>
+								</li>								
+								<li>
+								<a href="#correspondsToTemplate" title="http://www.opmw.org/ontology/correspondsToTemplate">corresponds to Template</a>
+								</li>
+								<li>
+								<a href="#correspondsToTemplateArtifact" title="http://www.opmw.org/ontology/correspondsToTemplateArtifact">corresponds to Template Artifact</a>
+								</li>
+								<li>
+								<a href="#correspondsToTemplateProcess" title="http://www.opmw.org/ontology/correspondsToTemplateProcess">corresponds to Template Process</a>
+								</li>
+								<li>
+								<a href="#isGeneratedBy" title="http://www.opmw.org/ontology/isGeneratedBy">is generated by</a>
+								</li>
+								<li>
+								<a href="#isParameterOfTemplate" title="http://www.opmw.org/ontology/isParameterOfTemplate">is parameter of Template</a>
+								</li>
+								<li>
+								<a href="#isVariableOfTemplate" title="http://www.opmw.org/ontology/isVariableOfTemplate">is variable of Template</a>
+								</li>
+								<li>
+								<a href="#isStepOfTemplate" title="http://www.opmw.org/ontology/isStepOfTemplate">is step of Template</a>
+								</li>
+								<li>
+								<a href="#uses" title="http://www.opmw.org/ontology/uses">uses</a>
+								</li>
+								</ul>
+								<div class="entity" id="executedInWorkflowSystem">
+								<a name="http://www.opmw.org/ontology/executedInWorkflowSystem"/></a>
+								<h3>executed in workflow system<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/executedInWorkflowSystem</p>
+								<div class="comment">
+								<p>Property to bind an execution account to the system where it was executed (which could be different from the one used for designing its workflow template).</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmo: &lt;http://openprovenance.org/model/opmo#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionAccount/acc1&gt; 
+			a opmo:Account, opmw:executionAccount;
+			opmw:executedInWorkflowSystem &lt;http://www.opmw.org/export/resource/Agent/SHELL&gt;.
+
+	&lt;http://www.opmw.org/export/resource/Agent/SHELL&gt; 
+			a opmw:Agent.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionAccount" title="http://www.opmw.org/ontology/WorkflowExecutionAccount">Workflow Execution Account</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://purl.org/net/opmv/ns#Agent">opmv:Agent</span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="hasExecutableComponent">
+								<a name="http://www.opmw.org/ontology/hasExecutableComponent"/></a>
+								<h3>has Executable Component<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasExecutableComponent</p>
+								<div class="comment">
+								<p>Property that binds a workflow execution process to the specific component (code, scripts, etc.) used in the execution.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmv: &lt;http://purl.org/net/opmv/ns#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionProcess/REAERATIONEDM133549210450086&gt;
+			a opmv:Process, opmw:WorkflowExecutionProcess;
+			opmw:hasExecutableComponent &lt;http://www.opmw.org/export/resource/ReaerationEDM/COMPONENTREAERATIONEDM&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has super-properties</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">owl:topObjectProperty</span>
+								<sup class="type-op" title="object property">op</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionProcess" title="http://www.opmw.org/ontology/WorkflowExecutionProcess">Workflow execution process</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>								
+								<div class="entity" id="correspondsToTemplate">
+								<a name="http://www.opmw.org/ontology/correspondsToTemplate"/></a>
+								<h3>corresponds to Template<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/correspondsToTemplate</p>
+								<div class="comment">
+								<p>Property that binds an execution account to the template of the whole workflow. The template contains the plan for the workflow.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmo: &lt;http://openprovenance.org/model/opmo#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionProcess/acc1&gt;
+			a opmo:Account, opmw:workflowExecutionAccount;
+			opmw:correspondsToTemplate &lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_EDM&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://openprovenance.org/model/opmo#Account">opmo:Account</span>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplate" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="correspondsToTemplateArtifact">
+								<a name="http://www.opmw.org/ontology/correspondsToTemplateArtifact"/></a>
+								<h3>corresponds to Template Artifact<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/correspondsToTemplateArtifact</p>
+								<div class="comment">
+								<p>Property that binds a workflow execution artifact to its correspondant workflow template artifact.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmv: &lt;http://purl.org/net/opmv/ns#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionArtifact/DEPTH1.2150836&gt; 
+			a opmv:Artifact, opmw:WorkflowExecutionArtifact;
+			opmw:correspondsToTemplateArtifact &lt;http://www.opmw.org/export/resource/ParameterVariable/AQUAFLOW_EDM_DEPTH&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionArtifact" title="http://www.opmw.org/ontology/WorkflowExecutionArtifact">Workflow Execution Artifact</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplateArtifact" title="http://www.opmw.org/ontology/WorkflowTemplateArtifact">Workflow Template Artifact</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="correspondsToTemplateProcess">
+								<a name="http://www.opmw.org/ontology/correspondsToTemplateProcess"/></a>
+								<h3>corresponds to Template Process<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/correspondsToTemplateProcess</p>
+								<div class="comment">
+								<p>Property that binds a workflow execution process to its correspondant process template.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmv: &lt;http://purl.org/net/opmv/ns#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionProcess/REAERATIONEDM133549210450086&gt;
+			a opmv:Process, opmw:WorkflowExecutionProcess;
+			opmw:correspondsToTemplateProcess &lt;http://www.opmw.org/export/resource/WorkflowTemplateProcess/AQUAFLOW_EDM_REAERATIONEDM&gt;. 
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>								
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionProcess" title="http://www.opmw.org/ontology/WorkflowExecutionProcess">Workflow execution process</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplateProcess" title="http://www.opmw.org/ontology/WorkflowTemplateProcess">Workflow Template Process</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="isGeneratedBy">
+								<a name="http://www.opmw.org/ontology/isGeneratedBy"/></a>
+								<h3>is generated by<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/isGeneratedBy</p>
+								<div class="comment">
+								<p>Property that binds a workflow template artifact to the workflow template process that generates it.</p>
+								<p>Example:
+								<pre>							
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+
+	&lt;http://www.opmw.org/export/resource/DataVariable/AQUAFLOW_EDM_REAERATIONPARAMS&gt;
+			a opmw:DataVariable, opmw:WorkflowTemplateArtifact;
+			opmw:isGeneratedBy &lt;http://www.opmw.org/export/resource/WorkflowTemplateProcess/AQUAFLOW_EDM_REAERATIONEDM&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplateArtifact" title="http://www.opmw.org/ontology/WorkflowTemplateArtifact">Workflow Template Artifact</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplateProcess" title="http://www.opmw.org/ontology/WorkflowTemplateProcess">Workflow Template Process</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="isParameterOfTemplate">
+								<a name="http://www.opmw.org/ontology/isParameterOfTemplate"/></a>
+								<h3>is Parameter of Template<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/isParameterOfTemplate</p>
+								<div class="comment">
+								<p>Property used to dessignate which workflow Parameter Variables belong to a workflow template.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+								
+	&lt;http://www.opmw.org/export/resource/ParameterVariable/AQUAFLOW_EDM_DATE&gt;
+			 a opmw:ParameterVariable;
+			 opmw:isParameterOfTemplate &lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_EDM&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#ParameterVariable" title="http://www.opmw.org/ontology/ParameterVariable">Parameter Variable</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplate" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="isVariableOfTemplate">
+								<a name="http://www.opmw.org/ontology/belongsToTemplate"/></a>
+								<h3>is Variable of Template<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/isVariableOfTemplate</p>
+								<div class="comment">
+								<p>Property used to dessignate which workflow Data Variables belong to a workflow template.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+								
+	&lt;http://www.opmw.org/export/page/resource/DataVariable/AQUAFLOW_EDM_HOURLYDATA&gt;
+			 a opmw:DataVariable;
+			 opmw:isVariableOfTemplate &lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_EDM&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#DataVariable" title="http://www.opmw.org/ontology/DataVariable">Data Variable</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplate" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="isStepOfTemplate">
+								<a name="http://www.opmw.org/ontology/isStepOfTemplate"/></a>
+								<h3>is Step of Template<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/isStepOfTemplate</p>
+								<div class="comment">
+								<p>Property used to dessignate which workflow template processes belong to a workflow template.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+								
+	&lt;http://www.opmw.org/export/resource/WorkflowTemplateProcess/AQUAFLOW_EDM_REAERATIONEDM&gt;
+			a opmw:WorkflowTemplateProcess;
+			opmw:isStepOfTemplate &lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_EDM&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplateProcess" title="http://www.opmw.org/ontology/WorkflowTemplateProcess">Workflow Template Process</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplate" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="uses">
+								<a name="http://www.opmw.org/ontology/uses"/></a>
+								<h3>uses<sup class="type-op" title="object property">op</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/uses</p>
+								<div class="comment">
+								<p>Property that binds a workflow template process to the workflow template artifact that generates it.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowTemplateProcess/AQUAFLOW_EDM_REAERATIONEDM&gt;
+			a opmw:WorkflowTemplateProcess;
+			opmw:uses &lt;http://www.opmw.org/export/resource/DataVariable/PARAMETERSFILE&gt;.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplateProcess" title="http://www.opmw.org/ontology/WorkflowTemplateProcess">Workflow Template Process</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplateArtifact" title="http://www.opmw.org/ontology/WorkflowTemplateArtifact">Workflow Template Artifact</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+							</div>
+							<div id="dataproperties">
+								<h2>4.3 Data Properties</h2>
+								<ul class="hlist">
+								<li>
+								<a href="#createdInWorkflowSystem" title="http://www.opmw.org/ontology/createdInWorkflowSystem">created in Workflow System</a>
+								</li>
+								<li>
+								<a href="#hasDimensionality" title="http://www.opmw.org/ontology/hasDimensionality">has Dimensionality</a>
+								</li>
+								<li>
+								<a href="#hasDocumentation" title="http://www.opmw.org/ontology/hasDocumentation">has Documentation</a>
+								</li>
+								<li>
+								<a href="#overallEndTime" title="http://www.opmw.org/ontology/overallEndTime">overall End Time</a>
+								</li>
+								<li>
+								<a href="#hasExecutionDiagram" title="http://www.opmw.org/ontology/hasExecutionDiagram">has Execution Diagram</a>
+								</li>
+								<li>
+								<a href="#hasFileName" title="http://www.opmw.org/ontology/hasFileName">has File Name</a>
+								</li>
+								<li>
+								<a href="#hasLocation" title="http://www.opmw.org/ontology/hasLocation">has Location</a>
+								</li>
+								<li>
+								<a href="#hasSize" title="http://www.opmw.org/ontology/hasSize">has Size</a>
+								</li>
+								<li>
+								<a href="#overallStartTime" title="http://www.opmw.org/ontology/overallStartTime">overall Start Time</a>
+								</li>
+								<li>
+								<a href="#hasStatus" title="http://www.opmw.org/ontology/hasStatus">has Status</a>
+								</li>
+								<li>
+								<a href="#hasTemplateDiagram" title="http://www.opmw.org/ontology/hasTemplateDiagram">has Template Diagram</a>
+								</li>								
+								<li>
+								<a href="#hasValue" title="http://www.opmw.org/ontology/hasValue">has value</a>
+								</li>
+								<li>
+								<a href="#hasOriginalLogFile" title="http://www.opmw.org/ontology/hasOriginalLogFile">has Original Log File</a>
+								</li>
+								<li>
+								<a href="#hasNativeSystemTemplate" title="http://www.opmw.org/ontology/hasNativeSystemTemplate">has Native System Template</a>
+								</li>
+								<li>
+								<a href="#isConcrete" title="http://www.opmw.org/ontology/isConcrete">is Concrete</a>
+								</li>
+								<li>
+								<a href="#versionNumber" title="http://www.opmw.org/ontology/versionNumber">version number</a>
+								</li>
+								</ul>
+								<div class="entity" id="createdInWorkflowSystem">
+								<a name="http://www.opmw.org/ontology/createdInWorkflowSystem"/></a>
+								<h3>created in Workflow System<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/createdInWorkflowSystem</p>
+								<div class="comment">
+								<p>This data property binds a workflow template to the tool used for its design and creation. The tool is represented by its URL.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	&lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_EDM&gt;
+				a opmw:WorkflowTemplate;
+				opmw:createdInWorkflowSystem "http://wings.isi.edu"^^xsd:anyURI.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplate" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="hasDimensionality">
+								<a name="http://www.opmw.org/ontology/hasDimensionality"/></a>
+								<h3>has Dimensionality<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasDimensionality</p>
+								<div class="comment">
+								<p>Property that represents the dimensionality of the artifact: 0 is a single file, 1 for a collection, etc.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	&lt;http://www.opmw.org/export/resource/DataVariable/AQUAFLOW_NTM_DAILYDATA&gt;
+			a opmw:DataVariable, opmw:WorkflowTemplateArtifact;
+			opmw:hasDimensionality "1"^^xsd:int.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionArtifact" title="http://www.opmw.org/ontology/WorkflowExecutionArtifact">Workflow Execution Artifact</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">xsd:int</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="hasDocumentation">
+								<a name="http://www.opmw.org/ontology/hasDocumentation"/></a>
+								<h3>has Documentation<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasDocumentation</p>
+								<div class="comment">
+								<p>Property that binds a workflow template to its documentation.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_NTM&gt;
+			a opmw:WorkflowTemplate;
+			opmw:hasDocumentation "A copy of the documentation related to this template "^^xsd:string.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplate" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">xsd:string</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="overallEndTime">
+								<a name="http://www.opmw.org/ontology/overallEndTime"/></a>
+								<h3>overall End Time<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/overallEndTime</p>
+								<div class="comment">
+								<p>Property that indicates that the last of the activities in the account finished finished executing before this time.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmo: &lt;http://openprovenance.org/model/opmo#&gt; .
+								
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionAccount/ACCOUNT1335506667949&gt;
+			a opmw:WorkflowExecutionAccount,opmo:Account;
+			opmw:overallEndTime "2012-04-25T10:28:55-07:00"^^xsd:dateTime.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionAccount" title="http://www.opmw.org/ontology/WorkflowExecutionAccount">Workflow Execution Account</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="hasExecutionDiagram">
+								<a name="http://www.opmw.org/ontology/hasExecutionDiagram"/></a>
+								<h3>has Execution Diagram<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasExecutionDiagram</p>
+								<div class="comment">
+								<p>Property that links an execution account to its diagram. The diagram shows how the template has been instantiated with different components.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmo: &lt;http://openprovenance.org/model/opmo#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionAccount/ACCOUNT1335506667949&gt;
+			a opmw:WorkflowExecutionAccount,opmo:Account;
+			opmw:hasExecutionDiagram "http://wind.isi.edu/marbles/assets/components/Water/runs/run_148.png"^^sxd:anyURI.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionAccount" title="http://www.opmw.org/ontology/WorkflowExecutionAccount">Workflow Execution Account</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="hasFileName">
+								<a name="http://www.opmw.org/ontology/hasFileName"/></a>
+								<h3>has File Name<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasFileName</p>
+								<div class="comment">
+								<p>Property used to link an execution artifact to its file name (independently of its URI).</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmv: &lt;http://purl.org/net/opmv/ns#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionArtifact/DCF49186981194248009E24BAD6A6412&gt;
+			a opmv:Artifact, opmw:WorkflowExecutionArtifact.
+			opmw:hasFileName "NTMParams_SMN_2010_03_14Z"^^xsd:string.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionArtifact" title="http://www.opmw.org/ontology/WorkflowExecutionArtifact">Workflow Execution Artifact</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">xsd:string</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="hasLocation">
+								<a name="http://www.opmw.org/ontology/hasLocation"/></a>
+								<h3>has Location<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasLocation</p>
+								<div class="comment">
+								<p>Property used to link an execution artifact to the physical location of its file in the server.</p>
+								<p>Example</p>
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmv: &lt;http://purl.org/net/opmv/ns#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionArtifact/DCF49186981194248009E24BAD6A6412&gt;
+			a opmv:Artifact, opmw:WorkflowExecutionArtifact.
+			opmw:hasLocation "http://www.opmw.org/datasets/resource/1/148/NTMParams_SMN_2010_03_14Z"^^xsd:anyURI.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionArtifact" title="http://www.opmw.org/ontology/WorkflowExecutionArtifact">Workflow Execution Artifact</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="hasSize">
+								<a name="http://www.opmw.org/ontology/hasSize"/></a>
+								<h3>has Size<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasSize</p>
+								<div class="comment">
+								<p>Property used to annotate a workflow execution artifact with the size in bytes of its file.</p>
+								<p>Example
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmv: &lt;http://purl.org/net/opmv/ns#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionArtifact/DCF49186981194248009E24BAD6A6412&gt;
+			a opmv:Artifact, opmw:WorkflowExecutionArtifact.
+			opmw:hasLocation "68"^^xsd:int.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionArtifact" title="http://www.opmw.org/ontology/WorkflowExecutionArtifact">Workflow Execution Artifact</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">xsd:int</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="overallStartTime">
+								<a name="http://www.opmw.org/ontology/overallStartTime"/></a>
+								<h3>overall Start Time<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/overallStartTime</p>
+								<div class="comment">
+								<p>Property that indicates that none of the processes in the account started executing before this time.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmo: &lt;http://openprovenance.org/model/opmo#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionAccount/ACCOUNT1335506667949&gt;
+			a opmw:WorkflowExecutionAccount,opmo:Account;
+			opmw:overallStartTime "2012-04-25T10:28:07-07:00"^^xsd:dateTime.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionAccount" title="http://www.opmw.org/ontology/WorkflowExecutionAccount">Workflow Execution Account</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="hasStatus">
+								<a name="http://www.opmw.org/ontology/hasStatus"/></a>
+								<h3>has Status<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasStatus</p>
+								<div class="comment">
+								<p>Property used to state whether all the processes in an account were successful or not.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmo: &lt;http://openprovenance.org/model/opmo#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionAccount/ACCOUNT1335506667949&gt;
+			a opmo:Account, opmw:ExecutionAccount;
+			opmw:hasStatus "SUCCESS"^^xsd.string.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionAccount" title="http://www.opmw.org/ontology/WorkflowExecutionAccount">Workflow Execution Account</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">xsd:string</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="hasTemplateDiagram">
+								<a name="http://www.opmw.org/ontology/hasTemplateDiagram"/></a>
+								<h3>has Template Diagram<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasTemplateDiagram</p>
+								<div class="comment">
+								<p>Property used to link a workflow template to its graphical representation.</p>
+								<p>Example:
+								<pre>							
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	&lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_NTM&gt;
+			a opmw:WorkflowTemplate;
+			opmw:hasTemplateDiagram "http://wind.isi.edu/marbles/assets/components/workflow_portal/users/1/Water/runs/run_148.png"xsd:anyURI.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplate" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>								
+								<div class="entity" id="hasValue">
+								<a name="http://www.opmw.org/ontology/hasValue"/></a>
+								<h3>has value<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasValue</p>
+								<div class="comment">
+								<p>Property used to state the value of the artifact (in case of being a parameter).</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmv: &lt;http://purl.org/net/opmv/ns#&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionArtifact/DEPTH0.61959237&gt;
+			a opmv:Artifact, opmw:WorkflowExecutionArtifact;
+			opmw:hasValue "0.61959237"^^xsd:string.
+								</pre>
+								</div>
+								</p>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionArtifact" title="http://www.opmw.org/ontology/WorkflowExecutionArtifact">Workflow Execution Artifact</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">xsd:string</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="hasOriginalLogFile">
+								<a name="http://www.opmw.org/ontology/hasOriginalLogFile"/></a>
+								<h3>has Original Log File<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasOriginalLogFile</p>
+								<div class="comment">
+								Property used to link an execution account to the log file produced by workflow engine where the original execution was performed.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+	@prefix opmo: &lt;http://openprovenance.org/model/opmo#&gt; .
+								
+	&lt;http://www.opmw.org/export/resource/WorkflowExecutionAccount/ACCOUNT1335506667949&gt;
+			 a opmw:WorkflowExecutionAccount,opmo:Account;
+			 opmw:hasOriginalLogFile "http://wind.isi.edu/marbles/assets/components/Water/runs/run_148.ttl"^^sxd:anyURI.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowExecutionAccount" title="http://www.opmw.org/ontology/WorkflowExecutionAccount">Workflow Execution Account</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="hasNativeSystemTemplate">
+								<a name="http://www.opmw.org/ontology/hasNativeSystemTemplate"/></a>
+								<h3>has Native System Template<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/hasNativeSystemTemplate</p>
+								<div class="comment">
+								<p>Property used to link a workflow template to its original template (encoded in the syntax of the workflow system where it was designed: scufl, owl, etc.).</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+
+	&lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_NTM&gt;
+		a opmw:WorkflowTemplate;
+		opmw:hasNativeSystemTemplate "http://wind.isi.edu/marbles/assets/components/Water/AquaFlow_NTM.owl"xsd:anyURI.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has domain</dt>
+								<dd>
+								<ul>
+								<li>
+								<a href="#WorkflowTemplate" title="http://www.opmw.org/ontology/WorkflowTemplate">Workflow Template</a>
+								<sup class="type-c" title="class">c</sup>
+								</li>
+								</ul>
+								</dd>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="isConcrete">
+								<a name="http://www.opmw.org/ontology/isConcrete"/></a>
+								<h3>is Concrete<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/isConcrete</p>
+								<div class="comment">
+								<p>Property that specifies whether a component is abstract or not.</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+								<div class="entity" id="versionNumber">
+								<a name="http://www.opmw.org/ontology/versionNumber"/></a>
+								<h3>version number<sup class="type-dp" title="data property">dp</sup>
+								<span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+								</span>
+								</h3>
+								<p>
+								<strong>IRI:</strong> http://www.opmw.org/ontology/versionNumber</p>
+								<div class="comment">
+								<p>Property used to annotate a resource with it version number.</p>
+								<p>Example:
+								<pre>
+	@prefix opmw: &lt;http://www.opmw.org/ontology/&gt; .
+									
+	&lt;http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_NTM&gt;
+			 a opmw:WorkflowTemplate;
+			 opmw:versionNumber "2"^^xsd:int.
+								</pre>
+								</p>
+								</div>
+								<div class="description">
+								<p>
+								<strong>has characteristics:</strong> functional</p>
+								<dl>
+								<dt>has range</dt>
+								<dd>
+								<ul>
+								<li>
+								<span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">xsd:int</span>
+								</li>
+								</ul>
+								</dd>
+								</dl>
+								</div>
+								</div>
+							</div>
+						</div>
+						<div id="namespacedeclarations">
+								<h2>5. Namespace Declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2><dl>								
+								<dt>opmv</dt><dd>http://purl.org/net/opmv/ns#</dd>
+								<dt>opmo</dt><dd>http://openprovenance.org/model/opmo#</dd>
+								<dt>opmw</dt><dd>http://www.opmw.org/ontology/</dd>
+								<dt>owl</dt><dd>http://www.w3.org/2002/07/owl#</dd>
+								<dt>rdf</dt><dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd><dt>rdfs</dt><dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+								<dt>xsd</dt><dd>http://www.w3.org/2001/XMLSchema#</dd></dl>
+						</div>
+						<div id="references">
+								<h2>6. References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+								<ul>
+								<li><b>[Moreau et al 2011]</b>:	Moreau, L., Clifford, B., Freire, J., Futrelle, J., Gil, Y., Groth, P., Kwasnikowska, N., Miles, S., Missier, P., Myers, J., Plale, B., Simmhan, Y., Stephan, E., and denBussche, J. V. “The Open Provenance Model Core Specification (v1.1).” To appear in Future Generation Computer Systems, 2011. Preprint available <a href="http://www.bibbase.org/cache/www.isi.edu__7Egil_publications.bib/moreau-etal-fgcs11.html">here</a>  </li>
+								</ul>
+						</div>
+						<div id="acknowledgements">
+								<h2>7. Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+								<p>
+								We would like thank:
+								<ul>
+								<li><b>Varun Ratnakar</b> for his help on the naming of some of the properties and his technical support.</li>
+								<li><b>Khalid Belhajjame</b>, <b>Stian Soiland-Reyes</b>, <b>Simon Miles</b>, <b>Paolo Missier</b> and <b>Jun Zhao</b> for their feedback on the ontology.</li>
+								<li><b>Silvio Peroni</b> for developing <a href="http://lode.sourceforge.net/"> LODE </a>, a tool used to generate most of the cross reference section of the current document.</li>
+								</ul>
+								</p>
+						</div>
+						<div id="changeLog">
+								<h2>8. Change Log <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+								<ul>
+								<li>[27-09-2011]: Release of OPMW Ontology 1.0.</li>
+								<li>[30-03-2012]: ArtifactTemplate is no longer subclass of opmv:Artifact.</li>
+								<li>[30-03-2012]: ProcessTemplate is no longer subclass of opmv:Process.</li>
+								<li>[30-03-2012]: WorkflowTemplate is no longer subclass of opmo:OPMGraph.</li>
+								<li>[30-03-2012]: ExecutionAccount renamed as WorkflowExecutionAccount.</li>
+								<li>[30-03-2012]: ArtifactInstance renamed as WorkflowExecutionArtifact.</li>
+								<li>[30-03-2012]: ProcessInstance renamed as WorkflowExecutionProcess.</li>
+								<li>[30-03-2012]: ArtifactTemplate renamed as WorkflowTemplateArtifact.</li>
+								<li>[30-03-2012]: ProcessTemplate renamed as WorkflowTemplateProcess.</li>
+								<li>[30-03-2012]: hasTemplateComponent has been removed.</li>
+								<li>[30-03-2012]: hasProcessTemplate renamed as correspondsToTemplateProcess.</li>
+								<li>[30-03-2012]: hasArtifactTemplate renamed as correspondsToTemplateArtifact.</li>
+								<li>[30-03-2012]: opmv:used and opmv:wasGeneratedBy is no longer used for template modelins. Instead opmw:uses and opmw:isGeneratedBy properties are used</li>
+								<li>[30-03-2012]: opmo:hasProcess and opmo:has Artifact have been replaced with opmw:template.</li>
+								<li>[30-03-2012]: opmw:hasVersion renamed as opmw:versionNumber.</li>
+								<li>[30-03-2012]: replaced opmw:lastUpdatedTime with dc:modified.</li>
+								<li>[30-03-2012]: URI domain changed from wings.isi.edu to www.opmw.org.</li>
+								<li>[01-08-2012]: Release of OPMW Ontology 2.1</li>
+								<li>[01-08-2012]: hasTemplate relationship removed.</li>
+								<li>[01-08-2012]: hasURL relationship removed (replaced with foaf:homePage).</li>
+								<li>[01-08-2012]: hasSpecificComponent renamed to hasExecutableComponent.</li>								
+								<li>[01-08-2012]: hasWorkflowTemplate renamed as correspondsToTemplate.</li>
+								<li>[01-08-2012]: hasWorkflowTemplateArtifact renamed as correspondsToTemplateArtifact.</li>
+								<li>[01-08-2012]: hasWorkflowTemplateProcess renamed as correspondsToTemplateProcess.</li>
+								<li>[01-08-2012]: template renamed as belongsToTemplate.</li>
+								<li>[01-08-2012]: hasEndTime renamed as overallEndTime.</li>
+								<li>[01-08-2012]: hasStartTime renamed as overallStartTime.</li>
+								<li>[01-08-2012]: hasOriginalTemplate renamed as hasNativeSystemTemplate.</li>
+								<li>[11-09-2012]: belongsToTemplate replaced with isStepOfTemplate, isVariableOfTemplate and isParameterOfTemplate.</li>
+								</ul>
+
+						</div>
+</body></html>
