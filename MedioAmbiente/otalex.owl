@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"
+     xml:base="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#">
+        <dcterms:created rdf:datatype="&xsd;date">2015-12-25</dcterms:created>
+        <dcterms:creator rdf:datatype="&xsd;anyURI">http://delicias.dia.fi.upm.es/members/DGarijo/#me</dcterms:creator>
+        <dcterms:contributor rdf:datatype="&xsd;anyURI">http://mayor2.dia.fi.upm.es/oeg-upm/index.php/es/teachers/11-ocorcho</dcterms:contributor>
+        <dcterms:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</dcterms:license>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <dcterms:description xml:lang="en">Geonames extension for encoding the terms of the Otalex project</dcterms:description>
+        <dcterms:title xml:lang="en">Otalex ontology</dcterms:title>
+        <dcterms:description xml:lang="es">Extensión de Geonames para representar los términos del proyecto Otalex</dcterms:description>
+        <rdfs:comment xml:lang="es">Extensión de Geonames para representar los términos del proyecto Otalex</rdfs:comment>
+        <dcterms:title xml:lang="es">Ontología Otalex</dcterms:title>
+        <rdfs:comment xml:lang="pt">Extensão de Geonames parágrafo representar los términos del proyecto Otalex</rdfs:comment>
+        <dcterms:title xml:lang="pt">Ontologia Otalex</dcterms:title>
+        <vann:preferredNamespaceUri>http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#</vann:preferredNamespaceUri>
+        <dcterms:description xml:lang="pt">Extensão de Geonames parágrafo representar los términos del proyecto Otalex</dcterms:description>
+        <vann:preferredNamespacePrefix>otalex</vann:preferredNamespacePrefix>
+        <rdfs:comment xml:lang="en">Geonames extension for encoding the terms of the Otalex project</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#codigoCaracteristica -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#codigoCaracteristica">
+        <rdfs:label xml:lang="en">feature code</rdfs:label>
+        <rdfs:label xml:lang="es">código de característica</rdfs:label>
+        <rdfs:label xml:lang="pt">código de recurso</rdfs:label>
+        <rdfs:comment xml:lang="en">code used to represent the relationship stated by otalex:tipocaracteristica</rdfs:comment>
+        <rdfs:comment xml:lang="es">Código utilizado para representar la relación definida por otalex:tipoCaracteristica</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Código usado para representar a relação definida porotalex:codigoCaracteristica</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#tipoCaracteristica -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#tipoCaracteristica">
+        <rdfs:label xml:lang="en">type of feature</rdfs:label>
+        <rdfs:label xml:lang="es">tipo de característica</rdfs:label>
+        <rdfs:label xml:lang="pt">tipo de recurso</rdfs:label>
+        <rdfs:comment xml:lang="en">type of feature (e.g., natural reserve, natural forest, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="es">tipo de característica (parque natural, reserva natural, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Tipo de recurso (parque natural, reserva natural, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMaximoDeTempEnC -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMaximoDeTempEnC">
+        <rdfs:label xml:lang="en">Maximum temperature value in celsius degrees</rdfs:label>
+        <rdfs:label xml:lang="es">Valor máximo de temperatura en grados centígrados</rdfs:label>
+        <rdfs:label xml:lang="pt">O valor máximo da temperatura em graus celsius</rdfs:label>
+        <rdfs:comment xml:lang="en">Maximum temperature value, represented in celsius degrees</rdfs:comment>
+        <rdfs:comment xml:lang="es">Valor máximo de temperatura representada en grados centigrados</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Valor temperatura máxima, representada em graus celsius</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimodeTempEnC -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimodeTempEnC">
+        <rdfs:label xml:lang="en">Minimum temperature value in celsius degrees</rdfs:label>
+        <rdfs:label xml:lang="es">Valor mínimo de temperatura en grados centígrados</rdfs:label>
+        <rdfs:label xml:lang="pt">O valor máximo da temperatura em graus celsius</rdfs:label>
+        <rdfs:comment xml:lang="en">Maximum temperature value, represented in celsius degrees</rdfs:comment>
+        <rdfs:comment xml:lang="es">Valor mínimo de temperatura, representada en grados centígrados</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O valor mínimo da temperatura, representada em graus celsius</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest">
+        <rdfs:label xml:lang="en">Feature of interest</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaAbsoluta -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaAbsoluta">
+        <rdfs:label xml:lang="en">Absolute thermal amplitude</rdfs:label>
+        <rdfs:label xml:lang="es">Amplitud térmica absoluta</rdfs:label>
+        <rdfs:label xml:lang="pt">Amplitud térmica absoluta</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">Absolute thermal amplitude of a Feature, measured in celsius degrees</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Amplitud térmica absoluta de una característica, medida en grados centígrados</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Amplitude térmica absoluta de um recurso, medida em graus celsius</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaMediaAnual -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaMediaAnual">
+        <rdfs:label xml:lang="en">Annual thermal amplitude</rdfs:label>
+        <rdfs:label xml:lang="es">Amplitud térmica anual</rdfs:label>
+        <rdfs:label xml:lang="pt">Amplitude térmica anual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">Annual thermal amplitude of a Feature, measured in celsius degrees</rdfs:comment>
+        <rdfs:comment xml:lang="es">Amplitud térmica anual de una característica, medida en grados centígrados</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Amplitude térmica anual de uma Caracteristica, medida em graus Celsius</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica">
+        <rdfs:label xml:lang="en">Feature</rdfs:label>
+        <rdfs:label xml:lang="es">Característica</rdfs:label>
+        <rdfs:label xml:lang="pt">Característica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <rdfs:comment xml:lang="en">Extension of geonames:Feature. It represents the properties of Otalex related to Features. The individuals of this class may behave as observations.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Extensión de geonames:Feature para representar las propiedades de Otalex asociadas a Features. Los individuos de esta clase se pueden comportar como observaciones</rdfs:comment>
+        <rdfs:comment xml:lang="pt">GeoNames extensão: Recurso para representar propriedades associadas Features de OTALEX. Os indivíduos desse tipo pode se comportar como observações</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology#Feature -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology#Feature">
+        <rdfs:label xml:lang="en">Feature</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://www.geonames.org/ontology#"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn# -->
+
+    <owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/ssn#">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex# -->
+
+    <owl:Thing rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.geonames.org/ontology# -->
+
+    <owl:Thing rdf:about="http://www.geonames.org/ontology#">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

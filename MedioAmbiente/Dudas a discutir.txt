@@ -1,0 +1,8 @@
+Al final cada propiedad de la tabla tiene que equivaler a una propiedad de Otalex.
+En principio son todo data properties.
+Qué quiere decir la columna feature? No me queda claro
+QUé quiere decir la columna hash? Casi todos usan hash, a pesar de lo que se pone en esa columna
+Aunque una propiedad de use como atributo para la URI, puede que tenga que tener su URI en otalex, su prefijo, etc. No entiendo por qué se quita
+Hay muchas propiedades de datos que podrían enlazar a geolinkeddata. Esto se puede meter más adelante en el workflow con SILK. Buscando algo como:
+	select ?feature ?region from otalex where {?feature a Feature. ?feature <region> ?region} compare that with geolinkeddata. Add something like: locatedIn
+Las proppiedades que miden observaciones las traduzco literalmente. Por ejemplo: max_value. Digo que es maximo valor de temperatura en C
