@@ -45,11 +45,76 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:ObjectProperty rdf:about="&dcterms;identifier">
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+        <rdfs:label xml:lang="es">identificador</rdfs:label>
+        <rdfs:label xml:lang="pt">identificador</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/superficie -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/superficie">
+        <rdfs:isDefinedBy rdf:resource="http://geo.linkeddata.es/ontology/hydro.owl"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#area -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#area">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#caracteristicaSituadaEnProvinciaConCodigo -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#caracteristicaSituadaEnProvinciaConCodigo">
+        <rdfs:label xml:lang="en">feature located in province with code</rdfs:label>
+        <rdfs:label xml:lang="es">característica situada en provincia con código</rdfs:label>
+        <rdfs:label xml:lang="pt">O recurso localizada na província com código</rdfs:label>
+        <rdfs:comment xml:lang="en">Code of the province to which the feature that is associated by this property belongs to.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Código de la provincia a la cual pertenece la característica asociada con esta propiedad</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Código da província à qual pertence a característica associada a esta propriedade</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#caracteristicaSituadaEnProvinciaConNombre -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#caracteristicaSituadaEnProvinciaConNombre">
+        <rdfs:label xml:lang="es">característica situada en provincia con nombre</rdfs:label>
+        <rdfs:label xml:lang="pt">O recurso localizada na província com nome</rdfs:label>
+        <rdfs:comment xml:lang="en">Name of the province to which the feature that is associated by this property belongs to.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Nombre de la provincia a la cual pertenece la característica asociada con esta propiedad</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Nome da província à qual pertence a característica associada a esta propriedade</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -63,20 +128,233 @@
         <rdfs:comment xml:lang="es">Código utilizado para representar la relación definida por otalex:tipoCaracteristica</rdfs:comment>
         <rdfs:comment xml:lang="pt">Código usado para representar a relação definida porotalex:codigoCaracteristica</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#tipoCaracteristica -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#codigoMunicipio -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#tipoCaracteristica">
-        <rdfs:label xml:lang="en">type of feature</rdfs:label>
-        <rdfs:label xml:lang="es">tipo de característica</rdfs:label>
-        <rdfs:label xml:lang="pt">tipo de recurso</rdfs:label>
-        <rdfs:comment xml:lang="en">type of feature (e.g., natural reserve, natural forest, etc.)</rdfs:comment>
-        <rdfs:comment xml:lang="es">tipo de característica (parque natural, reserva natural, etc.)</rdfs:comment>
-        <rdfs:comment xml:lang="pt">Tipo de recurso (parque natural, reserva natural, etc.)</rdfs:comment>
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#codigoMunicipio">
+        <rdfs:label xml:lang="en">municipality code</rdfs:label>
+        <rdfs:label xml:lang="es">código de municipio</rdfs:label>
+        <rdfs:label xml:lang="pt">código de municipío</rdfs:label>
+        <rdfs:comment xml:lang="en">Municipality code, associated to a Feature, and expressed as a combination of a country code and a number with up to 8 digits (e.g., ES43106049)</rdfs:comment>
+        <rdfs:comment xml:lang="es">Código del municipio, asociado a una característica, y expresado como una combinación de código de país y un entero de hasta ocho dígitos (por ejemplo, ES43106049)</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Código da municipío associado a um recurso, e expressa como uma combinação de código Paisy um número inteiro de até oito dígitos (por exemplo ES43106049)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoAgua2009EnM3PorHab -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoAgua2009EnM3PorHab">
+        <rdfs:label xml:lang="en">water consumption in 2009 in m3 per person</rdfs:label>
+        <rdfs:label xml:lang="es">consumo de agua en 2009 en m3 por habitante</rdfs:label>
+        <rdfs:label xml:lang="pt">O consumo de água em 2009 m3 por habitante</rdfs:label>
+        <rdfs:comment xml:lang="en">Water consumption in 2009 for the selected feature, measured in m3 per person</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de agua en 2009, medido en metros cúbicos por habitante</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de água em 2009, medida em metros cúbicos por habitante</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2001EnKwh -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2001EnKwh">
+        <rdfs:label xml:lang="en">energy consumption in 2001, measured in Kwh</rdfs:label>
+        <rdfs:label xml:lang="es">consumo de energía en 2001, medido en Kwh</rdfs:label>
+        <rdfs:label xml:lang="pt">o consumo de energia em 2001, medido em kWh</rdfs:label>
+        <rdfs:comment xml:lang="en">Energy consumption for the feature in 2001, measured in Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de energía para un municipio o característica en 2001, medido en Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2001, medido em Kwh</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2002EnKwh -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2002EnKwh">
+        <rdfs:label xml:lang="en">energy consumption in 2002, measured in Kwh</rdfs:label>
+        <rdfs:label xml:lang="es">consumo de energía en 2002, medido en Kwh</rdfs:label>
+        <rdfs:label xml:lang="pt">o consumo de energia em 2002, medido em kWh</rdfs:label>
+        <rdfs:comment xml:lang="en">Energy consumption for the feature in 2002, measured in Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de energía para un municipio o característica en 2002, medido en Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2002, medido em Kwh</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2003EnKwh -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2003EnKwh">
+        <rdfs:label xml:lang="en">energy consumption in 2003, measured in Kwh</rdfs:label>
+        <rdfs:label xml:lang="es">consumo de energía en 2003, medido en Kwh</rdfs:label>
+        <rdfs:label xml:lang="pt">o consumo de energia em 2003, medido em kWh</rdfs:label>
+        <rdfs:comment xml:lang="en">Energy consumption for the feature in 2003, measured in Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de energía para un municipio o característica en 2003, medido en Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2003, medido em Kwh</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2004EnKwh -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2004EnKwh">
+        <rdfs:label xml:lang="en">energy consumption in 2004, measured in Kwh</rdfs:label>
+        <rdfs:label xml:lang="es">consumo de energía en 2004, medido en Kwh</rdfs:label>
+        <rdfs:label xml:lang="pt">o consumo de energia em 2004, medido em kWh</rdfs:label>
+        <rdfs:comment xml:lang="en">Energy consumption for the feature in 2004, measured in Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de energía para un municipio o característica en 2004, medido en Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2004, medido em Kwh</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2005EnKwh -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2005EnKwh">
+        <rdfs:label xml:lang="en">energy consumption in 2005, measured in Kwh</rdfs:label>
+        <rdfs:label xml:lang="es">consumo de energía en 2005, medido en Kwh</rdfs:label>
+        <rdfs:label xml:lang="pt">o consumo de energia em 2005, medido em kWh</rdfs:label>
+        <rdfs:comment xml:lang="en">Energy consumption for the feature in 2005, measured in Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de energía para un municipio o característica en 2005, medido en Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2005, medido em Kwh</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2006EnKwh -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2006EnKwh">
+        <rdfs:label xml:lang="en">energy consumption in 2006, measured in Kwh</rdfs:label>
+        <rdfs:label xml:lang="es">consumo de energía en 2006, medido en Kwh</rdfs:label>
+        <rdfs:label xml:lang="pt">o consumo de energia em 2006, medido em kWh</rdfs:label>
+        <rdfs:comment xml:lang="en">Energy consumption for the feature in 2006, measured in Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de energía para un municipio o característica en 2006, medido en Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2006, medido em Kwh</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2007EnKwh -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2007EnKwh">
+        <rdfs:label xml:lang="en">energy consumption in 2007, measured in Kwh</rdfs:label>
+        <rdfs:label xml:lang="es">consumo de energía en 2007, medido en Kwh</rdfs:label>
+        <rdfs:label xml:lang="pt">o consumo de energia em 2007, medido em kWh</rdfs:label>
+        <rdfs:comment xml:lang="en">Energy consumption for the feature in 2007, measured in Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de energía para un municipio o característica en 2007, medido en Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2007, medido em Kwh</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2008EnKwh -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2008EnKwh">
+        <rdfs:label xml:lang="en">energy consumption in 2008, measured in Kwh</rdfs:label>
+        <rdfs:label xml:lang="es">consumo de energía en 2008, medido en Kwh</rdfs:label>
+        <rdfs:label xml:lang="pt">o consumo de energia em 2008, medido em kWh</rdfs:label>
+        <rdfs:comment xml:lang="en">Energy consumption for the feature in 2008, measured in Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de energía para un municipio o característica en 2008, medido en Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2008, medido em Kwh</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2009EnKwh -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2009EnKwh">
+        <rdfs:label xml:lang="en">energy consumption in 2009, measured in Kwh</rdfs:label>
+        <rdfs:label xml:lang="es">consumo de energía en 2009, medido en Kwh</rdfs:label>
+        <rdfs:label xml:lang="pt">o consumo de energia em 2009, medido em kWh</rdfs:label>
+        <rdfs:comment xml:lang="en">Energy consumption for the feature in 2009, measured in Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de energía para un municipio o característica en 2009, medido en Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2009, medido em Kwh</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2010EnKwh -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#consumoEnergia2010EnKwh">
+        <rdfs:label xml:lang="en">energy consumption in 2010, measured in Kwh</rdfs:label>
+        <rdfs:label xml:lang="es">consumo de energía en 2010, medido en Kwh</rdfs:label>
+        <rdfs:label xml:lang="pt">o consumo de energia em 2010, medido em kWh</rdfs:label>
+        <rdfs:comment xml:lang="en">Energy consumption for the feature in 2010, measured in Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de energía para un municipio o característica en 2010, medido en Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2010, medido em Kwh</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#idCaracteristica -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#idCaracteristica"/>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#longitud -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#longitud">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#numeroDeCuencasHidrograficas -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#numeroDeCuencasHidrograficas">
+        <rdfs:label xml:lang="en">number of hydrographic watersheds</rdfs:label>
+        <rdfs:label xml:lang="es">número de cuencas hidrográficas</rdfs:label>
+        <rdfs:label xml:lang="pt">número de bacias hidrográficas</rdfs:label>
+        <rdfs:comment xml:lang="en">Number watershed on the feature</rdfs:comment>
+        <rdfs:comment xml:lang="es">Número de cuencas hidrográficas en la característica</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Número de bacias hidrográficas na propriedade</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#superficieHectareas -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#superficieHectareas">
+        <rdfs:subPropertyOf rdf:resource="http://geo.linkeddata.es/ontology/superficie"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMaximoDeETPEnMM -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMaximoDeETPEnMM">
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
     </owl:DatatypeProperty>
     
 
@@ -91,6 +369,14 @@
         <rdfs:comment xml:lang="es">Valor máximo de temperatura representada en grados centigrados</rdfs:comment>
         <rdfs:comment xml:lang="pt">Valor temperatura máxima, representada em graus celsius</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimoDeETPEnMM -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimoDeETPEnMM">
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
     </owl:DatatypeProperty>
     
@@ -122,41 +408,22 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/R%C3%ADo -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/R%C3%ADo">
+        <rdfs:label xml:lang="es">Río</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://geo.linkeddata.es/ontology/hydro.owl"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest">
         <rdfs:label xml:lang="en">Feature of interest</rdfs:label>
+        <rdfs:label xml:lang="es">Característica de interés</rdfs:label>
+        <rdfs:label xml:lang="pt">Característica de interesse</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaAbsoluta -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaAbsoluta">
-        <rdfs:label xml:lang="en">Absolute thermal amplitude</rdfs:label>
-        <rdfs:label xml:lang="es">Amplitud térmica absoluta</rdfs:label>
-        <rdfs:label xml:lang="pt">Amplitud térmica absoluta</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
-        <rdfs:comment xml:lang="en">Absolute thermal amplitude of a Feature, measured in celsius degrees</rdfs:comment>
-        <rdfs:comment xml:lang="pt">Amplitud térmica absoluta de una característica, medida en grados centígrados</rdfs:comment>
-        <rdfs:comment xml:lang="pt">Amplitude térmica absoluta de um recurso, medida em graus celsius</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaMediaAnual -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaMediaAnual">
-        <rdfs:label xml:lang="en">Annual thermal amplitude</rdfs:label>
-        <rdfs:label xml:lang="es">Amplitud térmica anual</rdfs:label>
-        <rdfs:label xml:lang="pt">Amplitude térmica anual</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
-        <rdfs:comment xml:lang="en">Annual thermal amplitude of a Feature, measured in celsius degrees</rdfs:comment>
-        <rdfs:comment xml:lang="es">Amplitud térmica anual de una característica, medida en grados centígrados</rdfs:comment>
-        <rdfs:comment xml:lang="pt">Amplitude térmica anual de uma Caracteristica, medida em graus Celsius</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
     </owl:Class>
     
 
@@ -176,10 +443,272 @@
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaAmplitudTermicaAbsoluta -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaAmplitudTermicaAbsoluta">
+        <rdfs:label xml:lang="en">Absolute thermal amplitude</rdfs:label>
+        <rdfs:label xml:lang="es">Amplitud térmica absoluta</rdfs:label>
+        <rdfs:label xml:lang="pt">Amplitud térmica absoluta</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="en">Absolute thermal amplitude of a Feature, measured in celsius degrees</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Amplitud térmica absoluta de una característica, medida en grados centígrados</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Amplitude térmica absoluta de um recurso, medida em graus celsius</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaAmplitudTermicaMediaAnual -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaAmplitudTermicaMediaAnual">
+        <rdfs:label xml:lang="en">Annual thermal amplitude</rdfs:label>
+        <rdfs:label xml:lang="es">Amplitud térmica anual</rdfs:label>
+        <rdfs:label xml:lang="pt">Amplitude térmica anual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="en">Annual thermal amplitude of a Feature, measured in celsius degrees</rdfs:comment>
+        <rdfs:comment xml:lang="es">Amplitud térmica anual de una característica, medida en grados centígrados</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Amplitude térmica anual de uma Caracteristica, medida em graus Celsius</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaBiogeografica -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaBiogeografica">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="es">El sector biogeográfico debe ser un conjunto de distritos de gran entidad feográfica, que posea táxones, asociaciones y serie de getación propias; así como que muestre geoseries topográficas t geopermaseries particulares, circunstancia que suele deberse a la existencia de comunidades climatófilas permanentes y subseriales endémicas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaConsumoAgua -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaConsumoAgua">
+        <rdfs:label xml:lang="en">Water consumption</rdfs:label>
+        <rdfs:label xml:lang="es">Consumo de agua</rdfs:label>
+        <rdfs:label xml:lang="pt">Consumo de água</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="en">Water consumption of a feature (m^3 /person)</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de agua, generalmente asociado a un municipio y medido en metros cúbicos por habitante (m^3/hab)</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de água geralmente associada a um município e as medidas em metros cúbicos por habitante (m ^ 3 / pessoa)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaConsumoEnergia -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaConsumoEnergia">
+        <rdfs:label xml:lang="en">Energy consumption</rdfs:label>
+        <rdfs:label xml:lang="es">Consumo de energía</rdfs:label>
+        <rdfs:label xml:lang="pt">Consumo de energia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="en">Energy consumption usually associated to a Feature, and  measured in Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="es">Consumo de energía generalmente asociado a un municipio, y medido en Kwh</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O consumo de energia geralmente associada a um município, e meia Kwh</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPAnual -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPAnual">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPInvierno -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPInvierno">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPOtono -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPOtono">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPPrimavera -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPPrimavera">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPVerano -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPVerano">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FerrocarrilViaSimple -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FerrocarrilViaSimple">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#MonumentoNatural -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#MonumentoNatural">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Municipio -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Municipio">
+        <rdfs:label xml:lang="en">Municipality</rdfs:label>
+        <rdfs:label xml:lang="es">Municipio</rdfs:label>
+        <rdfs:label xml:lang="pt">Municipío</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="en">Municipality from Spain or Portugal. If the municipality is from Spain, then the class behaves as the one defined in http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio</rdfs:comment>
+        <rdfs:comment xml:lang="es">Municipio de España o Portugal. Si el municipio es de España, esta clase se comporta como la que está definida en http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Município de Espanha ou de Portugal. Se o município é de Espanha, em seguida, a classe se comporta como o definido na http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PaisajeProtegido -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PaisajeProtegido">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ParqueNacional -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ParqueNacional">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ParqueNatural -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ParqueNatural">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RedNatura2000Aves -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RedNatura2000Aves">
+        <rdfs:label xml:lang="en">Natura 2000 bird network</rdfs:label>
+        <rdfs:label xml:lang="es">Red Natura 2000 Aves</rdfs:label>
+        <rdfs:label xml:lang="pt">Rede Natura 2000 Aves</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="en">Natura 2000 is a network of protected areas that extends by the countries of the European Union whose aim is to preserve ecological biodiversity recognized as threatened or sensitive sites.
+It is created from the application of two directives: the Birds Directive (79/409 / EEC of April 2) and Habitats (92/43 / EEC of the Council of 21 May) policy and constitutes an instrument políticade fundamental in the European Union&apos;s nature conservation and biodiversity. This class refers to the characteristics that are suited to the Birds Directive.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Red Narura 2000 es una red de espacios naturales protegidos que se extiende por los países de la Unión Europea y cuyo objetivo es el de conservar la biodiversidad ecológica en sitios reconocidos como amenazados o sensibles.
+
+Se crea a partir de la aplicación de dos normas: la Directiva Aves (79/409/CEE del consejo, de 2 de Abril) y la directiva Habitats (92/43/CEE, del consejo de 21 de Mayo) y constituye un instrumento fundamental en la políticade la Unión Europea en materia de conservación de la naturaleza y biodiversidad. Esta clase se refiere a las características que se adecúan a la directiva Aves.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Rede Natura 2000 é uma rede de áreas protegidas que se estende pelos países da União Europeia, cujo objetivo é preservar a biodiversidade ecológica reconhecidos como locais ameaçados ou sensíveis.
+Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/409 / CEE, de 2 de abril) e Habitats (92/43 / CEE do Conselho, de 21 de Maio) política e constitui um instrumento políticade fundamental na conservação da natureza da União Europeia e da biodiversidade. Esta classe refere-se às características que são adequadas para a Directiva Aves.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RedNatura2000Habitats -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RedNatura2000Habitats">
+        <rdfs:label xml:lang="en">Natura 2000 network habitat</rdfs:label>
+        <rdfs:label xml:lang="es">Red Natura 2000 Hábitats</rdfs:label>
+        <rdfs:label xml:lang="pt">Rede Natura 2000 habitats</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="en">Natura 2000 is a network of protected areas that extends by the countries of the European Union whose aim is to preserve ecological biodiversity recognized as threatened or sensitive sites.
+It is created from the application of two directives: the Birds Directive (79/409 / EEC of April 2) and Habitats (92/43 / EEC of the Council of 21 May) policy and constitutes an instrument políticade fundamental in the European Union&apos;s nature conservation and biodiversity. This class refers to the features that fit the Habitats regulations.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Red Narura 2000 es una red de espacios naturales protegidos que se extiende por los países de la Unión Europea y cuyo objetivo es el de conservar la biodiversidad ecológica en sitios reconocidos como amenazados o sensibles.
+
+Se crea a partir de la aplicación de dos normas: la Directiva Aves (79/409/CEE del consejo, de 2 de Abril) y la directiva Habitats (92/43/CEE, del consejo de 21 de Mayo) y constituye un instrumento fundamental en la políticade la Unión Europea en materia de conservación de la naturaleza y biodiversidad. Esta clase se refiere a las características que se adecúan a la normativa Habitats.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Rede Natura 2000 é uma rede de áreas protegidas que se estende pelos países da União Europeia, cujo objetivo é preservar a biodiversidade ecológica reconhecidos como locais ameaçados ou sensíveis.
+Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/409 / CEE, de 2 de abril) e Habitats (92/43 / CEE do Conselho, de 21 de Maio) política e constitui um instrumento políticade fundamental na conservação da natureza da União Europeia e da biodiversidade. Esta classe refere-se às características que se encaixam os regulamentos Habitats.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ReservaNatural -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ReservaNatural">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RioPrincipal -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RioPrincipal">
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/R%C3%ADo"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RioSecundario -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RioSecundario">
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/R%C3%ADo"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaDesdoblada -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaDesdoblada">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaSinDesdoblarPrincipal -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaSinDesdoblarPrincipal">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaSinDesdoblarSecundaria -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaSinDesdoblarSecundaria">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.geonames.org/ontology#Feature -->
 
     <owl:Class rdf:about="http://www.geonames.org/ontology#Feature">
         <rdfs:label xml:lang="en">Feature</rdfs:label>
+        <rdfs:comment xml:lang="es">Característica</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Característica</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.geonames.org/ontology#"/>
     </owl:Class>
     
@@ -196,6 +725,14 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/hydro.owl -->
+
+    <owl:Thing rdf:about="http://geo.linkeddata.es/ontology/hydro.owl">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
     <!-- http://purl.oclc.org/NET/ssnx/ssn# -->
 
     <owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/ssn#">
@@ -204,9 +741,25 @@
     
 
 
+    <!-- http://purl.org/dc/terms/ -->
+
+    <owl:Thing rdf:about="http://purl.org/dc/terms/">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex# -->
 
     <owl:Thing rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio# -->
+
+    <owl:Thing rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     

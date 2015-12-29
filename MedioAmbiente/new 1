@@ -1,0 +1,15 @@
+Clases a añadir a la onto:
+
+¿Cuáles son las reservas naturales de una característica geográfica?
+Reserva Natural-> otalex:ReservaNatural
+Parque natural-> otalex:ParqueNatural
+Parque Nacional -> otalex:ParqueNacional
+Monumento Natural-> otalex:MonumentoNatural
+Paisaje Protegida / Paisagem Protegida -> otalex:PaisajeProtegido
+
+
+¿Cuáles son las vías de comunicación de una característica geográfica?
+Vía desdoblada -> otalex:ViaDesdoblada
+Vía sin desdoblar secundaria -> otalex:ViaSinDesdoblarSecundaria
+Vía sin desdoblar principal -> otalex:ViaSinDesdoblarPrincipal
+Ferrocarril vía simple -> otalex:FerrocarrilViaSimple
