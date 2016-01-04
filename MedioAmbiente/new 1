@@ -13,3 +13,48 @@ Vía desdoblada -> otalex:ViaDesdoblada
 Vía sin desdoblar secundaria -> otalex:ViaSinDesdoblarSecundaria
 Vía sin desdoblar principal -> otalex:ViaSinDesdoblarPrincipal
 Ferrocarril vía simple -> otalex:FerrocarrilViaSimple
+
+El índice de aridez (Ia) se se define como la falta de agua en el suelo. Se calcula en función de la precipitación anual (P) y la evapotranspiración potencial anual (ETP) según la fórmula propuesta por Thornthwaite (Ia = P/ETP). Se han establecido tres clases de aridez: la zona húmeda se extiende principalmente por el norte, subúmeda húmeda en el sur y subhúmeda seca al sureste. Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf
+
+El índice de continentalidad (Ic) está relacionado con la oscilación anual de la temperatura media del mes más cálido (Tmax) y la del mes más frío (Tmin). [Ic = Tmax-Tmin].  Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf
+
+El índice ombrotérmico (Io) define rangos basados en la precipitación y temperatura (tipos y horizontes ómbricos). Es el cociente entre la suma de la precipitación media en mm de los meses cuya temperatura es superior a cero grados centígrados (Pp) y la suma de las temperaturas medias mensuales duperiores a cero grados centígrados en décimat de grado (Tp). Io = Pp(Tp)10. Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf
+
+El índice de termicidad (It) es la suma, en décimas de grado, de la temperatura media anual (T), la temperatura media de las mínimas (m) del mes más frío y la temperatura media de las máximas (M) del período mensual más frío. It= (T+m+M)10. Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf
+
+La precipitación máxima en 24 horas presenta una distribución similar a la precipitación media anual, estando condicionada en gran medida por el relieve. Oscila entre los 56 y 193 mm, siendo la media de 96 mm. Los valores mayores se sitúan principalmente en el noroeste y los menores en el este. Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf
+
+Las precipitaciones medias alcanzan valores próximos a los 700 mm anuales. El rango oscila entre 400 y 1600mm. Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf
+
+Acrisol gleico -> otalex:AcrisolGleico
+Arenosol haplico ->otalex:ArenosolHaplico
+Cambisol calcarico ->otalex:CambisolCalcarico
+Cambisol chromico ->otalex:CambisolChromico
+Cambisol districo ->otalex:CambisolDistrico
+Cambisol eutrico ->otalex:CambisolEutrico
+Cambisol mollico ->otalex:CambisolMollico
+Fluvisol calcarico ->otalex:FluvisolCalcarico
+Fluvisol eutrico ->otalex:FluvisolEutrico
+Leptosol districo ->otalex:LeptosolDistrico
+Leptosol eutrico ->otalex:LeptosolEutrico
+Leptosol haplico ->otalex:LeptosolHaplico
+Luvisol calcico ->otalex:LuvisolCalcico
+Luvisol chromico ->otalex:LuvisolChromico
+Luvisol ferrico ->otalex:LuvisolFerrico
+Luvisol gleico ->otalex:LuvisolGleico
+Luvisol haplico -> otalex:LuvisolHaplico
+Luvisol vertico -> otalex:LuvisolVertico
+Planosol eutrico -> otalex:PlanosolEutrico
+Podzol haplico ->otalex:PodzolHaplico
+Regosol districo ->otalex:RegosolDistrico
+Regosol eutrico ->otalex:RegosolEutrico
+Solonchak gleico ->otalex:SolonchakGleico
+Umbrisol arenico ->otalex:UmbrisolArenico
+Vertisol chromico ->otalex:VertisolChromico
+Vertisol pellico ->otalex:VertisolPellico
+
+
+Albufeiras ->geoes:Albufera
+Lagos e Lagoas ->geoes:AguasQuietasNaturales
+Rios Principais ->otalex:RiosPrincipales
+

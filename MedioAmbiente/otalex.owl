@@ -45,28 +45,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/terms/identifier -->
-
-    <owl:ObjectProperty rdf:about="&dcterms;identifier">
-        <rdfs:label xml:lang="en">identifier</rdfs:label>
-        <rdfs:label xml:lang="es">identificador</rdfs:label>
-        <rdfs:label xml:lang="pt">identificador</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -83,10 +61,11 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#area -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#abreviacionSuelo -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#area">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#abreviacionSuelo">
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
     </owl:DatatypeProperty>
     
 
@@ -100,6 +79,7 @@
         <rdfs:comment xml:lang="en">Code of the province to which the feature that is associated by this property belongs to.</rdfs:comment>
         <rdfs:comment xml:lang="es">Código de la provincia a la cual pertenece la característica asociada con esta propiedad</rdfs:comment>
         <rdfs:comment xml:lang="pt">Código da província à qual pertence a característica associada a esta propriedade</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
     </owl:DatatypeProperty>
     
@@ -113,20 +93,21 @@
         <rdfs:comment xml:lang="en">Name of the province to which the feature that is associated by this property belongs to.</rdfs:comment>
         <rdfs:comment xml:lang="es">Nombre de la provincia a la cual pertenece la característica asociada con esta propiedad</rdfs:comment>
         <rdfs:comment xml:lang="pt">Nome da província à qual pertence a característica associada a esta propriedade</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#codigoCaracteristica -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#codigoCaracteristica_(revisar) -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#codigoCaracteristica">
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#codigoCaracteristica_(revisar)">
         <rdfs:label xml:lang="en">feature code</rdfs:label>
         <rdfs:label xml:lang="es">código de característica</rdfs:label>
         <rdfs:label xml:lang="pt">código de recurso</rdfs:label>
-        <rdfs:comment xml:lang="en">code used to represent the relationship stated by otalex:tipocaracteristica</rdfs:comment>
-        <rdfs:comment xml:lang="es">Código utilizado para representar la relación definida por otalex:tipoCaracteristica</rdfs:comment>
-        <rdfs:comment xml:lang="pt">Código usado para representar a relação definida porotalex:codigoCaracteristica</rdfs:comment>
+        <rdfs:comment xml:lang="en">Code associated with a feature. It can refer to its location, its type, etc. The code may vary depending on the feature</rdfs:comment>
+        <rdfs:comment xml:lang="es">Código asociado a caracteristica. Puede indicar donde se encuentra, su tipo, etc. El código puede variar dependiendo de la característica</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Código associado a um recurso. Pode referir-se à sua localização, o seu tipo, etc. O código pode variar dependendo da função</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
     </owl:DatatypeProperty>
@@ -142,6 +123,7 @@
         <rdfs:comment xml:lang="en">Municipality code, associated to a Feature, and expressed as a combination of a country code and a number with up to 8 digits (e.g., ES43106049)</rdfs:comment>
         <rdfs:comment xml:lang="es">Código del municipio, asociado a una característica, y expresado como una combinación de código de país y un entero de hasta ocho dígitos (por ejemplo, ES43106049)</rdfs:comment>
         <rdfs:comment xml:lang="pt">Código da municipío associado a um recurso, e expressa como uma combinação de código Paisy um número inteiro de até oito dígitos (por exemplo ES43106049)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
     </owl:DatatypeProperty>
     
@@ -158,6 +140,7 @@
         <rdfs:comment xml:lang="pt">O consumo de água em 2009, medida em metros cúbicos por habitante</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -173,6 +156,7 @@
         <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2001, medido em Kwh</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -188,6 +172,7 @@
         <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2002, medido em Kwh</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -203,6 +188,7 @@
         <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2003, medido em Kwh</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -218,6 +204,7 @@
         <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2004, medido em Kwh</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -233,6 +220,7 @@
         <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2005, medido em Kwh</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -248,6 +236,7 @@
         <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2006, medido em Kwh</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -263,6 +252,7 @@
         <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2007, medido em Kwh</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -278,6 +268,7 @@
         <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2008, medido em Kwh</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -293,6 +284,7 @@
         <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2009, medido em Kwh</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -308,20 +300,15 @@
         <rdfs:comment xml:lang="pt">O consumo de energia para o recurso em 2010, medido em Kwh</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#idCaracteristica -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#criterios -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#idCaracteristica"/>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#longitud -->
-
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#longitud">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#criterios">
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
     </owl:DatatypeProperty>
     
 
@@ -332,11 +319,28 @@
         <rdfs:label xml:lang="en">number of hydrographic watersheds</rdfs:label>
         <rdfs:label xml:lang="es">número de cuencas hidrográficas</rdfs:label>
         <rdfs:label xml:lang="pt">número de bacias hidrográficas</rdfs:label>
-        <rdfs:comment xml:lang="en">Number watershed on the feature</rdfs:comment>
+        <rdfs:comment xml:lang="en">Number of watersheds on the feature</rdfs:comment>
         <rdfs:comment xml:lang="es">Número de cuencas hidrográficas en la característica</rdfs:comment>
         <rdfs:comment xml:lang="pt">Número de bacias hidrográficas na propriedade</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#perimetro -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#perimetro">
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#publicadoEn -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#publicadoEn">
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
     </owl:DatatypeProperty>
     
 
@@ -345,16 +349,36 @@
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#superficieHectareas">
         <rdfs:subPropertyOf rdf:resource="http://geo.linkeddata.es/ontology/superficie"/>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
         <rdfs:range rdf:resource="&xsd;float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMaximoDeETPEnMM -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#superficieM2 -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMaximoDeETPEnMM">
-        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#superficieM2">
+        <rdfs:subPropertyOf rdf:resource="http://geo.linkeddata.es/ontology/superficie"/>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorDeIndiceEnKgPorHab -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorDeIndiceEnKgPorHab">
+        <rdfs:comment>usado para indices de residuos</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMaximoDeIndice -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMaximoDeIndice">
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
     </owl:DatatypeProperty>
     
 
@@ -370,21 +394,32 @@
         <rdfs:comment xml:lang="pt">Valor temperatura máxima, representada em graus celsius</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimoDeETPEnMM -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMaximoEnMM -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimoDeETPEnMM">
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMaximoEnMM">
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimodeTempEnC -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimoDeIndice -->
 
-    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimodeTempEnC">
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimoDeIndice">
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimoDeTempEnC -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimoDeTempEnC">
         <rdfs:label xml:lang="en">Minimum temperature value in celsius degrees</rdfs:label>
         <rdfs:label xml:lang="es">Valor mínimo de temperatura en grados centígrados</rdfs:label>
         <rdfs:label xml:lang="pt">O valor máximo da temperatura em graus celsius</rdfs:label>
@@ -393,6 +428,17 @@
         <rdfs:comment xml:lang="pt">O valor mínimo da temperatura, representada em graus celsius</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
         <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimoEnMM -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#valorMinimoEnMM">
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
     </owl:DatatypeProperty>
     
 
@@ -428,6 +474,108 @@
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AcrisolGleico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AcrisolGleico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AluvialYColuvial -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AluvialYColuvial">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaAbsoluta -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaAbsoluta">
+        <rdfs:label xml:lang="en">Absolute thermal amplitude</rdfs:label>
+        <rdfs:label xml:lang="es">Amplitud térmica absoluta</rdfs:label>
+        <rdfs:label xml:lang="pt">Amplitud térmica absoluta</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="en">Absolute thermal amplitude of a Feature, measured in celsius degrees</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Amplitud térmica absoluta de una característica, medida en grados centígrados</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Amplitude térmica absoluta de um recurso, medida em graus celsius</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaMediaAnual -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AmplitudTermicaMediaAnual">
+        <rdfs:label xml:lang="en">Annual thermal amplitude</rdfs:label>
+        <rdfs:label xml:lang="es">Amplitud térmica anual</rdfs:label>
+        <rdfs:label xml:lang="pt">Amplitude térmica anual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="en">Annual thermal amplitude of a Feature, measured in celsius degrees</rdfs:comment>
+        <rdfs:comment xml:lang="es">Amplitud térmica anual de una característica, medida en grados centígrados</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Amplitude térmica anual de uma Caracteristica, medida em graus Celsius</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ArenosolHaplico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ArenosolHaplico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caliza -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caliza">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CambisolCalcarico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CambisolCalcarico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CambisolChromico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CambisolChromico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CambisolDistrico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CambisolDistrico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CambisolEutrico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CambisolEutrico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CambisolMollico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CambisolMollico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica">
@@ -443,36 +591,6 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaAmplitudTermicaAbsoluta -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaAmplitudTermicaAbsoluta">
-        <rdfs:label xml:lang="en">Absolute thermal amplitude</rdfs:label>
-        <rdfs:label xml:lang="es">Amplitud térmica absoluta</rdfs:label>
-        <rdfs:label xml:lang="pt">Amplitud térmica absoluta</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
-        <rdfs:comment xml:lang="en">Absolute thermal amplitude of a Feature, measured in celsius degrees</rdfs:comment>
-        <rdfs:comment xml:lang="pt">Amplitud térmica absoluta de una característica, medida en grados centígrados</rdfs:comment>
-        <rdfs:comment xml:lang="pt">Amplitude térmica absoluta de um recurso, medida em graus celsius</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaAmplitudTermicaMediaAnual -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaAmplitudTermicaMediaAnual">
-        <rdfs:label xml:lang="en">Annual thermal amplitude</rdfs:label>
-        <rdfs:label xml:lang="es">Amplitud térmica anual</rdfs:label>
-        <rdfs:label xml:lang="pt">Amplitude térmica anual</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
-        <rdfs:comment xml:lang="en">Annual thermal amplitude of a Feature, measured in celsius degrees</rdfs:comment>
-        <rdfs:comment xml:lang="es">Amplitud térmica anual de una característica, medida en grados centígrados</rdfs:comment>
-        <rdfs:comment xml:lang="pt">Amplitude térmica anual de uma Caracteristica, medida em graus Celsius</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
-    </owl:Class>
-    
-
-
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaBiogeografica -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaBiogeografica">
@@ -482,9 +600,9 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaConsumoAgua -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ConsumoAgua -->
 
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaConsumoAgua">
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ConsumoAgua">
         <rdfs:label xml:lang="en">Water consumption</rdfs:label>
         <rdfs:label xml:lang="es">Consumo de agua</rdfs:label>
         <rdfs:label xml:lang="pt">Consumo de água</rdfs:label>
@@ -497,9 +615,9 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaConsumoEnergia -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ConsumoEnergia -->
 
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaConsumoEnergia">
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ConsumoEnergia">
         <rdfs:label xml:lang="en">Energy consumption</rdfs:label>
         <rdfs:label xml:lang="es">Consumo de energía</rdfs:label>
         <rdfs:label xml:lang="pt">Consumo de energia</rdfs:label>
@@ -512,50 +630,82 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPAnual -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Cuarcita -->
 
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPAnual">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPInvierno -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPInvierno">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPOtono -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPOtono">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPPrimavera -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPPrimavera">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPVerano -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaETPVerano">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CaracteristicaEvapotranspiracion">
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Cuarcita">
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Duna -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Duna">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ETPAnual -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ETPAnual">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Evapotranspiracion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ETPInvierno -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ETPInvierno">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Evapotranspiracion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ETPOtono -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ETPOtono">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Evapotranspiracion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ETPPrimavera -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ETPPrimavera">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Evapotranspiracion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ETPVerano -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ETPVerano">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Evapotranspiracion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Evapotranspiracion -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Evapotranspiracion">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FerrocarrilViaDoble -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FerrocarrilViaDoble">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Via"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FerrocarrilViaReducida -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FerrocarrilViaReducida">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Via"/>
     </owl:Class>
     
 
@@ -563,7 +713,171 @@
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FerrocarrilViaSimple -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FerrocarrilViaSimple">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Via"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FluvisolCalcarico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FluvisolCalcarico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FluvisolEutrico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#FluvisolEutrico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Granito -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Granito">
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceAridez -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceAridez">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="es">El índice de aridez (Ia) se se define como la falta de agua en el suelo. Se calcula en función de la precipitación anual (P) y la evapotranspiración potencial anual (ETP) según la fórmula propuesta por Thornthwaite (Ia = P/ETP). Se han establecido tres clases de aridez: la zona húmeda se extiende principalmente por el norte, subúmeda húmeda en el sur y subhúmeda seca al sureste. Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceContinentalidad -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceContinentalidad">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="es">El índice de continentalidad (Ic) está relacionado con la oscilación anual de la temperatura media del mes más cálido (Tmax) y la del mes más frío (Tmin). [Ic = Tmax-Tmin]. Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceOmbrotermico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceOmbrotermico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="es">El índice ombrotérmico (Io) define rangos basados en la precipitación y temperatura (tipos y horizontes ómbricos). Es el cociente entre la suma de la precipitación media en mm de los meses cuya temperatura es superior a cero grados centígrados (Pp) y la suma de las temperaturas medias mensuales duperiores a cero grados centígrados en décimat de grado (Tp). Io = Pp(Tp)10. Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceRecogidaPapel -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceRecogidaPapel">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceRecogidaPlastico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceRecogidaPlastico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceRecogidaSolidosUrbanosIndiferenciado -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceRecogidaSolidosUrbanosIndiferenciado">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceRecogidaVidrio -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceRecogidaVidrio">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceTermicidad -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#IndiceTermicidad">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="es">El índice de termicidad (It) es la suma, en décimas de grado, de la temperatura media anual (T), la temperatura media de las mínimas (m) del mes más frío y la temperatura media de las máximas (M) del período mensual más frío. It= (T+m+M)10. Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LeptosolDistrico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LeptosolDistrico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LeptosolEutrico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LeptosolEutrico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LeptosolHaplico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LeptosolHaplico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolCalcico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolCalcico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolChromico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolChromico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolFerrico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolFerrico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolGleico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolGleico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolHaplico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolHaplico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolVertico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolVertico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
     </owl:Class>
     
 
@@ -581,7 +895,7 @@
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Municipio">
         <rdfs:label xml:lang="en">Municipality</rdfs:label>
         <rdfs:label xml:lang="es">Municipio</rdfs:label>
-        <rdfs:label xml:lang="pt">Municipío</rdfs:label>
+        <rdfs:label xml:lang="pt">Município</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
         <rdfs:comment xml:lang="en">Municipality from Spain or Portugal. If the municipality is from Spain, then the class behaves as the one defined in http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio</rdfs:comment>
         <rdfs:comment xml:lang="es">Municipio de España o Portugal. Si el municipio es de España, esta clase se comporta como la que está definida en http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio</rdfs:comment>
@@ -611,6 +925,57 @@
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ParqueNatural">
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Pizarra -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Pizarra">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PlanosolEutrico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PlanosolEutrico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PlutonicaEIgnea -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PlutonicaEIgnea">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="en">check alignement with sweet.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PodzolHaplico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PodzolHaplico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PrecipitacionMaxima24Horas -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PrecipitacionMaxima24Horas">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="es">La precipitación máxima en 24 horas presenta una distribución similar a la precipitación media anual, estando condicionada en gran medida por el relieve. Oscila entre los 56 y 193 mm, siendo la media de 96 mm. Los valores mayores se sitúan principalmente en el noroeste y los menores en el este. Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PrecipitacionMediaAnual -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PrecipitacionMediaAnual">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="es">Las precipitaciones medias alcanzan valores próximos a los 700 mm anuales. El rango oscila entre 400 y 1600mm. Fuente: http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</rdfs:comment>
     </owl:Class>
     
 
@@ -653,6 +1018,22 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RegosolDistrico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RegosolDistrico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RegosolEutrico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RegosolEutrico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ReservaNatural -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ReservaNatural">
@@ -679,10 +1060,115 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#SolonchakGleico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#SolonchakGleico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="es">Clase que sirve para agrupar todos los tipos de suelo. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#TemperaturaMaximaAbsoluta -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#TemperaturaMaximaAbsoluta">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#TemperaturaMaximaMediaAnual -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#TemperaturaMaximaMediaAnual">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#TemperaturaMediaAnual -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#TemperaturaMediaAnual">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#TemperaturaMinimaAbsoluta -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#TemperaturaMinimaAbsoluta">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#TemperaturaMinimaMediaAnual -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#TemperaturaMinimaMediaAnual">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UmbrisolArenico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UmbrisolArenico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadPaisaje -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadPaisaje">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#VertisolChromico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#VertisolChromico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#VertisolPelico -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#VertisolPelico">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Suelo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Via -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Via">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaDesdoblada -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaDesdoblada">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Via"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaDoblePrincipal -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaDoblePrincipal">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Via"/>
     </owl:Class>
     
 
@@ -690,7 +1176,7 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaSinDesdoblarPrincipal -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaSinDesdoblarPrincipal">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Via"/>
     </owl:Class>
     
 
@@ -698,7 +1184,7 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaSinDesdoblarSecundaria -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ViaSinDesdoblarSecundaria">
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Via"/>
     </owl:Class>
     
 
