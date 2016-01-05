@@ -58,3 +58,11 @@ Albufeiras ->geoes:Albufera
 Lagos e Lagoas ->geoes:AguasQuietasNaturales
 Rios Principais ->otalex:RiosPrincipales
 
+	<rdfs:label xml:lang="en"></rdfs:label>
+	<rdfs:label xml:lang="es"></rdfs:label>
+	<rdfs:label xml:lang="pt"></rdfs:label>
+	<rdfs:comment xml:lang="en"></rdfs:comment>
+	<rdfs:comment xml:lang="es"></rdfs:comment>
+	<rdfs:comment xml:lang="pt"></rdfs:comment>
+	<dcterms:source></dcterms:source>
+
