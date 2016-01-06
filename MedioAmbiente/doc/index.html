@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html prefix="dc: http://purl.org/dc/terms/ schema: http://schema.org/ prov: http://www.w3.org/ns/prov# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl#">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />   <script src="resources/jquery.js"></script> 
+    <script> 
+function loadHash() {
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+		$('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+	}
+}    $(function(){
+      $("#abstract").load("sections/abstract-es.html"); 
+      $("#introduction").load("sections/introduction-es.html"); 
+      $("#overview").load("sections/overview-es.html"); 
+      $("#description").load("sections/description-es.html"); 
+      $("#crossref").load("sections/crossref-es.html", null, loadHash); 
+      $("#references").load("sections/references-es.html"); 
+    });
+    </script> 
+  </head> 
+
+<body resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#" typeOf="owl:Ontology schema:TechArticle">
+<span resource="" typeOf="foaf:Document schema:WebPage">
+<span property="dc:created schema:dateCreated" content="2015-12-25"></span>
+<span property="dc:isVersionOf prov:specializationOf" resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"></span>
+<span property="dc:contributor prov:wasAttributedTo schema:contributor" resource="http://purl.org/net/dgarijo"></span>
+</span>
+<div class="container"><div class="head">
+<div style="float:right">language <a href="index-pt.html"><b>pt</b></a> <a href="index-en.html"><b>en</b></a> <a href="index-es.html"><b>es</b></a> </div>
+<h1 property="dc:title schema:name">Ontología Otalex</h1>
+<span property="dc:modified schema:dateModified" content="2015-12-25"></span>
+<h2>Fecha de creaci&oacute;n:  2015-12-25</h2>
+<dl><dt>&Uacute;ltima Versi&oacute;n:</dt>
+<dd><a href="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#">http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#</a></dd>
+</dl><dt>Revisi&oacute;n n&uacute;mero:</dt>
+<dd property="schema:version">1.0</dd>
+<dl><dt>Autores:</dt>
+<dd><a property="dc:creator schema:author prov:wasAttributedTo" resource="http://delicias.dia.fi.upm.es/members/DGarijo/#me" href="http://delicias.dia.fi.upm.es/members/DGarijo/#me">Daniel Garijo</a>, Ontology Engineering Group</dd></dl>
+
+<dl><dt>Colaboradores:</dt>
+<dd><a property="dc:contributor schema:contributor prov:wasAttributedTo" resource="http://mayor2.dia.fi.upm.es/oeg-upm/index.php/es/teachers/11-ocorcho" href="http://mayor2.dia.fi.upm.es/oeg-upm/index.php/es/teachers/11-ocorcho">Oscar Corcho</a>, Ontology Engineering Group</dd></dl>
+
+<dl><dt>Ontolog&iacute;as extendidas:</dt>
+<dd><a property=" schema:mentions" resource="http://www.geonames.org/ontology#" href="http://www.geonames.org/ontology#">Geonames</a></dd><dd><a property=" schema:mentions" resource="http://geo.linkeddata.es/ontology/" href="http://geo.linkeddata.es/ontology/">Geolinkeddata</a></dd></dl>
+
+<a property="dc:rights" href="http://creativecommons.org/licenses/by-nc-sa/2.0/" rel="license">
+<img src="https://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png" style="border-width:0" alt="License"></img>
+</a>
+<br/><dl>Trabajo bajo licencia:  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative commons by-nc-sa/2.0</a>.</dl>
+<span property="dc:license" resource="http://creativecommons.org/licenses/by-nc-sa/2.0/"></span>
+<hr/>
+</div>
+     <div id="abstract"></div>
+<div id="toc"><h2>&Iacute;ndice</h2>
+<ul>
+<li><a href="#introduction">1. Introducci&oacute;n</a></li>
+<ul><li><a href="#namespacedeclarations">1.1 Namespaces utlizados en el documento</a></li></ul>
+<li><a href="#overview">2. Otalex: Resumen</a></li>
+<li><a href="#description">3. Otalex: Descripci&oacute;n</a></li>
+<li><a href="#crossref">4. T&eacute;rminos de Otalex para clases, propiedades y propiedades de datos</a></li>
+<ul>
+<li><a href="#classes">4.1 Clases</a></li>
+        <li><a href="#dataproperties">4.2 Propiedades de datos</a></li>
+</ul>
+<li><a href="#references">5. Referencias</a></li>
+<li><a href="#acknowledgements">6. Agradecimientos</a></li>
+</ul>
+</div>
+     <div id="introduction"></div>
+     <div id="overview"></div>
+     <div id="description"></div>
+     <div id="crossref"></div>
+     <div id="references"></div>
+<div id="acknowledgements">
+<h2>6. Agradecimientos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<p>Los autores agradecen a <a href="http://www.essepuntato.it/">Silvio Peroni</a> el desarrollo de <a href="http://www.essepuntato.it/lode">LODE</a>, un entorno de documentaci&oacute;n para OWL que es usado para generar la descripci&oacute;n de t&eacute;rminos de la ontolog&iacute;a de este documento; y a  <a href="http://purl.org/net/dgarijo/">Daniel Garijo</a> por desarrollar <a href="https://github.com/dgarijo/Widoco">Widoco</a>, el programa utilizado para producir la plantilla en la que se basa este documento.</p>
+</div>
+</body> 
+</html>

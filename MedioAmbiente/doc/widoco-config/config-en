@@ -1,0 +1,25 @@
+
+abstract=This document introduces the ontology for the Otalex atlas, which describes many geographic features in Extremadura (Spain) and Alentejo (Portugal) 
+ontologyTitle=Otalex ontology
+ontologyPrefix=otalex
+ontologyNamespaceURI=http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#
+ontologyName=Otalex
+thisVersionURI=
+latestVersionURI=http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#
+previousVersionURI=
+dateOfRelease=2015-12-25
+ontologyRevisionNumber=1.0
+licenseURI=http://creativecommons.org/licenses/by-nc-sa/2.0/
+licenseName=Creative commons by-nc-sa/2.0
+licenseIconURL=https://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png
+citeAs=
+authors=Daniel Garijo
+authorsURI=http://delicias.dia.fi.upm.es/members/DGarijo/#me
+authorsInstitution=Ontology Engineering Group
+contributors=Oscar Corcho
+contributorsURI=http://mayor2.dia.fi.upm.es/oeg-upm/index.php/es/teachers/11-ocorcho
+contributorsInstitution=Ontology Engineering Group
+importedOntologyNames=
+importedOntologyURIs=
+extendedOntologyNames=Geonames;Geolinkeddata
+extendedOntologyURIs=http://www.geonames.org/ontology#;http://geo.linkeddata.es/ontology/
