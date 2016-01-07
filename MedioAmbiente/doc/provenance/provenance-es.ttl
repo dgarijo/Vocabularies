@@ -1,0 +1,12 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<..\index-es.html> a prov:Entity;
+	 dc:title "Ontología Otalex";
+	 prov:wasAttributedTo <http://delicias.dia.fi.upm.es/members/DGarijo/#me>;
+	 dc:creator <http://delicias.dia.fi.upm.es/members/DGarijo/#me>;
+	 prov:wasAttributedTo <http://mayor2.dia.fi.upm.es/oeg-upm/index.php/es/teachers/11-ocorcho>;
+	 dc:contributor <http://mayor2.dia.fi.upm.es/oeg-upm/index.php/es/teachers/11-ocorcho>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#>;
+	 prov:wasGeneratedAt "2015-12-25".
