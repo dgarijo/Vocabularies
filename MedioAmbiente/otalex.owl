@@ -1219,9 +1219,9 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolChromico -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolCromico -->
 
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolChromico">
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LuvisolCromico">
         <rdfs:label xml:lang="en">Chromic luvisol</rdfs:label>
         <rdfs:label xml:lang="es">Luvisol crómico</rdfs:label>
         <rdfs:label xml:lang="pt">Luvisol crómico</rdfs:label>
