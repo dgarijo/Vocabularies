@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY scovo "http://purl.org/NET/scovo#" >
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ontology "http://geo.linkeddata.es/ontology/" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY wgs84_pos "http://www.w3.org/2003/01/geo/wgs84_pos#" >
+    <!ENTITY geopolitical "http://aims.fao.org/aos/geopolitical.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="&ontology;top.owl#"
+     xml:base="&ontology;top.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:ontology="http://geo.linkeddata.es/ontology/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:scovo="http://purl.org/NET/scovo#">
+    <owl:Ontology rdf:about="">
+        <rdfs:label xml:lang="es"
+            >Ontolog&#237;a utilizada para modelar geo.linkeddata.es</rdfs:label>
+        <dc:creator xml:lang="es"
+            >Ontology Engineering Group, Facultad de Inform&#225;tica, Universidad Polit&#233;cnica de Madrid</dc:creator>
+        <rdfs:comment xml:lang="es"
+            >Red de ontolog&#237;as para modelar la informaci&#243;n disponible en geo.linkeddata.es</rdfs:comment>
+        <owl:imports rdf:resource="http://aims.fao.org/aos/geopolitical.owl"/>
+        <owl:imports rdf:resource="http://vocab.deri.ie/scovo"/>
+        <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/formaParteDe -->
+
+    <owl:ObjectProperty rdf:about="&ontology;formaParteDe">
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+        <rdfs:label xml:lang="es">forma parte de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/formadoPor -->
+
+    <owl:ObjectProperty rdf:about="&ontology;formadoPor">
+        <rdfs:comment xml:lang="en">has part</rdfs:comment>
+        <rdfs:comment xml:lang="es">formado por</rdfs:comment>
+        <owl:inverseOf rdf:resource="&ontology;formaParteDe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/hasName -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;hasName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/hasValue -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;hasValue">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#area -->
+
+    <owl:Class rdf:about="&geopolitical;area">
+        <rdfs:subClassOf rdf:resource="&scovo;Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#territory -->
+
+    <owl:Class rdf:about="&geopolitical;territory">
+        <rdfs:label xml:lang="es">territorio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/A%C3%B1o -->
+
+    <owl:Class rdf:about="&ontology;A%C3%B1o">
+        <rdfs:label xml:lang="es">A&#241;o</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&time;DurationDescription"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Organizaci%C3%B3n -->
+
+    <owl:Class rdf:about="&ontology;Organizaci%C3%B3n">
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+        <rdfs:label xml:lang="es">Organizaci&#243;n</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&foaf;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NET/scovo#Dataset -->
+
+    <owl:Class rdf:about="&scovo;Dataset">
+        <rdfs:label xml:lang="es"
+            >Conjunto de datos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NET/scovo#Dimension -->
+
+    <owl:Class rdf:about="&scovo;Dimension">
+        <rdfs:label xml:lang="es">Dimensi&#243;n</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+    <owl:Class rdf:about="&wgs84_pos;SpatialThing">
+        <rdfs:label xml:lang="es"
+            >Fen&#243;meno Espacial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DurationDescription -->
+
+    <owl:Class rdf:about="&time;DurationDescription">
+        <rdfs:subClassOf rdf:resource="&scovo;Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="&foaf;Organization"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
