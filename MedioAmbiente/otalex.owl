@@ -125,6 +125,22 @@
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#clasificacionCorine -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#clasificacionCorine">
+        <rdfs:label xml:lang="en">Corine classification</rdfs:label>
+        <rdfs:label xml:lang="es">clasificación Corine</rdfs:label>
+        <rdfs:label xml:lang="pt">classificação Corine</rdfs:label>
+        <rdfs:comment xml:lang="en">Corine property that determines which class corresponding to the feature.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Propiedad que determina qué clase Corine se corresponde con la característica.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Corine propriedade que determina qual a classe correspondente ao recurso.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+        <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#codigoCaracteristica -->
 
     <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#codigoCaracteristica">
@@ -575,13 +591,45 @@
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AgricolaHeterogenea -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AgricolaHeterogenea">
+        <rdfs:label xml:lang="en">Heterogeneous agricultural area</rdfs:label>
+        <rdfs:label xml:lang="es">Zona agrícola heterogénea</rdfs:label>
+        <rdfs:label xml:lang="pt">Zona agrícola heterogêneos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="en">Territories with heterogeneous agricultural areas</rdfs:comment>
+        <rdfs:comment xml:lang="es">Territorios con zonas agrícolas heterogéneas</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Territórios com áreas agrícolas heterogêneos</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AgroforestalMontado -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AgroforestalMontado">
+        <rdfs:label xml:lang="en">Agroforestry-Montado</rdfs:label>
+        <rdfs:label xml:lang="es">Agroforestal-Montado</rdfs:label>
+        <rdfs:label xml:lang="pt">Agro-florestais-Montado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="en">Territories with agroforestry areas.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Territorios con zonas agroforestales.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Territórios incluem agroflorestais áreas.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AluvialYColuvial -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AluvialYColuvial">
         <rdfs:label xml:lang="en">Alluvial and colluvial</rdfs:label>
         <rdfs:label xml:lang="es">Aluvial y coluvial</rdfs:label>
         <rdfs:label xml:lang="pt">Aluviais e coluviais</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
         <rdfs:comment xml:lang="en">Lithologic group formed by recent sedimentary deposits created by the water, gravity or thaws.</rdfs:comment>
         <rdfs:comment xml:lang="es">Grupo litológico formado por aquellos depósitos sedimentarios recientes, creados tanto por el agua como por la gravedad y los deshielos.</rdfs:comment>
         <rdfs:comment xml:lang="pt">Grupo de litologia que consiste em depósitos sedimentares criado pela água, tanto quanto pela gravidade e degelos.</rdfs:comment>
@@ -620,6 +668,38 @@
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ArboladoYMonteMediterraneo -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ArboladoYMonteMediterraneo">
+        <rdfs:label xml:lang="en">Mediterranean forest</rdfs:label>
+        <rdfs:label xml:lang="es">Arbolado y monte mediterráneo</rdfs:label>
+        <rdfs:label xml:lang="pt">Floresta mediterrânica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Corine"/>
+        <rdfs:comment xml:lang="es">Tipo de clasificación Corine que incluye territorios con arbolado y monte mediterráneo.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="en">Corine type classification that includes territories with trees and Mediterranean bush.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Classificação do tipo de Corine, que inclui territórios com árvores e vegetação mediterrânica.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Arbusto -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Arbusto">
+        <rdfs:label xml:lang="en">Bush</rdfs:label>
+        <rdfs:label xml:lang="es">Arbusto</rdfs:label>
+        <rdfs:label xml:lang="pt">Matos</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="pt">Territorios con zonas de matos.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="en">Territories con bush areas.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Territorios con zonas de arbusto.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AreaProtegida -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#AreaProtegida">
@@ -652,13 +732,45 @@
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Artificial -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Artificial">
+        <rdfs:label xml:lang="en">Artificial areas</rdfs:label>
+        <rdfs:label xml:lang="es">Zonas artificales</rdfs:label>
+        <rdfs:label xml:lang="pt">Zonas artificializadas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="es">Territorios con Zonas artificales.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="en">Features with artificial areas.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Zonas artificializadas.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#BosqueFrondoso -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#BosqueFrondoso">
+        <rdfs:label xml:lang="en">Broadleaf forest</rdfs:label>
+        <rdfs:label xml:lang="es">Bosque forndoso</rdfs:label>
+        <rdfs:label xml:lang="pt">Floresta de folhosas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="en">Area with hardwood forest.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Zona con bosques frondosos.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="pt">Área com Floresta de folhosas.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caliza -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caliza">
         <rdfs:label xml:lang="en">Limestone</rdfs:label>
         <rdfs:label xml:lang="es">Caliza</rdfs:label>
         <rdfs:label xml:lang="pt">Calcários</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
         <dcterms:source>C. Klein, C. S. Hurlbut. Manual de Mineralogía, cuarta edición. Editorial Reverté, 1998</dcterms:source>
         <rdfs:comment xml:lang="en">Lithologic group consisting on sedimentary rock mainly composed of calcium carbonate (CaCO3), generally calcite, although often presents traces of magnesite (MgCO3) and other carbonates.</rdfs:comment>
         <rdfs:comment xml:lang="es">grupo litológico que consiste en roca sedimentaria compuesta mayoritariamente por carbonato de calcio (CaCO3), generalmente calcita, aunque frecuentemente presenta trazas de magnesita (MgCO3) y otros carbonatos.</rdfs:comment>
@@ -809,16 +921,112 @@
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Corine -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Corine">
+        <rdfs:label xml:lang="en">Corine Feature</rdfs:label>
+        <rdfs:label xml:lang="es">Característica Corine</rdfs:label>
+        <rdfs:label xml:lang="pt">Característica Corine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="en">The Corine Land Cover project developed a classification with a common methodology for all European countries. The minimum mapping unit surface is 25 hectares, while the collected linear elements have a width of at least 100 meters. The classification was synthesized and prepared for GEOALEX project, that distinguishes only 8 classes.</rdfs:comment>
+        <rdfs:comment xml:lang="es">El proyecto Corine Land Cover diseñó una clasificación con una metodología común para todos los países europeos. La unidad de mapeo mínima superficial es de 25 hectáreas, mientras que los elementos lineales recogidos tienen una anchura de al menos 100 metros. La clasificación fue sintetizada y elaborada para el proyecto GEOALEX, que distingue tan solo 8 clases.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">O projecto Corine Land Cover desenvolveu uma classificação com uma metodologia comum para todos os países europeus. A superfície mínima unidade de mapeamento é de 25 hectares, enquanto que os elementos recolhidos lineares ter uma largura de pelo menos 100 metros. A classificação foi sintetizado e preparado para projeto GEOALEX que distingue apenas 8 classes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Cuarcita -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Cuarcita">
         <rdfs:label xml:lang="en">Quartzite</rdfs:label>
         <rdfs:label xml:lang="es">Cuarcita</rdfs:label>
         <rdfs:label xml:lang="pt">Quartzito</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
         <rdfs:comment xml:lang="en">Lithologic group consisting on hard metamorphic rock with high quartz content.</rdfs:comment>
         <rdfs:comment xml:lang="es">Grupo litológico que consiste en roca metamórfica dura con alto contenido de cuarzo.</rdfs:comment>
         <rdfs:comment xml:lang="pt">Grupo de litologia que consiste em rocha metamórfica com alto teor de quartzo.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CultivoPermanente -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CultivoPermanente">
+        <rdfs:label xml:lang="en">Permanent crops</rdfs:label>
+        <rdfs:label xml:lang="es">Cultivo permanente</rdfs:label>
+        <rdfs:label xml:lang="pt">Culturas permanentes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="en">Area including permanent crops.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Zona que incluye cultivos permanentes.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="pt">Área, incluindo as culturas permanentes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CultivoTemporal -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#CultivoTemporal">
+        <rdfs:label xml:lang="en">Temporary crops</rdfs:label>
+        <rdfs:label xml:lang="es">Cultivo temporal</rdfs:label>
+        <rdfs:label xml:lang="pt">Culturas temporárias</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="es">Zona que incluye cultivos personales.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="en">Area including temporary crops.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Área incluindo culturas temporárias.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#DominioAgricolaDeRegadio -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#DominioAgricolaDeRegadio">
+        <rdfs:label xml:lang="en">Irrigated agricultural domains</rdfs:label>
+        <rdfs:label xml:lang="es">Dominio agrícola de regadío</rdfs:label>
+        <rdfs:label xml:lang="pt">Dominío agrícola de regadío</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Corine"/>
+        <rdfs:comment xml:lang="en">Type of territory within the classification Corine including irrigated agricultural domains</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="es">Tipo de territorio dentro de la clasificación Corine que incluye dominios agrícolas de regadío.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Tipo de território dentro da classificação Corine incluindo domínios da agricultura irrigada.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#DominioAgricolaDeSecano -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#DominioAgricolaDeSecano">
+        <rdfs:label xml:lang="en">Agricultural field of dry land</rdfs:label>
+        <rdfs:label xml:lang="es">Dominio agrícola de secano</rdfs:label>
+        <rdfs:label xml:lang="pt">Dominio agrícola de sequeiro</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Corine"/>
+        <rdfs:comment xml:lang="en">Type of territory within the Corine classification that includes rainfed agricultural domains.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Tipo de territorio dentro de la clasificación Corine que incluye dominios agrícolas de secano.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Tipo de território dentro da classificação Corine que inclui domínios agrícolas de sequeiro.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#DominioCosteroYLitoral -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#DominioCosteroYLitoral">
+        <rdfs:label xml:lang="en">Domain coastal and littoral</rdfs:label>
+        <rdfs:label xml:lang="es">Dominio costero y litoral</rdfs:label>
+        <rdfs:label xml:lang="pt">Domínio costeira e litoral</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Corine"/>
+        <rdfs:comment xml:lang="es">Tipo de territorio dentro de la clasificación Corine que incluye costas y litorales.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Tipo de território dentro da classificação Corine que inclui o litoral e as linhas costeiras.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="en">Type of territory within the Corine classification that includes coasts and shorelines.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
     </owl:Class>
     
@@ -830,7 +1038,7 @@
         <rdfs:label xml:lang="en">Dune</rdfs:label>
         <rdfs:label xml:lang="es">Duna</rdfs:label>
         <rdfs:label xml:lang="pt">Duna</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
         <rdfs:comment xml:lang="es">Grupo litológico constituído por materiales recientes.</rdfs:comment>
         <rdfs:comment xml:lang="pt">Grupo de litologia que consiste em materiais recentes.</rdfs:comment>
         <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
@@ -1022,7 +1230,7 @@
         <rdfs:label xml:lang="en">Granite</rdfs:label>
         <rdfs:label xml:lang="es">Granito</rdfs:label>
         <rdfs:label xml:lang="pt">Granito</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
         <rdfs:comment xml:lang="en">Lithologic group made of plutonic and igneous  rock constituted by quartz, feldspar and mica</rdfs:comment>
         <rdfs:comment xml:lang="es">Grupo litológico que consiste en roca ígnea plutónica, constituida esencialmente por cuarzo, feldespato y mica.</rdfs:comment>
         <rdfs:comment xml:lang="pt">Grupo de litologia que consiste em roca ígnea plutónica constituida esencialmente por quartzo, feldespato y mica.</rdfs:comment>
@@ -1155,6 +1363,22 @@
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LaminaDeAgua -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LaminaDeAgua">
+        <rdfs:label xml:lang="en">Continental Waters</rdfs:label>
+        <rdfs:label xml:lang="es">Lámina de agua</rdfs:label>
+        <rdfs:label xml:lang="pt">Aguas continentais</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Corine"/>
+        <rdfs:comment xml:lang="en">Corine type classification that includes continental water of a territory.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Tipo de clasificación Corine que incluye las láminas de agua en un territorio.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Tipo de classificação Corine que inclui aguas continentais em um território.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LeptosolDistrico -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#LeptosolDistrico">
@@ -1198,6 +1422,22 @@
         <rdfs:comment xml:lang="en">Soil type very thin (less than 25 cm thick), on a hard rock (or cemented layer, or materials&gt; 40% CaCO3, very burdensome material). It has very low evolution.</rdfs:comment>
         <rdfs:comment xml:lang="es">Tipo de suelo muy delgados (espesor menor a 25 cm), sobre una roca dura (o capa cementada, o material &gt; 40% CO3Ca, material muy gravoso). Es de muy baja evolución.</rdfs:comment>
         <rdfs:comment xml:lang="pt">Tipo de solo muito fino (menos de 25 cm de espessura), em um hard rock (ou camada cimentada, ou materiais&gt; 40% de CaCO3, material muito pesado). É muito baixa a evolução.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Llanura -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Llanura">
+        <rdfs:label xml:lang="en">Plain</rdfs:label>
+        <rdfs:label xml:lang="es">Llanura</rdfs:label>
+        <rdfs:label xml:lang="pt">Planície</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="en">Plain areas</rdfs:comment>
+        <rdfs:comment xml:lang="es">Zonas con llanuras.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Áreas com planícies.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
     </owl:Class>
     
@@ -1299,6 +1539,22 @@
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Mixta -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Mixta">
+        <rdfs:label xml:lang="en">Mixed area</rdfs:label>
+        <rdfs:label xml:lang="es">Zona mixta</rdfs:label>
+        <rdfs:label xml:lang="pt">Zona mista</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="en">Landscape unit with mixed terrain.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Unidad de paisaje con terreno mixto.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Unidade de paisagem com terreno misto.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#MonumentoNatural -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#MonumentoNatural">
@@ -1379,13 +1635,61 @@ Paisagem protegida refere-se às partes específicas do ambiente natural, que, d
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PastizalYEspacioAbierto -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PastizalYEspacioAbierto">
+        <rdfs:label xml:lang="en">Grassland and open space</rdfs:label>
+        <rdfs:label xml:lang="es">Pastizal y espacio abierto</rdfs:label>
+        <rdfs:label xml:lang="pt">Pastagem e espaço aberto</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Corine"/>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="en">Grassland and open spaces according wing Corine classification.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Zonas de pastizales y espacios abiertos de acuerdo a la clasificación Corine.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Pastagem e espaços abertos de acordo asa classificação Corine.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Pasto -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Pasto">
+        <rdfs:label xml:lang="en">Pasture land</rdfs:label>
+        <rdfs:label xml:lang="es">Pasto</rdfs:label>
+        <rdfs:label xml:lang="pt">Pastagen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="en">Areas with pasture land.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Zonas de pastos.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Zonas de pastagem.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Pendiente -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Pendiente">
+        <rdfs:label xml:lang="en">Hillside</rdfs:label>
+        <rdfs:label xml:lang="es">Pendiente</rdfs:label>
+        <rdfs:label xml:lang="pt">Encosta</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="en">Hillside aureas</rdfs:comment>
+        <rdfs:comment xml:lang="es">Zonas con pendiente.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Zonas de encosta.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Pizarra -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Pizarra">
         <rdfs:label xml:lang="en">Slate</rdfs:label>
         <rdfs:label xml:lang="es">Pizarra</rdfs:label>
         <rdfs:label xml:lang="pt">Ardósia</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
         <rdfs:comment xml:lang="en">Lithologic group consisting on homogeneous fine-grained metamorphic rock formed by the compaction of low-grade metamorphism of shale</rdfs:comment>
         <rdfs:comment xml:lang="es">Grupo litológico que consiste en roca metamórfica homogénea de grano fino formada por la compactación por metamorfismo de bajo grado de lutitas.</rdfs:comment>
         <rdfs:comment xml:lang="pt">Grupo de litologia que consiste em rocha metamórfica de grão fino formada pela compactação do metamorfismo de baixo grau de xisto</rdfs:comment>
@@ -1416,7 +1720,7 @@ Paisagem protegida refere-se às partes específicas do ambiente natural, que, d
         <rdfs:label xml:lang="en">Plutonic and igneous rocks</rdfs:label>
         <rdfs:label xml:lang="es">Rocas plutónicas e ígneas</rdfs:label>
         <rdfs:label xml:lang="pt">Rochas plutónicas e rochas igneas</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
         <rdfs:comment xml:lang="en">Lithologic group that includes igneous and plutonic rocks.</rdfs:comment>
         <rdfs:comment xml:lang="es">Grupo litológico que incluye rocas de tipo plutónico e ígneo.</rdfs:comment>
         <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
@@ -1544,6 +1848,22 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RelieveAbrupto -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#RelieveAbrupto">
+        <rdfs:label xml:lang="en">Abrupt relief</rdfs:label>
+        <rdfs:label xml:lang="es">Relieve abrupto</rdfs:label>
+        <rdfs:label xml:lang="pt">Relevo abrupto</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <dcterms:source>http://cvc.cervantes.es/obref/atlas/esp/territorio/ter_txt5.htm#2</dcterms:source>
+        <rdfs:comment xml:lang="en">Rugged landscape. Thus, farming  is difficult and it increases the risk of erosion and edaphic impoverishment. Naturally, populations and infrastructure are concentrated mainly on the rare plains- and valley bottoms, so that the size of the territory that can be directly occupied is greatly reduced in practice. </rdfs:comment>
+        <rdfs:comment xml:lang="es">Tipo de paisaje accidentado. Ello dificulta la actividad agrícola e incrementa los riesgos de erosión y de empobrecimiento edáfico, y tampoco facilita la inscripción paisajística de las infraestructuras. Como es lógico, poblaciones e infraestructuras se concentran en las escasas llanuras —principalmente, en los litorales— y al fondo de los valles, de modo que la extensión del territorio que puede ser directamente ocupado se reduce mucho en la práctica. Este fenómeno provoca el clásico encarecimiento de todo aquello que es escaso, asimetrías socioeconómicas crecientes entre la plana y la montaña, e impactos paisajísticos agudos en las áreas operables, causados por las infraestructuras territoriales. Así, un paisaje singularmente sensible acaba por convertirse en un paisaje especialmente impactado.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Paisagem acidentada. Assim, a agricultura é difícil e aumenta o risco de erosão e empobrecimento edáfico. Naturalmente, populações e infra-estrutura estão concentrados principalmente nos planos raros em fundos litorales- e vale, de modo que o tamanho do território ocupado que podem ser diretamente é muito reduzida na prática.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ReservaNatural -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ReservaNatural">
@@ -1555,6 +1875,22 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
         <rdfs:comment xml:lang="es">Espacios naturales, cuya creación tiene como finalidad la protección de ecosistemas, comunidades o elementos biológicos que, por su rareza, fragilidad, importancia o singularidad merecen una valoración especial.</rdfs:comment>
         <dcterms:source>http://www.juntadeandalucia.es/medioambiente/site/portalweb/menuitem.220de8226575045b25f09a105510e1ca/?vgnextoid=ae17b924931f4310VgnVCM2000000624e50aRCRD</dcterms:source>
         <rdfs:comment xml:lang="pt">Espaços naturais, cuja criação visa proteger os ecossistemas, comunidades ou elementos biológicos que, pela sua raridade, fragilidade, importância ou singularidade merecem uma consideração especial.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Resinosa -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Resinosa">
+        <rdfs:label xml:lang="en">Resinous</rdfs:label>
+        <rdfs:label xml:lang="es">Resinoso</rdfs:label>
+        <rdfs:label xml:lang="pt">Resinoso</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="en">Type of vegetation cover that consists of coniferous trees.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Tipo de cubierta vegetal formada por árboles resinosos.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Tipo de cobertura vegetal consiste de árvores coníferas.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
     </owl:Class>
     
@@ -1592,6 +1928,22 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#SistemaAgroSilvoPastoril -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#SistemaAgroSilvoPastoril">
+        <rdfs:label xml:lang="en">Agro-Silvo-Pastoril system</rdfs:label>
+        <rdfs:label xml:lang="es">Sistema Agro-Silvo-Pastoril</rdfs:label>
+        <rdfs:label xml:lang="pt">Sistema Agro-Silvo-Pastoril</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Corine"/>
+        <dcterms:source>http://www.agro.uba.ar/apuntes/no_8/sistemas.htm</dcterms:source>
+        <rdfs:comment xml:lang="en">Land usage and technologies in which woody perennials (trees, shrubs, palms and others) are deliberately combined in the same management unit with herbaceous plants (crops, pastures) and / or animals, even in the very form of spatial arrangement or timing, and there are both ecological and economic interactions between the different components (Young, 1987).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Aquel uso de la tierra y tecnologías en que leñosas perennes (árboles, arbustos, palmas y otros) son deliberadamente combinados en la misma unidad de manejo con plantas herbáceas (cultivos, pasturas) y/o animales, incluso en la misma forma de arreglo espacial o secuencia temporal, y en que hay interacciones tanto ecológicas como económicas entre los diferentes componentes (Young, 1987).</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Que o uso e tecnologias terra em que lenhosas perenes (árvores, arbustos, palmeiras e outras) são deliberadamente combinados na mesma unidade de manejo com plantas herbáceas (lavouras, pastagens) e / ou animais, mesmo na própria forma de arranjo espacial ou momento, e há duas interações ecológicas e económicas entre os diferentes componentes (Young, 1987).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#SolonchakGleico -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#SolonchakGleico">
@@ -1620,6 +1972,14 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
         <rdfs:comment xml:lang="es">Clase que agrupa los tipos de suelo que encontramos en una región. En esta definición están considerados aquellos tipos que se encuentran en el atlas Otalex, es decir, principalmente Regosoles, Cambisoles y Luvisoles.</rdfs:comment>
         <rdfs:comment xml:lang="pt">Classe agrupar tipos de solos encontrados em uma região. Nesta definição desses tipos encontrados no atlas OTALEX, ou seja, principalmente Regossolos, Cambisoles e Luvisoles são considerados.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#SuperficieArtificial -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#SuperficieArtificial">
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Corine"/>
     </owl:Class>
     
 
@@ -1720,6 +2080,22 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje">
+        <rdfs:label xml:lang="en">Local lanscape unit</rdfs:label>
+        <rdfs:label xml:lang="es">Unidad local de paisaje</rdfs:label>
+        <rdfs:label xml:lang="pt">Unidad local de paisagem</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
+        <rdfs:comment xml:lang="en">Concept based on the hypothesis of the existence of basic elements which combined together give a specific spatial pattern which is associated a particular character (Cancela d&apos;Abreu et al 2002). The concept of local landscape unit refers to the smallest homogeneous unit represented at a local and regional level, which is discernible and can individualize their environment and have a natural or anthropogenic. It is based on lithology, landforms and occupation and land use.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Concepto basado en la hipótesis de la existencia de elementos básicos que combinados entre sí confieren un patrón espacial específico al que está asociado un carácter determinado (Cancela d&apos;Abreu et al 2002). El concepto de unidad local de paisaje (ULP) se refiere a la unidad más pequeña representada a escala local y regional, tendencialmente homogénea, que es discernible y capaz de individualización de su entorno, ya tenga un origen natural o antrópico. Se basa en la litología, accidentes geográficos y la ocupación y uso del suelo.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="pt">Conceito baseado na hipótese da existência de elementos básicos que combinados dão um padrão espacial específico que está associado um determinado personagem (Cancela d&apos;Abreu et al 2002). O conceito de unidade de paisagem local (ULP) refere-se à menor unidade representada tendencialmente nível local e regional homogêneo, o que é visível e pode individualizar seu ambiente e têm uma singular ou antrópica. Baseia-se em litologia, acidentes geográficos e ocupação e uso da terra.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadPaisaje -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadPaisaje">
@@ -1731,6 +2107,54 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
         <rdfs:comment xml:lang="en">Landscape unit that can be found in a feature.</rdfs:comment>
         <rdfs:comment xml:lang="es">Unidad de paisaje que se puede encontrar en un territorio.</rdfs:comment>
         <rdfs:comment xml:lang="pt">Unidade de paisagem que pode ser encontrado em um território.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ValleAplanado -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ValleAplanado">
+        <rdfs:label xml:lang="en">Flattened valleys</rdfs:label>
+        <rdfs:label xml:lang="es">Valle aplanado</rdfs:label>
+        <rdfs:label xml:lang="pt">Valle aplanado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="en">Areas with flattened valleys</rdfs:comment>
+        <rdfs:comment xml:lang="es">Zonas con valles aplanados</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="pt">Áreas com vales aplanados</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ValleEncajado -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ValleEncajado">
+        <rdfs:label xml:lang="en">Embedded valley</rdfs:label>
+        <rdfs:label xml:lang="es">Valle encajado</rdfs:label>
+        <rdfs:label xml:lang="pt">Valle encaixado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="en">Embedded valley areas</rdfs:comment>
+        <rdfs:comment xml:lang="es">Zonas con valles encajados</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="pt">Áreas de vale encaixados</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#VegetacionEscasa -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#VegetacionEscasa">
+        <rdfs:label xml:lang="en">Sparse vegetation</rdfs:label>
+        <rdfs:label xml:lang="es">Vegetación escasa</rdfs:label>
+        <rdfs:label xml:lang="pt">vegetação esparsa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="es">Zonas de vegetación escasa.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="en">Areas of low vegetation</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Áreas de vegetação baixa</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
     </owl:Class>
     
