@@ -566,9 +566,9 @@
     
 
 
-    <!-- http://geo.linkeddata.es/ontology/R%C3%ADo -->
+    <!-- http://geo.linkeddata.es/ontology/Rio -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/R%C3%ADo">
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Rio">
         <rdfs:label xml:lang="es">Río</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://geo.linkeddata.es/ontology/hydro.owl"/>
     </owl:Class>
@@ -1902,7 +1902,7 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
         <rdfs:label xml:lang="en">Main river</rdfs:label>
         <rdfs:label xml:lang="es">Río principal</rdfs:label>
         <rdfs:label xml:lang="pt">Rio principal</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/R%C3%ADo"/>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Rio"/>
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
         <rdfs:comment xml:lang="en">Main river</rdfs:comment>
         <rdfs:comment xml:lang="es">Curso de agua principal</rdfs:comment>
@@ -1918,7 +1918,7 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
         <rdfs:label xml:lang="en">Secondary river</rdfs:label>
         <rdfs:label xml:lang="es">Río secundario</rdfs:label>
         <rdfs:label xml:lang="pt">Rio secundario</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/R%C3%ADo"/>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Rio"/>
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Caracteristica"/>
         <rdfs:comment xml:lang="en">Secondary river</rdfs:comment>
         <rdfs:comment xml:lang="es">Río no principal</rdfs:comment>
