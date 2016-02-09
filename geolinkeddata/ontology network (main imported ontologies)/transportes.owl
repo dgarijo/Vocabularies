@@ -36,9 +36,9 @@
     
 
 
-    <!-- http://geo.linkeddata.es/ontology/Aer%C3%B3dromo -->
+    <!-- http://geo.linkeddata.es/ontology/Aerodromo -->
 
-    <owl:Class rdf:about="&ontology;Aer%C3%B3dromo">
+    <owl:Class rdf:about="&ontology;Aerodromo">
         <rdfs:label xml:lang="en">Aerodrome</rdfs:label>
         <rdfs:label xml:lang="es">Aer&#243;dromo</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -82,9 +82,9 @@
     
 
 
-    <!-- http://geo.linkeddata.es/ontology/BaseA%C3%A9rea -->
+    <!-- http://geo.linkeddata.es/ontology/BaseAerea -->
 
-    <owl:Class rdf:about="&ontology;BaseA%C3%A9rea">
+    <owl:Class rdf:about="&ontology;BaseAerea">
         <rdfs:label xml:lang="en">Airbase</rdfs:label>
         <rdfs:label xml:lang="es">Base a&#233;rea</rdfs:label>
         <rdfs:comment xml:lang="es"
@@ -127,9 +127,9 @@
     
 
 
-    <!-- http://geo.linkeddata.es/ontology/Estaci%C3%B3nDeAutobuses -->
+    <!-- http://geo.linkeddata.es/ontology/EstacionDeAutobuses -->
 
-    <owl:Class rdf:about="&ontology;Estaci%C3%B3nDeAutobuses">
+    <owl:Class rdf:about="&ontology;EstacionDeAutobuses">
         <rdfs:label xml:lang="en">Bus station</rdfs:label>
         <rdfs:label xml:lang="es"
             >Estaci&#243;n de autobuses </rdfs:label>
@@ -137,9 +137,9 @@
     
 
 
-    <!-- http://geo.linkeddata.es/ontology/Estaci%C3%B3nDeFerrocarril -->
+    <!-- http://geo.linkeddata.es/ontology/EstacionDeFerrocarril -->
 
-    <owl:Class rdf:about="&ontology;Estaci%C3%B3nDeFerrocarril">
+    <owl:Class rdf:about="&ontology;EstacionDeFerrocarril">
         <rdfs:label xml:lang="en">Train station</rdfs:label>
         <rdfs:label xml:lang="es"
             >Estaci&#243;n de ferrocarril</rdfs:label>
@@ -212,9 +212,9 @@
     
 
 
-    <!-- http://geo.linkeddata.es/ontology/Traves%C3%ADa -->
+    <!-- http://geo.linkeddata.es/ontology/Travesia -->
 
-    <owl:Class rdf:about="&ontology;Traves%C3%ADa">
+    <owl:Class rdf:about="&ontology;Travesia">
         <rdfs:label xml:lang="en">Passage</rdfs:label>
         <rdfs:label xml:lang="es">Traves&#237;a</rdfs:label>
         <rdfs:comment xml:lang="es"
