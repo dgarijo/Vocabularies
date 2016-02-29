@@ -732,27 +732,11 @@
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Artificial -->
-
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Artificial">
-        <rdfs:label xml:lang="en">Artificial areas</rdfs:label>
-        <rdfs:label xml:lang="es">Zonas artificales</rdfs:label>
-        <rdfs:label xml:lang="pt">Zonas artificializadas</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
-        <rdfs:comment xml:lang="es">Territorios con Zonas artificales.</rdfs:comment>
-        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
-        <rdfs:comment xml:lang="en">Features with artificial areas.</rdfs:comment>
-        <rdfs:comment xml:lang="pt">Zonas artificializadas.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
-    </owl:Class>
-    
-
-
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#BosqueFrondoso -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#BosqueFrondoso">
         <rdfs:label xml:lang="en">Broadleaf forest</rdfs:label>
-        <rdfs:label xml:lang="es">Bosque forndoso</rdfs:label>
+        <rdfs:label xml:lang="es">Bosque frondoso</rdfs:label>
         <rdfs:label xml:lang="pt">Floresta de folhosas</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
         <rdfs:comment xml:lang="en">Area with hardwood forest.</rdfs:comment>
@@ -1698,6 +1682,22 @@ Paisagem protegida refere-se às partes específicas do ambiente natural, que, d
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Planicie -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Planicie">
+        <rdfs:label xml:lang="en">Plain</rdfs:label>
+        <rdfs:label xml:lang="es">Planicie</rdfs:label>
+        <rdfs:label xml:lang="pt">Planície</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="en">SArea with plain surfaces.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Superficie con planicies.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="pt">Área com planícies.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PlanosolEutrico -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#PlanosolEutrico">
@@ -1979,7 +1979,15 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
     <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#SuperficieArtificial -->
 
     <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#SuperficieArtificial">
+        <rdfs:label xml:lang="en">Artificial area</rdfs:label>
+        <rdfs:label xml:lang="es">Superficie artificial</rdfs:label>
+        <rdfs:label xml:lang="pt">Superficie artificial</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#Corine"/>
+        <rdfs:comment xml:lang="en">Area with artificial resources.</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="es">Área con superficies artificiales.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Área com superfícies artificiais.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
     </owl:Class>
     
 
@@ -2128,15 +2136,15 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
     
 
 
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ValleEncajado -->
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ValleCerrado -->
 
-    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ValleEncajado">
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ValleCerrado">
         <rdfs:label xml:lang="en">Embedded valley</rdfs:label>
-        <rdfs:label xml:lang="es">Valle encajado</rdfs:label>
+        <rdfs:label xml:lang="es">Valle cerrado</rdfs:label>
         <rdfs:label xml:lang="pt">Valle encaixado</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
         <rdfs:comment xml:lang="en">Embedded valley areas</rdfs:comment>
-        <rdfs:comment xml:lang="es">Zonas con valles encajados</rdfs:comment>
+        <rdfs:comment xml:lang="es">Zonas con valles cerrados</rdfs:comment>
         <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
         <rdfs:comment xml:lang="pt">Áreas de vale encaixados</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
@@ -2256,6 +2264,22 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
     
 
 
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ZonaArtificial -->
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#ZonaArtificial">
+        <rdfs:label xml:lang="en">Artificial area</rdfs:label>
+        <rdfs:label xml:lang="es">Zona artificial</rdfs:label>
+        <rdfs:label xml:lang="pt">Zona artificial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#UnidadLocalPaisaje"/>
+        <rdfs:comment xml:lang="en">Areas with artificial resources</rdfs:comment>
+        <dcterms:source>http://www.ideotalex.eu/OtalexC/Publicaciones/OTALEXC/Atlas_OTALEX_C.pdf</dcterms:source>
+        <rdfs:comment xml:lang="es">Zonas con superficies artificiales</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Áreas com superfícies artificiais</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.geonames.org/ontology#Feature -->
 
     <owl:Class rdf:about="http://www.geonames.org/ontology#Feature">
@@ -2264,65 +2288,6 @@ Ele é criado a partir da aplicação de duas directivas: a Directiva Aves (79/4
         <rdfs:comment xml:lang="pt">Característica geográfica</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.geonames.org/ontology#"/>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://geo.linkeddata.es/ontology/hydro.owl -->
-
-    <owl:Thing rdf:about="http://geo.linkeddata.es/ontology/hydro.owl">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-    </owl:Thing>
-    
-
-
-    <!-- http://purl.oclc.org/NET/ssnx/ssn# -->
-
-    <owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/ssn#">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-    </owl:Thing>
-    
-
-
-    <!-- http://purl.org/dc/terms/ -->
-
-    <owl:Thing rdf:about="http://purl.org/dc/terms/">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-    </owl:Thing>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex# -->
-
-    <owl:Thing rdf:about="http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-    </owl:Thing>
-    
-
-
-    <!-- http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio# -->
-
-    <owl:Thing rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-    </owl:Thing>
-    
-
-
-    <!-- http://www.geonames.org/ontology# -->
-
-    <owl:Thing rdf:about="http://www.geonames.org/ontology#">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
-    </owl:Thing>
 </rdf:RDF>
 
 
