@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html prefix="dc: http://purl.org/dc/terms/ schema: http://schema.org/ prov: http://www.w3.org/ns/prov# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl#">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />   <script src="resources/jquery.js"></script> 
+    <script> 
+function loadHash() {
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+		$('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+	}
+};
+    </script> 
+  </head> 
+
+<body resource="http://www.disk-project.org/ontology#" typeOf="schema:TechArticle">
+<span resource="" typeOf="foaf:Document schema:WebPage">
+<span property="dc:created schema:dateCreated" content="2016-01-28T15:46:00Z"></span>
+<span property="dc:contributor prov:wasAttributedTo schema:contributor" resource="http://purl.org/net/dgarijo"></span>
+</span>
+<div class="logo"><img height="100" alt="Disk" src="resources/logo.png"></div>
+<div class="container"><div class="head">
+<div style="float:right">language <a href="index.html"><b>en</b></a> </div>
+<h1 property="dc:title schema:name">Disk ontologies landing page</h1>
+<span property="dc:modified schema:dateModified" content="2016-03-24T15:46:00Z"></span>
+<h2>Release  2016-03-24</h2>
+<dl>
+<dt>This version:</dt>
+<dd><a href="">TO DO</a></dd>
+</dl><dl><dt>Latest version:</dt>
+<dd><a href="http://www.disk-project.org/ontology/">http://www.disk-project.org/ontology/</a></dd>
+</dl>
+<dt>Revision:</dt>
+<dd property="schema:version">0.0.1</dd>
+<dl><dt>Authors:</dt>
+<dd><a property="dc:creator schema:author prov:wasAttributedTo" resource="http://www.isi.edu/~varunr/" href="http://www.isi.edu/~varunr/">Varun Ratnakar</a>, Information Sciences Institute, USC</dd>
+</dl>
+<dl><dt>Contributors:</dt>
+<dd><a property="dc:creator schema:author prov:wasAttributedTo" resource="http://www.isi.edu/~varunr/" href="http://www.isi.edu/~varunr/">Varun Ratnakar</a>, Information Sciences Institute, USC</dd>
+<dd><a property="dc:creator schema:author prov:wasAttributedTo" resource="http://orcid.org/0000-0003-0454-7145" href="http://orcid.org/0000-0003-0454-7145">Daniel Garijo</a>, Information Sciences Institute, USC</dd>
+
+<dd><a property="dc:creator schema:author prov:wasAttributedTo" resource="http://www.isi.edu/~gil/" href="http://www.isi.edu/~gil/">Yolanda Gil</a>, Information Sciences Institute, USC</dd></dl>
+
+
+<br/><dl>This work is licensed under a license: <a rel="license" href="http://purl.org/NET/rdflicense/APACHE2.0"> Apache license 2.0</a>.</dl>
+<span property="dc:license" resource="http://purl.org/NET/rdflicense/APACHE2.0"></span>
+<hr/>
+</div>
+<div class="status"><div><span>DISK <strong>Draft</strong> Specification</span></div></div>
+     <div id="abstract"></div>
+	 
+<div class="introductory section" id="sotd">
+	<h2>Status of This Document</h2>
+		<p>This document is a specification from the <a href="http://www.disk-project.org/">Disk</a>
+			project. It does not represent the support or consensus of any standards organisation.
+		</p>
+</div>
+  
+<div class="section" id="toc">
+	<h2 class="introductory">Table of Contents</h2>
+		<ul class="toc">
+			<li class="tocline">
+				<a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a>
+			</li>
+			<li class="tocline"><a class="tocxref" href="#vocabularies"><span class="secno">2. </span>Disk vocabularies</a>
+				<ul class="toc">
+					<li class="tocline"><a class="tocxref" href="#omics"><span class="secno">2.1 </span>Omics vocabulary</a></li>
+					<li class="tocline"><a class="tocxref" href="#hyp"><span class="secno">2.2 </span>Hypothesis vocabulary</a></li>
+					<li class="tocline"><a class="tocxref" href="#disk"><span class="secno">2.3 </span>Disk vocabulary</a></li>
+				</ul>
+			</li>
+			<li class="tocline"><a class="tocxref" href="#examples"><span class="secno">3. </span>Examples</a></li>
+			<li class="tocline"><a class="tocxref" href="#references"><span class="secno">4 </span>References</a></li>
+		</ul>
+</div>
+     <div id="introduction">
+	 <h2> 1. Introduction</h2>
+	 <p>
+		[Draft: some figures may help to understand the text] The DISK project aims to help scientists to test and discover new hypothesis from existing datasets. Scientists define lines of inquiry that represent generic research questions, like the proteins associated to a type of cancer. The lines of inquiry may have multiple hypothesis associated to them, which define a particular instance or aspect of the line of inquiry (e.g., the EGFR protein is associated to colon cancer). Each hypothesis is represented as a connected graph, where the nodes are the different terms that compose the hypothesis and the edges represent the relationships among those terms. 
+	</p>
+	<p>
+		Each of the statements represented in the hypothesis graph can be supported by the results obtained after running an experiment. In fact, the hypothesis has a confidence value, which varies depending on the results of the experiments run to test it. The provenance of the results is crucial to determine the confidence value associated to the hypothesis, and thus it needs to be captured as well. 
+	</p>
+	<p>
+	A hypothesis may also be modified after reviewing the results of an experiment. The relationship among the different versions of the hypothesis (i.e., its evolution) is another key requirement to take into consideration. 
+	</p>
+	<p>
+	In summary, we have four main requirements for representing hypotheses: 
+	</p>
+	<ol>
+	<li>Hypothesis element description, which provides the means to appropriately describe the contents of a hypothesis and their relationships;</li>
+	<li>Confidence and provenance of the support results, which captures why a hypothesis has a certain confidence value, and how that value was obtained;</li>
+	<li>Hypothesis evolution, which represents the different versions among the hypothesis and their relationships,</li>
+	<li>Hypothesis metadata, which allows providing credit, responsibility and attribution to the creators and contributors of a given hypothesis.</li>
+	</ol>
+	<p>
+	In order to review and compare different existing vocabularies and models we have created a comparison framework that helps identifying the features and gaps of each of the approaches. The framework is described in the next section, followed by a summary of the different vocabularies and a discussion about which approaches would be the most appropriate to reuse.
+	</p>
+	 </div>
+	 
+     <div id="vocabularies">
+	 <h2> 2. Disk vocabularies</h2>
+	 <p>
+		The Disk project defines three different vocabularies: an omics vocabulary, a hypotheis vocabulary and a general purpose Disk vocabulary.
+	 </p>
+	 <h3 id="omics">2.1 Omics vocabulary</h3>
+	 <p>
+	 The <a href="http://disk-project.org/ontology/omics#">omics vocabulary</a> introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc.
+	 </p>
+	 <p><a href="omicsDocumentation/index-en.html">Browse the documentation of the vocabulary</a> for more details.</p>
+	 
+	 <h3 id="omics">2.2 Hypothesis vocabulary</h3>
+	 <p>
+	 The <a href="http://disk-project.org/ontology/hypothesis#">hypothesis vocabulary</a> introduces a set of terms and properties for linking the terms included in a hypothesis.
+	 </p>
+	 <p><a href="hypothesisDocumentation/index-en.html">Browse the documentation of the vocabulary</a> for more details.</p>
+	 
+	 <h3 id="omics">2.3 Disk vocabulary</h3>
+	 <p>
+	 The <a href="http://disk-project.org/ontology/disk#">Disk vocabulary</a> introduces the terms for creating hypothesis graphs and associate them to different lines of inquiry.
+	 </p>
+	 <p><a href="diskDocumentation/index-en.html">Browse the documentation of the vocabulary</a> for more details.</p>
+	 
+	 </div>
+	 
+	 
+	 
+	 <div id="examples">
+	 <h2> 3. Examples</h2>
+	 <p>
+		Once we have some examples, we will put them here.
+	 </p>
+	 </div>
+     <div id="references">
+	 <h2> 4. References</h2>
+	 <p>
+		If some references are cited in the document, add them here.
+	 </p>
+	 </div>
+<div id="acknowledgements">
+<h2>Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>Acknowledgements go here</p>
+</div>
+</body> 
+</html>
