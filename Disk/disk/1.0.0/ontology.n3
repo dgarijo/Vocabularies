@@ -1,0 +1,211 @@
+<http://disk-project.org/ontology/disk#hasStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#hasStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasStatus> <http://www.w3.org/2000/01/rdf-schema#domain> _:Agenid10 .
+<http://disk-project.org/ontology/disk#hasStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates the status of the execution (whether it has been successful or not) or the triggered line of inquiry (i.e., ongoing, finished, etc.)"@en .
+<http://disk-project.org/ontology/disk#hasStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has run status"@en .
+<http://disk-project.org/ontology/disk#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/ns/prov#Plan> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#Plan> <http://www.w3.org/2000/01/rdf-schema#label> "Plan"@en .
+<http://www.w3.org/ns/prov#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#MetaWorkflow> .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to identify which variables in the hypothesis are used in the workflows."@en .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has hypothesis variable"@en .
+<http://disk-project.org/ontology/disk#hasHypothesisVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff5 .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov/#Bundle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov/#Bundle> <http://www.w3.org/2000/01/rdf-schema#comment> "A bundle is a named set of provenance descriptions, and is itself an entity, so allowing provenance of provenance to be expressed."@en .
+<http://www.w3.org/ns/prov/#Bundle> <http://www.w3.org/2000/01/rdf-schema#label> "Bundle"@en .
+<http://www.w3.org/ns/prov/#Bundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#has_provenance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#has_provenance> <http://www.w3.org/2000/01/rdf-schema#label> "has provenance"@en .
+<http://www.w3.org/ns/prov#has_provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ffc <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ffb .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/terms/created> "2016-09-02"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://disk-project.org/ontology/disk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/terms/title> "The DISK Ontology"@en .
+<http://disk-project.org/ontology/disk> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/elements/1.1/creator> "Daniel Garijo" .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/elements/1.1/creator> "Varun Ratnakar" .
+<http://disk-project.org/ontology/disk> <http://purl.org/vocab/vann/preferredNamespacePrefix> "disk" .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/terms/abstract> "The DISK Ontology aims to represent the components in a Line of Inquiry (e.g., hypothesis, metaworkflows, workflows, etc.), along with their relationships and main interactions. It also aims to represents hypothesis and their revisions. The ontology is aligned to the W3C PROV standard"@en .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/elements/1.1/creator> "Yolanda Gil" .
+<http://disk-project.org/ontology/disk> <http://www.w3.org/2000/01/rdf-schema#label> "DISK Ontology"@en .
+<http://disk-project.org/ontology/disk> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://disk-project.org/ontology/disk#"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://disk-project.org/ontology/disk#hasVariableBinding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasVariableBinding> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#VariableBinding> .
+<http://disk-project.org/ontology/disk#hasVariableBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a Workflow binding to it correspondent variable binding"@en .
+<http://disk-project.org/ontology/disk#hasVariableBinding> <http://www.w3.org/2000/01/rdf-schema#label> "has variable binding"@en .
+<http://disk-project.org/ontology/disk#hasVariableBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasRevisionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasDerivedFrom> .
+<http://www.w3.org/ns/prov#wasRevisionOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#wasRevisionOf> <http://www.w3.org/2000/01/rdf-schema#label> "was revision of"@en .
+<http://www.w3.org/ns/prov#wasRevisionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff4 .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/TR/rdf-schema/> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Statement"@en .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#comment> "A hypothesis h consists of: \n1. A hypothesis statement, which is a set of assertions about entities in the domain.  For example, they express assertions such as \u201CThe mutant form of Protein ABCD is associated with colon cancer.\u201D\n2. A hypothesis qualification (confidence report) , which qualifies the veracity of the hypothesis based on the data and the analyses done so far.  A typical qualification is a numeric confidence value.  For example, for the hypothesis statement above we could have a confidence value of 0.7. Each of the statements of a hypothesis may have a different confidence value.\n3. A hypothesis provenance, which is a record of the analyses that were carried out in support of the hypothesis statement.  For example the provenance may include an analysis of mass spectrometry data for 25 patients with colon cancer and 25 healthy controls followed by clustering, cluster metrics and binary hypothesis testing.\n4. A hypothesis history, which points to a prior hypothesis h\u2019 that was revised to generate h.  In our example, a prior hypothesis could be \u201CProtein ABCD is associated with cancer.\u201D"@en .
+<http://disk-project.org/ontology/disk#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Hypothesis"@en .
+<http://disk-project.org/ontology/disk#Hypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "was derived from"@en .
+<http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasDataQuery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasDataQuery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasDataQuery> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a line of inquiry to the data query text associated to it"@en .
+<http://disk-project.org/ontology/disk#hasDataQuery> <http://www.w3.org/2000/01/rdf-schema#label> "has data query"@en .
+<http://disk-project.org/ontology/disk#hasDataQuery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ffa .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/disk#hasParentHypothesis> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasRevisionOf> .
+<http://disk-project.org/ontology/disk#hasParentHypothesis> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/disk#hasParentHypothesis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/disk#hasParentHypothesis> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links to the parent hypothesis from which the current hypothesis has been derived"@en .
+<http://disk-project.org/ontology/disk#hasParentHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "has parent hypothesis"@en .
+<http://disk-project.org/ontology/disk#hasParentHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasHypothesisQuery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasHypothesisQuery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasHypothesisQuery> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a line of inquiry to the hypothesis query text"@en .
+<http://disk-project.org/ontology/disk#hasHypothesisQuery> <http://www.w3.org/2000/01/rdf-schema#label> "has hypothesis query"@en .
+<http://disk-project.org/ontology/disk#hasHypothesisQuery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#MetaWorkflow> .
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a metaworkflow to its revised hypothesis variable."@en .
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has revised hypothesis variable"@en .
+<http://disk-project.org/ontology/disk#hasRevisedHypothesisVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasDerivedFrom> .
+<http://disk-project.org/ontology/disk#hasLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a triggered line of inquiry to the original line of inquiry from which it was derived"@en .
+<http://disk-project.org/ontology/disk#hasLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#label> "has line of inquiry"@en .
+<http://disk-project.org/ontology/disk#hasLineOfInquiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.wings-workflows.org/ontology/workflow.owl#Variable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.wings-workflows.org/ontology/workflow.owl#> .
+<http://www.wings-workflows.org/ontology/workflow.owl#Variable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable of a workflow template"@en .
+<http://www.wings-workflows.org/ontology/workflow.owl#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable"@en .
+<http://www.wings-workflows.org/ontology/workflow.owl#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://disk-project.org/ontology/disk#ConfidenceReport> <http://www.w3.org/2000/01/rdf-schema#comment> "A confidence report groups the confidence value and the link to the triggered line of inquiry of a given statement or hypothesis"@en .
+<http://disk-project.org/ontology/disk#ConfidenceReport> <http://www.w3.org/2000/01/rdf-schema#label> "Confidence report"@en .
+<http://disk-project.org/ontology/disk#ConfidenceReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.wings-workflows.org/ontology/workflow.owl#Workflow> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.wings-workflows.org/ontology/workflow.owl#> .
+<http://www.wings-workflows.org/ontology/workflow.owl#Workflow> <http://www.w3.org/2000/01/rdf-schema#comment> "Workflows define the set of computational tasks and dependencies needed to carry out in silico experiments"@en .
+<http://www.wings-workflows.org/ontology/workflow.owl#Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
+<http://www.wings-workflows.org/ontology/workflow.owl#Workflow> <http://www.w3.org/2000/01/rdf-schema#label> "Workflow"@en .
+<http://www.wings-workflows.org/ontology/workflow.owl#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff9 <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff8 .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#hasBindingValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasBindingValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#VariableBinding> .
+<http://disk-project.org/ontology/disk#hasBindingValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a binding to its associated value"@en .
+<http://disk-project.org/ontology/disk#hasBindingValue> <http://www.w3.org/2000/01/rdf-schema#label> "has binding value"@en .
+<http://disk-project.org/ontology/disk#hasBindingValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#LineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#comment> "A line of inquiry represents potential analyses that can be pursued to test a type of hypothesis.  A line of inquiry consists of:\n1. A hypothesis pattern, which represents the type of hypotheses that can be explored with this line of inquiry.  An example of a hypothesis pattern is \u201CProtein ?p is associated with cancer ?c\u201D.  This hypothesis pattern must be expressed in the same language as hypothesis statements, so that they can be matched against a user\u2019s hypothesis.\n2. A set of query patterns, representing the kinds of data relevant to testing the hypothesis pattern as a set of templates of queries to a data repository.  Several kinds of data may be relevant, so there may be several query patterns.  For example, \u201CRetrieve data of mass spectrometry experiments of tumor samples from patients with cancer ?c\u201D.  \n3. A set of workflows, which capture data analysis methods that can be applied to the data retrieved by the query patterns in order to test the hypothesis pattern.  For example, a workflow to analyze mass spectrometry data could include steps such as matching proteins from either a patient\u2019s custom database or on a reference human proteomic database to tandem mass spectrometry data.\n4. A set of workflow mappings, indicating how the query patterns and the datasets retrieved should be used to instantiate the workflows above to create execution-ready workflows.  \n5. A set of meta-workflows, which describe how to aggregate the results of the workflow executions done to analyze the data.  For example, suppose that one of the workflows in the line of inquiry is for analyzing protein mass spectrometry data for n patients finding evidence for the protein ?p with a p-value p1 and another workflow is for protein fluorescence data for m patients giving a p-value p1, then the meta-workflow would indicate how to combine that evidence into a joint confidence value.\n6. A set of meta-workflow mappings, which describe how the results of the workflow executions are to be used to generate bindings for the inputs of the meta-workflows.\n7. A set of priorities, which describe the relative importance of running different execution-ready workflows given the hypothesis at hand"@en .
+<http://disk-project.org/ontology/disk#LineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#label> "Line of Inquiry"@en .
+<http://disk-project.org/ontology/disk#LineOfInquiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#MetaWorkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A metaworkflow is a special type of workflow which uses as inputs the results of other workflows"@en .
+<http://disk-project.org/ontology/disk#MetaWorkflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.wings-workflows.org/ontology/workflow.owl#Workflow> .
+<http://disk-project.org/ontology/disk#MetaWorkflow> <http://www.w3.org/2000/01/rdf-schema#label> "Metaworkflow"@en .
+<http://disk-project.org/ontology/disk#MetaWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#hasVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.wings-workflows.org/ontology/workflow.owl#Variable> .
+<http://disk-project.org/ontology/disk#hasVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#VariableBinding> .
+<http://disk-project.org/ontology/disk#hasVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a variable binding to its corresponding variable"@en .
+<http://disk-project.org/ontology/disk#hasVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has variable"@en .
+<http://disk-project.org/ontology/disk#hasVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasHypothesis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasHypothesis> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/disk#hasHypothesis> <http://www.w3.org/2000/01/rdf-schema#comment> "property that links a triggered line of inquiry to the hypothesis that matched to it."@en .
+<http://disk-project.org/ontology/disk#hasHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "has hypothesis"@en .
+<http://disk-project.org/ontology/disk#hasHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff6 .
+<http://disk-project.org/ontology/disk#hasWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a line of inquiry or executed line of inquiry to the workflow bindings present on it"@en .
+<http://disk-project.org/ontology/disk#hasWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#label> "has workflow bindings"@en .
+<http://disk-project.org/ontology/disk#hasWorkflowBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasWorkflow> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.wings-workflows.org/ontology/workflow.owl#Workflow> .
+<http://disk-project.org/ontology/disk#hasWorkflow> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasWorkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a Workflow bindong to its associated workflow"@en .
+<http://disk-project.org/ontology/disk#hasWorkflow> <http://www.w3.org/2000/01/rdf-schema#label> "has workflow"@en .
+<http://disk-project.org/ontology/disk#hasWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#VariableBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains a Variable and a binding value"@en .
+<http://disk-project.org/ontology/disk#VariableBinding> <http://www.w3.org/2000/01/rdf-schema#label> "Variable binding"@en .
+<http://disk-project.org/ontology/disk#VariableBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#hasConfidenceReport> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ffc .
+<http://disk-project.org/ontology/disk#hasConfidenceReport> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#ConfidenceReport> .
+<http://disk-project.org/ontology/disk#hasConfidenceReport> <http://www.w3.org/2000/01/rdf-schema#label> "has confidence report"@en .
+<http://disk-project.org/ontology/disk#hasConfidenceReport> <http://www.w3.org/2000/01/rdf-schema#label> "Property that links the hypothesis or statement to the ConfidenceReport that supports them"@en .
+<http://disk-project.org/ontology/disk#hasConfidenceReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#has_provenance> .
+<http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#ConfidenceReport> .
+<http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a confidence report to the triggered line of inquiry that contains all the provenance for the report's value."@en .
+<http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#label> "has triggered line of inquiry"@en .
+<http://disk-project.org/ontology/disk#hasTriggeredLineOfInquiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links to the ID of the described resource"@en .
+<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/2000/01/rdf-schema#label> "has id"@en .
+<http://disk-project.org/ontology/disk#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff7 .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasExecution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.wings-workflows.org/ontology/execution.owl#Execution> .
+<http://disk-project.org/ontology/disk#hasExecution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a workflow bundle to the execution results of the workflow"@en .
+<http://disk-project.org/ontology/disk#hasExecution> <http://www.w3.org/2000/01/rdf-schema#label> "has execution"@en .
+<http://disk-project.org/ontology/disk#hasExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasConfidenceValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://disk-project.org/ontology/disk#hasConfidenceValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#ConfidenceReport> .
+<http://disk-project.org/ontology/disk#hasConfidenceValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that binds a confidence report to its confidence value"@en .
+<http://disk-project.org/ontology/disk#hasConfidenceValue> <http://www.w3.org/2000/01/rdf-schema#label> "has confidence value"@en .
+<http://disk-project.org/ontology/disk#hasConfidenceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#Data> <http://www.w3.org/2000/01/rdf-schema#comment> "The results produced as a result of executing a workflow from a given line of inquiry"@en .
+<http://disk-project.org/ontology/disk#Data> <http://www.w3.org/2000/01/rdf-schema#label> "Data"@en .
+<http://disk-project.org/ontology/disk#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX3bbe5541X3aX156ffba83fbX3aXX2dX7ff9 .
+<http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://disk-project.org/ontology/disk#hasWorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "The workflow bindings associated to a metaworkflow, i.e., a workflow and a variable binding"@en .
+<http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#label> "has metaworkflow binding"@en .
+<http://disk-project.org/ontology/disk#hasMetaWorkflowBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#createdFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasDerivedFrom> .
+<http://disk-project.org/ontology/disk#createdFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#Data> .
+<http://disk-project.org/ontology/disk#createdFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that states from where these data have been created (e-g-, workflow, metaworkflow, line of inquiry, etc.)"@en .
+<http://disk-project.org/ontology/disk#createdFrom> <http://www.w3.org/2000/01/rdf-schema#label> "created from"@en .
+<http://disk-project.org/ontology/disk#createdFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#comment> "A triggered line of inquiry represents a strategy for exploring a hypothesis that is currently being explored by executing its associated workflows and metaworkflows. A triggered line of inquiry may require a long time to complete. When finished, the triggered line of inquiry will include pointers to the provenance of the workflows and metaworkflows that participated on the execution, as well as a confidence value on the original hypothesis."@en .
+<http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#label> "Triggered line of inquiry"@en .
+<http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.wings-workflows.org/ontology/execution.owl#Execution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.wings-workflows.org/ontology/execution.owl#> .
+<http://www.wings-workflows.org/ontology/execution.owl#Execution> <http://www.w3.org/2000/01/rdf-schema#comment> "An execution of a workflow"@en .
+<http://www.wings-workflows.org/ontology/execution.owl#Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov/#Bundle> .
+<http://www.wings-workflows.org/ontology/execution.owl#Execution> <http://www.w3.org/2000/01/rdf-schema#label> "Execution"@en .
+<http://www.wings-workflows.org/ontology/execution.owl#Execution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBinding> .
+<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the execution of a workflow in the corresponding workflow system"@en .
+<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/2000/01/rdf-schema#label> "has run link"@en .
+<http://disk-project.org/ontology/disk#hasRunLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://disk-project.org/ontology/disk#WorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains a workflow and a variable binding"@en .
+<http://disk-project.org/ontology/disk#WorkflowBinding> <http://www.w3.org/2000/01/rdf-schema#label> "Workflow binding"@en .
+<http://disk-project.org/ontology/disk#WorkflowBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#hasResultingHypothesis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#TriggeredLineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasResultingHypothesis> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/disk#hasResultingHypothesis> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a triggered line of inquiry to the hypothesis revision that resulted from its analysis"@en .
+<http://disk-project.org/ontology/disk#hasResultingHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "has resulting hypothesis"@en .
+<http://disk-project.org/ontology/disk#hasResultingHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
