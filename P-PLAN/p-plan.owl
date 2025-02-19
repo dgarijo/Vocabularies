@@ -285,7 +285,7 @@
     <owl:Class rdf:about="http://purl.org/net/p-plan#Entity">
         <rdfs:label xml:lang="en">Entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&prov;Entity"/>
-        <prov:definition xml:lang="en">A p-plan:Entity represents the input of the execution of a p-plan:Activity. It corresponds to a p-plan:Variable.</prov:definition>
+        <prov:definition xml:lang="en">A p-plan:Entity represents the input and the output of the execution of a p-plan:Activity. It corresponds to a p-plan:Variable.</prov:definition>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/net/p-plan#"/>
     </owl:Class>
     
