@@ -341,7 +341,7 @@
 							layer over the execution. As a result, a plan step could be carried out in different ways in different executions 
 							of the same plan. In addition, a step may not have a corresponding activity, for example if there is an execution failure. Dependencies 
 							between <code>p-plan:Steps</code> are captured with the <code>p-plan:isPrecededBy</code> relationship.
-							<code>p-plan:Variables</code> represent the inputs of the steps and can have proper-ties (i.e., type, restrictions, metadata, etc.). 
+							<code>p-plan:Variables</code> represent s of the steps and can have proper-ties (i.e., type, restrictions, metadata, etc.). 
 							<code>p-plan:Steps</code> have <code>p-plan:Variables</code> as input and <code>p-plan:Variables</code> are output of 
 							<code>p-plan:Steps</code>. Both of them are associated to
 							a <code>p-plan:Plan</code>. The relation of the plan with agents and activities is not specified P-PLAN, since it can be modeled with PROV
@@ -400,7 +400,7 @@
 								<p>
 								<strong>IRI:</strong>http://purl.org/net/p-plan#Entity</p>
 								<div class="comment">
-								<p>A p-plan:Entity is a subclass of prov:Entity that represents the input of an executed p-plan:Activity. The p-plan:Entity corresponds to a p-plan:Variable in the overall p-plan:Plan.</p>
+								<p>A p-plan:Entity is a subclass of prov:Entity that represents the input and the output of an executed p-plan:Activity. The p-plan:Entity corresponds to a p-plan:Variable in the overall p-plan:Plan.</p>
 								<p>Example:
 								<pre>
 	@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
